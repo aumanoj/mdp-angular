@@ -1,0 +1,269 @@
+
+            <!-- Page-Title -->
+            <div class="row">
+                <div class="col-sm-12">
+                    <div class="page-title-box">
+                        <div class="float-right">
+                            <ol class="breadcrumb">
+                                <li class="breadcrumb-item"><a [routerLink]="">MDP</a></li>
+                                <li class="breadcrumb-item"><a [routerLink]="" (click)="dashboard()" >Dashboard</a></li>
+                                <li class="breadcrumb-item ">Settings</li>
+                            </ol>
+                        </div>
+                        <h4 class="page-title">Settings</h4>
+                    </div><!--end page-title-box-->
+                </div><!--end col-->
+            </div>
+            <!-- end page title end breadcrumb -->
+            <div class="row">
+                <div class="col-lg-12">
+                    <ul class="nav nav-tabs nav-tabs1" role="tablist">
+                        <li class="nav-item">
+                             <a class="nav-link active" href="#PREFERENCES" role="tab" data-toggle="tab">PREFERENCES</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#NOTIFICATIONS" role="tab" data-toggle="tab">NOTIFICATIONS</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#SCHEDULE"  role="tab" data-toggle="tab">SCHEDULE INTERVALS</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#COMPANY" role="tab" data-toggle="tab">COMPANY SETTINGS</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#TIME" role="tab" data-toggle="tab">TIME CLOCK</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#LABOR" role="tab" data-toggle="tab">LABOR COST</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#TIME_OFF" role="tab" data-toggle="tab">TIME OFF</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#ACCOUNT" role="tab" data-toggle="tab">ACCOUNT ACTIVITY</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#INTEGRATIONS" role="tab" data-toggle="tab">INTEGRATIONS</a>
+                        </li>
+                    </ul>
+                </div><!--end col-->
+            </div><!--end row-->
+
+            <div class="tab-content">
+                <div role="tabpanel" class="tab-pane active" id="PREFERENCES">
+                    <div class="row">
+                        <div class="col-12">
+                            <div class="card">
+                                <div class="card-body">
+                                    <div *ngIf="error" class=" row alert alert-danger alert-dismissible col-xs-12" data-auto-dismiss role="alert" id="successMessage">
+                                        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                                            <span aria-hidden="true"><i class="mdi mdi-close"></i></span>
+                                        </button>
+                                        <strong> {{error_message}}</strong>
+                                    </div>
+                                <form *ngFor="let u of user" class="form-horizontal form-material mb-0 form-parsley" (ngSubmit)="update()" [formGroup]="ngForm_settings_preferences">
+            
+                                    <div class="form-group row">
+                                        <div class="col-md-12">
+                                            <input type="hidden" class="form-control" formControlName="id" value="id" />
+                                        </div>
+                                    </div>
+            
+                                    <div class="form-group row">
+                                        <div class="col-md-2"></div>
+                                        <div class="col-md-8">
+                                            <span i18n="@@preference_msg">Your preferences define the look and feel of your MDP. They don’t affect other employees in your organization.</span>
+                                            <hr>
+                                        </div>
+                                        <div class="col-md-2"></div>
+            
+                                        <div class="col-md-2"></div>
+                                        <div class="col-md-8">
+                                            <label i18n="@@preference_time_format">TIME FORMAT</label>
+                                            <div class="form-group row">
+                                                <div class="col-md-8">
+                                                    <p i18n="@@preference_time_format_desc">Select the time format for shifts and availability.</p>
+                                                </div>
+                                                <div class="col-md-4">
+                                                    <select class="form-control" formControlName="preference_time_format" [(ngModel)]="u.preference_time_format">
+                                                        <option [ngValue]="u.preference_time_format">{{u.preference_time_format}}</option>
+                                                        <option value="HH:mm">HH:mm</option>
+                                                        <option value="H:mm am">H:mm</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                            <hr>
+                                        </div>
+                                        <div class="col-md-2"></div>
+            
+                                        <div class="col-md-2"></div>
+                                        <div class="col-md-8">
+                                            <label i18n="@@preference_name_format">NAME FORMAT</label>
+                                            <div class="form-group row">
+                                                <div class="col-md-8">
+                                                    <p i18n="@@preference_name_format_desc">Select the name format for employee lists</p>
+                                                </div>
+                                                <div class="col-md-4">
+                                                    <select class="form-control" formControlName="preference_name_format" [(ngModel)]="u.preference_name_format">
+                                                        <option [ngValue]="u.preference_name_format">{{u.preference_name_format}}</option>
+                                                        <option value="FIRST_LAST">John Max</option>
+                                                        <option value="LAST_FIRST">Max John</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                            <hr>
+                                        </div>
+                                        <div class="col-md-2"></div>
+            
+                                        <div class="col-md-2"></div>
+                                        <div class="col-md-8">
+                                            <label i18n="@@preference_world_clock">WORLD CLOCK</label>
+                                            <div class="form-group row">
+                                                <div class="col-md-8">
+                                                    <p i18n="@@preference_world_clock_desc">Display calendar events and schedule according to my local time (Asia/Calcutta)
+                                                        When disabled you see and schedule events within their locations timezone</p>
+                                                </div>
+                                                <div class="col-md-4">
+                                                    <div class="custom-control custom-switch switch-success">
+                                                        <input type="checkbox" class="custom-control-input"  formControlName="preference_world_clock" [(ngModel)]="u.preference_world_clock" id="customSwitchSuccess">
+                                                        <label class="custom-control-label text-muted" for="customSwitchSuccess"></label>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <hr>
+                                        </div>
+                                        <div class="col-md-2"></div>
+            
+                                        <div class="col-md-2"></div>
+                                        <div class="col-md-8">
+                                            <label i18n="@@preference_sound_effect">SOUND EFFECTS</label>
+                                            <div class="form-group row">
+                                                <div class="col-md-8">
+                                                    <p i18n="@@preference_sound_effect_desc">Enable sound effects, so you know when you have received a new message or have sent one</p>
+                                                </div>
+                                                <div class="col-md-4">
+                                                    <div class="custom-control custom-switch switch-success">
+                                                        <input type="checkbox" class="custom-control-input" formControlName="preference_sound_effect" [(ngModel)]="u.preference_sound_effect" id="customSwitchSuccess2">
+                                                        <label class="custom-control-label text-muted" for="customSwitchSuccess2"></label>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <hr>
+                                        </div>
+                                        <div class="col-md-2"></div>
+            
+                                        <div class="col-md-2"></div>
+                                        <div class="col-md-8">
+                                            <label></label>
+                                            <div class="form-group row">
+                                                <div class="col-md-8">
+                                                    <p i18n="@@preference_showOther_msg">Show others when I am typing Allow others to see when you are typing a message</p>
+                                                </div>
+                                                <div class="col-md-4">
+                                                    <div class="custom-control custom-switch switch-success">
+                                                        <input type="checkbox" class="custom-control-input" formControlName="preference_show_other_typing" [(ngModel)]="u.preference_show_other_typing" id="customSwitchSuccess3">
+                                                        <label class="custom-control-label text-muted" for="customSwitchSuccess3"></label>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <hr>
+                                        </div>
+                                        <div class="col-md-2"></div>
+            
+                                        <div class="col-md-2"></div>
+                                        <div class="col-md-8">
+                                            <label i18n="@@preference_csv_delimeter">CSV Delimiter</label>
+                                            <div class="form-group row">
+                                                <div class="col-md-8">
+                                                    <p i18n="@@preference_csv_delimeter_desc">Delimiter for exports to CSV files</p>
+                                                </div>
+                                                <div class="col-md-4">
+                                                    <select class="form-control" formControlName="preference_csv_delimeter" [(ngModel)]="u.preference_csv_delimeter">
+                                                        <option [ngValue]="u.preference_csv_delimeter">{{u.preference_csv_delimeter}}</option>
+                                                        <option value="COMMA">comma (,)</option>
+                                                        <option value="SEMICOLON">semicolon (;)</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                            <hr>
+                                        </div>
+                                        <div class="col-md-2"></div>
+            
+                                        <div class="col-md-2"></div>
+                                        <div class="col-md-8">
+                                            <label i18n="@@preference_google_cal">Google calendar synchronization</label>
+                                            <div class="form-group row">
+                                                <div class="col-md-8">
+                                                    <p i18n="@@preference_google_cal_desc">Subscribe to your personal schedule on Google calendar Learn More</p>
+                                                </div>
+                                                <div class="col-md-4">
+                                                    <div class="custom-control custom-switch switch-success">
+                                                        <input type="checkbox" class="custom-control-input" formControlName="preference_google_calender_sync" [(ngModel)]="u.preference_google_calender_sync" id="customSwitchSuccess3.2">
+                                                        <label class="custom-control-label text-muted" for="customSwitchSuccess3.2"></label>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <hr>
+                                        </div>
+                                        <div class="col-md-2"></div>
+                                    </div>
+                                    <div class="form-group mb-0">
+                                        <button class="btn btn-danger btn-sm text-light px-4 mt-3 float-right mb-0 ml-2"  type="reset">Reset</button>
+                                        <button  class="btn btn-primary btn-sm text-light px-4 mt-3 float-right mb-0" type="submit">Save</button>
+                                        <!-- <div *ngIf="error" class="alert alert-danger mt-3 mb-0">{{error_message}}</div> -->
+                                    </div><!--end form-group-->
+                                    <!-- <div  class="row col-xs-12">
+                                        <div *ngIf="showMsg" class=" row alert alert-success alert-dismissible col-xs-12" data-auto-dismiss role="alert" id="successMessage">
+                                            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                                                
+                                            </button>
+                                            <strong> Record updated successfully</strong>
+                                        </div>
+                                    </div> -->
+                                </form>
+                                </div><!--end card-body-->
+                                
+                            </div><!--end card-->
+                        </div> <!--end col-->
+                    </div><!--end row-->
+                    <ngx-ui-loader  overlayColor="rgba(40,40,40,0)" pbThickness="0" fgsColor="#09357d" fgsType="rectangle-bounce" [loaderId]="'loader-01'" ></ngx-ui-loader>  
+                </div><!--end preference--->
+
+                <div role="tabpanel" class="tab-pane" id="NOTIFICATIONS">
+                    <app-notifications></app-notifications>
+                </div><!--end notifications-->
+
+                <div role="tabpanel" class="tab-pane" id="SCHEDULE">
+                    <app-schedule-intervals></app-schedule-intervals>
+                </div><!--end schedule-->
+
+                <div role="tabpanel" class="tab-pane" id="COMPANY">
+                    <app-company-settings></app-company-settings>
+                </div><!--end company-settings-->
+
+                <div role="tabpanel" class="tab-pane" id="TIME">
+                    <app-time-clock></app-time-clock>
+                </div><!--end time-clock-->
+
+                <div role="tabpanel" class="tab-pane" id="LABOR">
+                    <app-labor-cost></app-labor-cost>
+                </div><!--end labor-cost-->
+
+                <div role="tabpanel" class="tab-pane" id="TIME_OFF">
+                    <app-time-off></app-time-off>
+                </div><!--end time-off-->
+
+                <div role="tabpanel" class="tab-pane" id="ACCOUNT">
+                    <app-account-activity></app-account-activity>
+                </div><!--end account-activity-->
+
+                <div role="tabpanel" class="tab-pane" id="INTEGRATIONS">
+                    <app-integrations></app-integrations>
+                </div><!--end integrations-->
+               
+
+            </div><!--end tabs-->
+            
+           
+
+             

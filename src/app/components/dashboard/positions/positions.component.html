@@ -1,0 +1,57 @@
+<div class="container-fluid">
+    <!-- Page-Title -->
+    <div class="row">
+        <div class="col-sm-12">
+            <div class="page-title-box">
+                <div class="float-right">
+                    <ol class="breadcrumb">
+                        <li class="breadcrumb-item"><a [routerLink]="">MDP</a></li>
+                        <li class="breadcrumb-item">Positions</li>  
+                    </ol>
+                </div>
+                <h4 class="page-title">Positions</h4>
+            </div><!--end page-title-box-->
+        </div><!--end col-->
+    </div>
+    <!-- end page title end breadcrumb -->
+    <div ngxUiLoaderBlurred>
+    <div class="row">
+        <div class="col-12">
+            <div class="card">
+                <div class="card-body">
+                    <button type="button" class="btn btn-primary px-4 mt-0 mb-3" (click)="add_position()"><i class="mdi mdi-plus-circle-outline mr-2"></i>Add New Position</button>
+                    <div class="table-responsive">
+                        <table id="datatable" class="table">
+                            <thead class="thead-light">
+                            <tr>
+                                <th>Name</th>
+                                <th>No of Employees</th>
+
+                                <th class="text-right">Action</th>
+                            </tr><!--end tr-->
+                            </thead>
+
+                            <tbody>
+                            
+                            <tr *ngFor="let position of positions; let i=index;">
+                                <td><a [routerLink]=""(click)="edit_position(position.id)"><img src="./assets/images/users/user-10.jpg" alt="" class="thumb-sm rounded-circle mr-2">{{position.name}}</a></td>
+                                <td>
+                                    <tr *ngFor="let position_user of position.position_users;let i = index; let last = last">
+                                        <div id="counter_id" *ngIf="last">{{i + 1}}</div>
+                                    </tr>
+                                </td>
+                                <td class="text-right">
+                                    <button class="btn btn-primary btn-sm text-light mb-1" (click)="edit_position(position.id)"> <a  class="mr-2"><i class="fas fa-edit text-light font-16"></i></a></button>
+                                    <button class="btn btn-danger btn-sm text-light ml-2 mb-1" (click)="delete_position(position.id,i,position.name)"> <a ><i class="fas fa-trash-alt text-light font-16"></i></a></button>
+                                </td>
+                            </tr><!--end tr-->
+
+                            </tbody>
+                        </table>
+                    </div>
+                </div><!--end card-body-->
+            </div><!--end card-->
+        </div> <!--end col-->
+    </div><!--end row-->
+    <ngx-ui-loader  overlayColor="rgba(40,40,40,0)" pbThickness="0" fgsColor="#09357d" fgsType="rectangle-bounce" [loaderId]="'loader-01'" ></ngx-ui-loader>
+</div>

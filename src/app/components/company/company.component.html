@@ -1,0 +1,93 @@
+
+
+            <!-- <div class="modal-content"> -->
+               <div class="card-body">
+                   
+                        <div class="row">
+                            <div class="col-md-7">
+                                <h5 class="modal-title float-right " id="myLargeModalLabel">About Company</h5>
+                                <!-- <button typse="button" class="close" data-dismiss="modal" aria-hidden="true">×</button> -->
+                            </div>
+                        </div>
+                        <hr>
+                    <div *ngIf="error_message" class=" row alert alert-danger alert-dismissible col-xs-12" data-auto-dismiss role="alert" id="successMessage">
+                        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                            <span aria-hidden="true"><i class="mdi mdi-close"></i></span>
+                        </button>
+                        <strong> {{error_message}}</strong>
+                    </div>
+                    <div class="modal-body">
+
+                                <form  (ngSubmit)="company_reg()"  [formGroup]="ngForm">
+                                        <div class="row">
+                                            <div class="col-md-12">
+                                                <div class="form-group row">
+                                                    <label i18n="@@company_name" for="txtName" class="col-lg-2 col-form-label">Company Name </label><b i18n="@@company_name_required" class="required"> *</b>
+                                                    <div class="col-lg-9">
+                                                        <input id="txtName"  type="text" formControlName="name" class="form-control" i18n-placeholder="@@company_name_pholder"  placeholder=" Enter Company Name" [ngClass]="{ 'is-invalid': submitted && f.name.errors }" >
+                                                        <div *ngIf="submitted && f.name.errors" class="invalid-feedback">
+                                                            <div i18n="@@company_name_validation" *ngIf="f.name.errors.required">Name is required</div>
+                                                        </div>
+                                                    </div>
+                                                </div><!--end form-group-->
+                                            </div><!--end col-->
+                                        </div><!--end row-->
+                                        <div class="row">
+                                            <div class="col-md-12">
+                                                <div class="form-group row">
+                                                    <label i18n="@@industry_type" for="industryType" class="col-lg-2 col-form-label">Industry type</label><b i18n="@@industry_type_required" class="required"> *</b>
+                                                    <div class="col-lg-9">
+                                                        <select id="industryType" formControlName="industry" class="form-control"  [ngClass]="{ 'is-invalid': submitted && f.industry.errors }">
+                                                            <option i18n="@@industry_type_select" value="">--Please Select--</option>
+                                                            <option value="Technology">Technology</option>
+                                                            <option value="Cafe">Cafe</option>
+                                                            <option value="Security">Security</option>
+                                                            <option value="Fitness">Fitness</option>
+                                                            <option value="Other">Other</option>
+                                                        </select>
+                                                        <div *ngIf="submitted && f.industry.errors" class="invalid-feedback">
+                                                            <div i18n="@@industry_type_validation" *ngIf="f.industry.errors.required">Please Select Industry. </div>
+                                                        </div>
+                                                    </div>
+                                                </div><!--end form-group-->
+                                            </div><!--end col-->
+                                        </div><!--end row-->
+                                        <div class="row">
+                                            <div class="col-md-12">
+                                                <div class="form-group row">
+                                                    <label i18n="@@no_of_employee" for="numberOfEmployee" class="col-lg-2 col-form-label">Number of Employees</label><b i18n="@@no_of_employee_required" class="required"> *</b>
+                                                    <div class="col-lg-9">
+                                                        <select id="numberOfEmployee" formControlName="employeeRange" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.employeeRange.errors }">
+                                                            <option i18n="@@no_of_employee_select" value="">--Please Select--</option>
+                                                            <option value="0-20">0-20</option>
+                                                            <option value="21-50">21-50</option>
+                                                            <option value="51-100">51-100</option>
+                                                            <option value="101-151">101-151</option> 
+                                                        </select>
+                                                        <div *ngIf="submitted && f.employeeRange.errors" class="invalid-feedback">
+                                                            <div i18n="@@no_of_employee_validation" *ngIf="f.employeeRange.errors.required">Please Select Employee Range.</div>
+                                                        </div>
+                                                    </div>
+                                                </div><!--end form-group--> 
+                                            </div><!--end col-->
+                                        </div><!--end row-->
+                                        <div class="form-group">
+                                            <div class="form-check">
+                                                <label class="required" for="invalidCheck">
+                                                    (*) Mandatory fields
+                                                </label>
+                                            </div>
+                                        </div><!--end form-group-->
+                                        <div class="row ">
+                                            <div class="col-md-7 ">
+                                                <button type="submit" class="btn btn-primary float-right" >Submit</button>
+                                            </div>
+                                        </div>
+                                        <!-- <div  class="row col-xs-12">
+                                            <p class="flash_msg"><flash-messages></flash-messages></p>
+                                        </div> -->
+                            </form>                   
+                    </div>
+               </div>
+     
+  

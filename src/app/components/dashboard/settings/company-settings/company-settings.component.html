@@ -1,0 +1,518 @@
+
+
+
+    <div class="row">
+        <div class="col-12">
+            <div class="card">
+                <div class="card-body">
+                        
+                    <form *ngFor="let c of company" class="form-horizontal form-material mb-0 form-parsley" (ngSubmit)="update()" [formGroup]="ngForm">
+                        <div *ngIf="error" id="errorID" class=" row alert alert-danger alert-dismissible col-xs-12" data-auto-dismiss role="alert" id="successMessage">
+                            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                                <span aria-hidden="true"><i class="mdi mdi-close"></i></span>
+                            </button>
+                            <strong> {{error_message}}</strong>
+                        </div>
+                        <div class="form-group row">
+                            <div class="col-md-12">
+                                <input type="hidden" class="form-control" formControlName="id" value="id"/>
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                        <div class="col-md-2"></div>
+                        <div class="col-md-8">
+                            <div class="form-group row">
+                                <div class="col-md-12">
+                                    <p i18n="@@cmpy_settings_msg">Company settings define the way MDP functions for your team. These settings apply to everyone within your company and can be managed only by Admins.</p>
+                                </div>
+                            </div>
+                            <hr>
+                        </div>
+                        <div class="col-md-2"></div>
+                    </div>
+
+                    <div class="form-group row">
+                        <div class="col-md-2"></div>
+                        <div class="col-md-8">
+                            <label class="text-primary"><b i18n="@@cmpy_settings_general">GENERAL</b></label>
+                            <hr>
+                            <div class="form-group row">
+                                <div class="col-md-8">
+                                    <label i18n="@@cmpy_settings_hrs-of-operation">Hours of operation</label>
+                                    <label i18n="@@cmpy_settings_hrs-of-operation_desc"> Set hours of operation to define the operational calendar for your company.</label>
+                                </div>
+                                <div class="col-md-1" i18n="@@cmpy_settings_from">From</div>
+                                <div class="col-md-3 mt-2">
+                                   <select class="form-control" formControlName="setting_operation_hours_from" [(ngModel)]="c.setting_operation_hours_from">
+                                       <option [ngValue]="c.setting_operation_hours_from">{{c.setting_operation_hours_from}}</option>
+                                        <option value="12:00">12:00AM</option>
+                                        <option value="01:00">01:00PM</option>
+                                        <option value="02:00">02:00PM</option>
+                                    </select>
+                                </div>
+                                <div class="col-md-8"></div>
+                                <div class="col-md-1">To</div>
+                                <div class="col-md-3">
+                                    <select class="form-control mt-2" formControlName="setting_operation_hours_to" [(ngModel)]="c.setting_operation_hours_to">
+                                        <option [ngValue]="c.setting_operation_hours_to">{{c.setting_operation_hours_to}}</option>
+                                        <option value="12:00">12:00AM</option>
+                                        <option value="01:00">01:00PM</option>
+                                        <option value="02:00">02:00PM</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <hr>
+                        </div>
+                        <div class="col-md-2"></div>
+                    </div>
+                    <div class="form-group row">
+                        <div class="col-md-2"></div>
+                        <div class="col-md-8">
+                            <div class="form-group row">
+                                <div class="col-md-8">
+                                    <label i18n="@@cmpy_settings_enable-cutoff">Enable a cutoff time for overnight hours</label>
+                                    <label i18n="@@cmpy_settings_enable-cutoff_desc"> shifts that cross 12:00 AM between days - set a cutoff time to split the hours between days on schedule and payroll.</label>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="custom-control custom-switch switch-success">
+                                        <input type="checkbox" class="custom-control-input" formControlName="setting_enable_cutoff_time" [(ngModel)]="c.setting_enable_cutoff_time" id="customSwitchSuccess_g1">
+                                        <label class="custom-control-label text-muted" for="customSwitchSuccess_g1"></label>
+                                    </div>
+                                </div>
+                            </div>
+                            <hr>
+                        </div>
+                        <div class="col-md-2"></div>
+                    </div>
+
+                    <div class="form-group row">
+                        <div class="col-md-2"></div>
+                        <div class="col-md-8">
+                            <div class="form-group row">
+                                <div class="col-md-8">
+                                    <label i18n="@@cmpy_settings_first-day-week">First day of the week</label>
+                                    <label i18n="@@cmpy_settings_first-day-week_desc"> Select the first day of your work week</label>
+                                </div>
+                                <div class="col-md-4">
+                                    <select class="form-control" formControlName="setting_weekday_first" [(ngModel)]="c.setting_weekday_first">
+                                        <option [ngValue]="c.setting_weekday_first">{{c.setting_weekday_first}}</option>
+                                        <option value="MONDAY">Monday</option>
+                                        <option value="TUESDAY">Tuesday</option>
+                                        <option value="WEDNESDAY">Wednesday</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <hr>
+                        </div>
+                        <div class="col-md-2"></div>
+                    </div>
+
+                    <div class="form-group row">
+                        <div class="col-md-2"></div>
+                        <div class="col-md-8">
+                            <div class="form-group row">
+                                <div class="col-md-8">
+                                    <p i18n="@@cmpy_settings_break-choose-whether">Breaks Choose whether breaks are enabled for shifts</p>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="custom-control custom-switch switch-success">
+                                        <input type="checkbox" class="custom-control-input" formControlName="setting_breaks" [(ngModel)]="c.setting_breaks" id="customSwitchSuccess_g2">
+                                        <label class="custom-control-label text-muted" for="customSwitchSuccess_g2"></label>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                        <div class="col-md-2"></div>
+                    </div>
+
+                    <div class="form-group row">
+                        <div class="col-md-2"></div>
+                        <div class="col-md-8">
+                            <div class="form-group row">
+                                <div class="col-md-8">
+                                    <p i18n="@@cmpy_settings_paid-unpaid-break">Paid or unpaid breaks</p>
+                                </div>
+                                <div class="col-md-4">
+                                    <select class="form-control" formControlName="setting_paid_unpaid_breaks" [(ngModel)]="c.setting_paid_unpaid_breaks">
+                                        <option [ngValue]="c.setting_paid_unpaid_breaks">{{c.setting_paid_unpaid_breaks}}</option>
+                                        <option value="PAID">Paid</option>
+                                        <option value="UNPAID">Unpaid</option>
+                                    </select>
+                                </div>
+                            </div>
+
+                        </div>
+                        <div class="col-md-2"></div>
+                    </div>
+
+                    <div class="form-group row">
+                        <div class="col-md-2"></div>
+                        <div class="col-md-8">
+                            <div class="form-group row">
+                                <div class="col-md-8">
+                                    <label i18n="@@cmpy_settings_default-break-length">Default break length</label>
+                                    <label i18n="@@cmpy_settings_default-break-length_desc"> Set the default length of the breaks here, so you do not have to adjust it when scheduling</label>
+                                </div>
+                                <div class="col-md-4">
+                                    <select class="form-control" formControlName="setting_default_break_length_min" [(ngModel)]="c.setting_default_break_length_min">
+                                        <option [ngValue]="c.setting_default_break_length_min">{{c.setting_default_break_length_min}}</option>
+                                        <option value="NO BREAK">No Break</option>
+                                        <option value="5">5 Minute</option>
+                                        <option value="10">10 Minute</option>
+                                        <option value="15">15 Minute</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <hr>
+                        </div>
+                        <div class="col-md-2"></div>
+                    </div>
+
+                    <div class="form-group row">
+                        <div class="col-md-2"></div>
+                        <div class="col-md-8">
+                            <label class="text-primary"><b i18n="@@cmpy_settings_restrictions">RESTRICTIONS</b></label>
+                                <hr>
+                            <div class="form-group row">
+                                <div class="col-md-8">
+                                    <p i18n="@@cmpy_settings_restrictions_desc">Contact details Allow employees to see each other’s phone numbers and emails</p>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="custom-control custom-switch switch-success">
+                                        <input type="checkbox" class="custom-control-input" formControlName="setting_restrict_contact_detail" [(ngModel)]="c.setting_restrict_contact_detail" id="customSwitchSuccess15">
+                                        <label class="custom-control-label text-muted" for="customSwitchSuccess15"></label>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-2"></div>
+                    </div>
+
+                    <div class="form-group row">
+                        <div class="col-md-2"></div>
+                        <div class="col-md-8">
+                            <div class="form-group row">
+                                <div class="col-md-8">
+                                    <p i18n="@@cmpy_settings_restrictions_schedule-hrs-of-coworkers"> Scheduled hours of coworkers Allow employees to see total hours for coworkers</p>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="custom-control custom-switch switch-success">
+                                        <input type="checkbox" class="custom-control-input" formControlName="setting_restrict_coworkers_schedule_hour" [(ngModel)]="c.setting_restrict_coworkers_schedule_hour" id="customSwitchSuccess16">
+                                        <label class="custom-control-label text-muted" for="customSwitchSuccess16"></label>
+                                    </div>
+                                </div>
+                            </div>
+                            <hr>
+                        </div>
+                        <div class="col-md-2"></div>
+                    </div>
+
+                    <div class="form-group row">
+                        <div class="col-md-2"></div>
+                        <div class="col-md-8">
+                            <div class="form-group row">
+                                <div class="col-md-8">
+                                    <p i18n="@@cmpy_settings_restrictions_visibility-of-schedules">Visibility of schedules for managers Allow managers to view other locations' schedules</p>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="custom-control custom-switch switch-success">
+                                        <input type="checkbox" class="custom-control-input" formControlName="setting_restrict_schedule_visible_manager" [(ngModel)]="c.setting_restrict_schedule_visible_manager" id="customSwitchSuccess18">
+                                        <label class="custom-control-label text-muted" for="customSwitchSuccess18"></label>
+                                    </div>
+                                </div>
+                            </div>
+                            <hr>
+                        </div>
+                        <div class="col-md-2"></div>
+                    </div>
+
+                    <div class="form-group row">
+                        <div class="col-md-2"></div>
+                        <div class="col-md-8">
+                            <div class="form-group row">
+                                <div class="col-md-8">
+                                    <p i18n="@@cmpy_settings_restrictions_visibility-of-schedules-for-emp">Visibility of schedules for employees Allow employees to view other employees' schedules</p>
+                                </div>
+                                <!-- <div class="col-md-4">
+                                    <div class="custom-control custom-switch switch-success">
+                                        <input type="checkbox" class="custom-control-input" formControlName="" id="customSwitchSuccess19">
+                                        <label class="custom-control-label text-muted" for="customSwitchSuccess19"></label>
+                                    </div>
+                                </div> -->
+                            </div>
+                        </div>
+                        <div class="col-md-2"></div>
+                    </div>
+
+                    <div class="form-group row">
+                        <div class="col-md-2"></div>
+                        <div class="col-md-8">
+                            <div class="form-group row">
+                                <div class="col-md-12">
+                                    <select class="form-control" formControlName="setting_restrict_schedule_visible_manager_view" [(ngModel)]="c.setting_restrict_schedule_visible_manager_view">
+                                        <option [ngValue]="c.setting_restrict_schedule_visible_manager_view">{{c.setting_restrict_schedule_visible_manager_view}}</option>
+                                        <option value="Employees can view full sechedule in all locations">Employees can view full sechedule in all locations</option>
+                                        <option value="Employee view all position">Employee view all position</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <hr>
+                        </div>
+                        <div class="col-md-2"></div>
+                    </div>
+
+                    <div class="form-group row">
+                        <div class="col-md-2"></div>
+                        <div class="col-md-8">
+                            <div class="form-group row">
+                                <div class="col-md-8">
+                                    <p i18n="@@cmpy_settings_restrictions_visibility-of-coworkers">Visibility of coworkers across locations Allow employees to view and communicate with coworkers assigned to different locations</p>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="custom-control custom-switch switch-success">
+                                        <input type="checkbox" class="custom-control-input" formControlName="setting_visible_location_coworkers" [(ngModel)]="c.setting_visible_location_coworkers" id="customSwitchSuccess20">
+                                        <label class="custom-control-label text-muted" for="customSwitchSuccess20"></label>
+                                    </div>
+                                </div>
+                            </div>
+                            <hr>
+                        </div>
+                        <div class="col-md-2"></div>
+                    </div>
+
+                    <div class="form-group row">
+                        <div class="col-md-2"></div>
+                        <div class="col-md-8">
+                            <label class="text-primary"><b i18n="@@cmpy_settings_message">MESSAGES</b></label>
+                                <hr>
+                            <div class="form-group row">
+                                <div class="col-md-8">
+                                    <p i18n="@@cmpy_settings_message_desc">Enable messages feature Send messages to groups or individuals. Easily reach employees within groups, locations or specific positions. Share anything you like, files, photos, videos or links.</p>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="custom-control custom-switch switch-success">
+                                        <input type="checkbox" class="custom-control-input" formControlName="setting_message" [(ngModel)]="c.setting_message" id="customSwitchSuccess21">
+                                        <label class="custom-control-label text-muted" for="customSwitchSuccess21"></label>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-2"></div>
+                    </div>
+
+                    <div class="form-group row">
+                        <div class="col-md-2"></div>
+                        <div class="col-md-8">
+                            <div class="form-group row">
+                                <div class="col-md-8">
+                                    <p i18n="@@cmpy_settings_message_allow-emp">Allow employees to start conversations Employees will be able to create new conversations</p>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="custom-control custom-switch switch-success">
+                                        <input type="checkbox" class="custom-control-input" formControlName="setting_allow_staff_conversation" [(ngModel)]="c.setting_allow_staff_conversation" id="customSwitchSuccess22">
+                                        <label class="custom-control-label text-muted" for="customSwitchSuccess22"></label>
+                                    </div>
+                                </div>
+                            </div>
+                            <hr>
+                        </div>
+                        <div class="col-md-2"></div>
+                    </div>
+
+                    <div class="form-group row">
+                        <div class="col-md-2"></div>
+                        <div class="col-md-8">
+                            <label class="text-primary"><b i18n="@@cmpy_settings_task">TASKS</b></label>
+                                <hr>
+                            <div class="form-group row">
+                                <div class="col-md-8">
+                                    <p i18n="@@cmpy_settings_task_desc">Enable tasks feature Assign tasks and follow their progress. Create to-do lists for yourself or your employees. Set due dates and get reminded as the dates approach.</p>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="custom-control custom-switch switch-success">
+                                        <input type="checkbox" class="custom-control-input" formControlName="setting_task" [(ngModel)]="c.setting_task" id="customSwitchSuccess23">
+                                        <label class="custom-control-label text-muted" for="customSwitchSuccess23"></label>
+                                    </div>
+                                </div>
+                            </div>
+                            <hr>
+                        </div>
+                        <div class="col-md-2"></div>
+                    </div>
+
+                    <div class="form-group row">
+                        <div class="col-md-2"></div>
+                        <div class="col-md-8">
+                            <label class="text-primary"><b i18n="@@cmpy_settings_newsfeed">NEWSFEED</b></label>
+                                <hr>
+                            <div class="form-group row">
+                                <div class="col-md-8">
+                                    <p i18n="@@cmpy_settings_newsfeed_desc">Enable newsfeed feature Set up pages on your newsfeed for any purpose you like. Share updates, files, pictures and videos. Create your own social space – interact... have fun.</p>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="custom-control custom-switch switch-success">
+                                        <input type="checkbox" class="custom-control-input" formControlName="setting_newsfeed" [(ngModel)]="c.setting_newsfeed" id="customSwitchSuccess24">
+                                        <label class="custom-control-label text-muted" for="customSwitchSuccess24"></label>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-2"></div>
+                    </div>
+
+                    <div class="form-group row">
+                        <div class="col-md-2"></div>
+                        <div class="col-md-8">
+                            <div class="form-group row">
+                                <div class="col-md-8">
+                                    <p i18n="@@cmpy_settings_newsfeed_allow-emp">Allow employees to create pages Employees will be able to create pages</p>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="custom-control custom-switch switch-success">
+                                        <input type="checkbox" class="custom-control-input" formControlName="setting_newsfeed_staff_allow_create" [(ngModel)]="c.setting_newsfeed_staff_allow_create" id="customSwitchSuccess25">
+                                        <label class="custom-control-label text-muted" for="customSwitchSuccess25"></label>
+                                    </div>
+                                </div>
+                            </div>
+                            <hr>
+                        </div>
+                        <div class="col-md-2"></div>
+                    </div>
+
+                    <div class="form-group row">
+                        <div class="col-md-2"></div>
+                        <div class="col-md-8">
+                            <label i18n="@@cmpy_settings_newsfeed_available-shift">Available shifts and shift exchanges</label>
+                                <hr>
+                            <div class="form-group row">
+                                <div class="col-md-8">
+                                    <p i18n="@@cmpy_settings_newsfeed_available-shift_desc">Allow employees to give away their shifts When disabled, employees are not able to offer their shifts or make them available</p>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="custom-control custom-switch switch-success">
+                                        <input type="checkbox" class="custom-control-input" formControlName="setting_staff_allow_shift_give_away" [(ngModel)]="c.setting_staff_allow_shift_give_away" id="customSwitchSuccess26">
+                                        <label class="custom-control-label text-muted" for="customSwitchSuccess26"></label>
+                                    </div>
+                                </div>
+                            </div>
+                            <hr>
+                        </div>
+                        <div class="col-md-2"></div>
+                    </div>
+
+                    <div class="form-group row">
+                        <div class="col-md-2"></div>
+                        <div class="col-md-8">
+                            <div class="form-group row">
+                                <div class="col-md-8">
+                                    <p i18n="@@cmpy_settings_newsfeed_allow-emp-swap-shift">Allow employees to swap shifts</p>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="custom-control custom-switch switch-success">
+                                        <input type="checkbox" class="custom-control-input" formControlName="setting_staff_swap_shift" [(ngModel)]="c.setting_staff_swap_shift" id="customSwitchSuccess27">
+                                        <label class="custom-control-label text-muted" for="customSwitchSuccess27"></label>
+                                    </div>
+                                </div>
+                            </div>
+                            <hr>
+                        </div>
+                        <div class="col-md-2"></div>
+                    </div>
+
+                    <div class="form-group row">
+                        <div class="col-md-2"></div>
+                        <div class="col-md-8">
+                            <div class="form-group row">
+                                <div class="col-md-8">
+                                    <p i18n="@@cmpy_settings_newsfeed_allow-emp-swap-shift_desc">Restrict offers and swaps by location and position When enabled, employees can only offer or swap a shift with an employee if the recipient is also assigned to the location and position of the shift</p>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="custom-control custom-switch switch-success">
+                                        <input type="checkbox" class="custom-control-input" formControlName="setting_staff_swap_shift_restrict_location_position" [(ngModel)]="c.setting_staff_swap_shift_restrict_location_position" id="customSwitchSuccess28">
+                                        <label class="custom-control-label text-muted" for="customSwitchSuccess28"></label>
+                                    </div>
+                                </div>
+                            </div>
+                            <hr>
+                        </div>
+                        <div class="col-md-2"></div>
+                    </div>
+
+                    <div class="form-group row">
+                        <div class="col-md-2"></div>
+                        <div class="col-md-8">
+                            <div class="form-group row">
+                                <div class="col-md-8">
+                                    <p i18n="@@cmpy_settings_newsfeed_automatically-approve">Automatically approve applicants When disabled, shift applications and offers require manager’s approval</p>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="custom-control custom-switch switch-success">
+                                        <input type="checkbox" class="custom-control-input" formControlName="setting_staff_swap_auto_approve" [(ngModel)]="c.setting_staff_swap_auto_approve" id="customSwitchSuccess29">
+                                        <label class="custom-control-label text-muted" for="customSwitchSuccess29"></label>
+                                    </div>
+                                </div>
+                            </div>
+                            <hr>
+                        </div>
+                        <div class="col-md-2"></div>
+                    </div>
+
+                    <div class="form-group row">
+                        <div class="col-md-2"></div>
+                        <div class="col-md-8">
+                            <label class="text-primary"><b i18n="@@cmpy_settings_unavailability">UNAVAILABILITY</b></label>
+                                <hr>
+                            <div class="form-group row">
+                                <div class="col-md-8">
+                                    <p i18n="@@cmpy_settings_unavailability_desc">Unavailability Allow employees to set and edit their unavailability</p>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="custom-control custom-switch switch-success">
+                                        <input type="checkbox" class="custom-control-input" formControlName="setting_staff_unavaliability" [(ngModel)]="c.setting_staff_unavaliability" id="customSwitchSuccess30">
+                                        <label class="custom-control-label text-muted" for="customSwitchSuccess30"></label>
+                                    </div>
+                                </div>
+                            </div>
+                            <hr>
+                        </div>
+                        <div class="col-md-2"></div>
+                    </div>
+
+                    <div class="form-group row">
+                        <div class="col-md-2"></div>
+                        <div class="col-md-8">
+                            <div class="form-group row">
+                                <div class="col-md-8">
+                                    <p i18n="@@cmpy_settings_unavailability_approval">Approval Require a manager's approval for unavailability changes</p>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="custom-control custom-switch switch-success">
+                                        <input type="checkbox" class="custom-control-input" formControlName="setting_staff_unavaliability_auto_approve" [(ngModel)]="c.setting_staff_unavaliability_auto_approve" id="customSwitchSuccess31">
+                                        <label class="custom-control-label text-muted" for="customSwitchSuccess31"></label>
+                                    </div>
+                                </div>
+                            </div>
+                            <hr>
+                        </div>
+                        <div class="col-md-2"></div>
+                    </div>
+                    <div class="form-group mb-0">
+                        <button class="btn btn-danger btn-sm text-light px-4 mt-3 float-right mb-0 ml-2" type="reset" type="reset">Reset</button>
+                        <button  class="btn btn-primary btn-sm text-light px-4 mt-3 float-right mb-0" type="submit">Save</button>
+                        <!-- <div *ngIf="error" class="alert alert-danger mt-3 mb-0">{{error_message}}</div> -->
+                    </div><!--end form-group-->
+                    <!-- <div  class="row col-xs-12">
+                        <div *ngIf="showMsg" class=" row alert alert-success alert-dismissible col-xs-12" data-auto-dismiss role="alert" id="successMessage">
+                            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                                <span aria-hidden="true"><i class="mdi mdi-close"></i></span>
+                            </button>
+                            <strong> Record updated successfully</strong>
+                        </div>
+                    </div> -->
+                </form>
+                </div><!--end card-body-->
+            </div><!--end card-->
+        </div> <!--end col-->
+    </div><!--end row-->
+

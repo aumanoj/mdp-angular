@@ -1,0 +1,97 @@
+<!-- page content-->
+<div class="page-content">
+    <div class="container-fluid">
+<!-- Page-Title -->
+<div class="row">
+<div class="col-sm-12">
+    <div class="page-title-box">
+        <div class="float-right">
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a [routerLink]="" >MDP</a></li>
+                <li class="breadcrumb-item"><a [routerLink]="" (click)="groups()">Groups</a></li>
+                <li class="breadcrumb-item ">Add Group</li>
+            </ol>
+        </div>
+        <h4 class="page-title">Add Group</h4>
+    </div><!--end page-title-box-->
+</div><!--end col-->
+</div>
+<!-- end page title end breadcrumb -->
+<div class="row">
+<div class="col-lg-12 mx-auto">
+    <div class="card dr-pro-pic">
+        <div class="card-body form-card-body">
+
+            <div *ngIf="error" class=" row alert alert-danger alert-dismissible col-xs-12" data-auto-dismiss role="alert" id="successMessage">
+                <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                    <span aria-hidden="true"><i class="mdi mdi-close"></i></span>
+                </button>
+                <strong> {{error_message}}</strong>
+            </div>
+            
+            <form class="form-horizontal form-material mb-0 form-parsley" (ngSubmit)="save()" [formGroup]="ngForm_addGroup" novalidate>
+
+                <div class="col-md-12">
+                    <!-- <label>Company ID</label> -->
+                    <input type="hidden" placeholder="Enter Company id" class="form-control" formControlName="companyID" value="companyID" [ngClass]="{ 'is-invalid': submitted && f.companyID.errors }"  />
+                    <!-- <div *ngIf="submitted && f.companyID.errors" class="invalid-feedback"></div>
+                    <div *ngIf="f.companyID.errors.required">Company Id is required</div> -->
+                </div>
+                    <div class="form-group row">
+                        <div class="col-md-12">
+                            <label i18n="@@add_group_name">GROUP NAME</label><b i18n="@@add_group_name_required" class="required"> *</b>
+                            <input type="text" i18n-placeholder="@@add_group-name_Pholder" placeholder="e.g. IT Department, Party Committee" class="form-control"  formControlName="name" id="position" [ngClass]="{ 'is-invalid': submitted && f.name.errors }"/>
+                            <div *ngIf="submitted && f.name.errors" class="invalid-feedback">
+                                <div i18n="@@add_group_name_validation" *ngIf="f.name.errors.required">Name is required</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="form-group row">
+                        <div class="form-group col-md-12">
+                            <label i18n="@@add_group_employee">EMPLOYEES</label>
+                            <ng-select [multiple]="true" formControlName="userid" i18n-placeholder="@@add_group-emp_Pholder" placeholder="Add Employee" >
+                                <ng-option *ngFor="let user of users" [value]="user.id" [disabled]="user.disabled">{{user.fname}} {{user.lname}}</ng-option>
+                            </ng-select>
+                            <!-- <select class="form-control" formControlName="userid" [ngClass]="{ 'is-invalid': submitted && f.userid.errors }" id="userid" data-live-search="true">
+                                <option *ngFor="let user of users" [value]="user.id">{{user.fname}}&nbsp;{{user.lname}}</option>
+                            </select> -->
+                        </div>
+                    </div>
+                    <hr>
+
+                    <div class="form-group row">
+                        <div class="col-md-9">
+                            <label i18n="@@add_group_schedule">SCHEDULE</label>
+                            <p i18n="@@add_group_schedule_desc">If you do not wish to see this group it can be hidden from your schedule.</p>
+                        </div>
+                        <div class="col-md-3">
+                            <div class="custom-control custom-switch switch-success">
+                                <input type="checkbox" class="custom-control-input" id="customSwitchSuccess">
+                                <label class="custom-control-label text-muted" for="customSwitchSuccess"></label>
+                            </div>
+                        </div>
+                    </div>
+                    <hr>
+                    <div class="form-group">
+                        <div class="form-check">
+                            <label class="required" for="invalidCheck">
+                                (*) Mandatory fields
+                            </label>
+                        </div>
+                    </div><!--end form-group-->
+                    <div class="form-group mb-0">
+                        <button class="btn btn-danger btn-sm text-light px-4 mt-3 float-right mb-0 ml-2" type="reset">Reset</button>
+                        <button class="btn btn-primary btn-sm text-light px-4 mt-3 float-right mb-0" type="submit">Save</button>
+                    </div><!--end form-group-->
+
+                    <!-- <div  class="row col-xs-12">
+                        <p><flash-messages></flash-messages></p>
+                    </div> -->
+                </form>
+            </div>
+        </div>
+    </div>
+</div> <!--end col-->
+</div><!--end row-->
+</div><!-- end-page content-->

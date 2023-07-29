@@ -1,0 +1,267 @@
+<div class="page-content">
+    <div class="container-fluid">
+            <!-- Page-Title -->
+            <div class="row">
+                <div class="col-sm-12">
+                    <div class="page-title-box">
+                        <div class="float-right">
+                            <ol class="breadcrumb">
+                                <li class="breadcrumb-item"><a [routerLink]="">MDP</a></li>
+                                <li class="breadcrumb-item"><a [routerLink]="" (click)="users()">Employees</a></li>
+                                <li class="breadcrumb-item ">{{ 'ADD-MEMBER.title' | translate }}</li>
+                            </ol>
+                        </div>
+                        <h4 class="page-title">{{ 'ADD-MEMBER.title' | translate }}</h4>
+                    </div><!--end page-title-box-->
+                </div><!--end col-->
+            </div>
+            <!-- end page title end breadcrumb -->
+            <div class="row">
+                <div class="col-lg-12 mx-auto">
+                    <div class="card dr-pro-pic">
+                        <div class="card-body form-card-body">
+                           
+                                <div *ngIf="error" class=" row alert alert-danger alert-dismissible col-xs-12" data-auto-dismiss role="alert" id="successMessage">
+                                    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                                        <span aria-hidden="true"><i class="mdi mdi-close"></i></span>
+                                    </button>
+                                    <strong> {{error_message}}</strong>
+                                </div>
+                            
+                            <form class="form-horizontal form-material mb-0 form-parsley" (ngSubmit)="save()" [formGroup]="ngForm_addUser" novalidate>
+                                
+                                <!-- <div *ngIf="showMsg" class="alert alert-success alert-dismissible col-xs-12"  role="alert" data-auto-dismiss="2000">
+                                    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                                        <span aria-hidden="true"><i class="mdi mdi-close"></i></span>
+                                    </button>
+                                    <strong> Record saved successfully!</strong>
+                                </div> -->
+
+                                <div class="form-group row">
+                                    <div class="col-md-12">
+                                        <!-- <label>Company ID</label> -->
+                                        <input type="hidden" placeholder="Enter Company id" class="form-control" formControlName="companyID" value="companyID"  [ngClass]="{ 'is-invalid': submitted && f.companyID.errors }"  />
+                                        <!-- <div *ngIf="submitted && f.companyID.errors" class="invalid-feedback"></div>
+                                        <div *ngIf="f.companyID.errors.required">Company Id is required</div> -->
+                                    </div>
+                                </div>
+
+                                    <div class="form-group row">
+                                        <div class="col-sm-12">
+                                            <label i18n="@@add_user_fname">{{ 'ADD-MEMBER.name' | translate }}</label><b i18n="@@add_user_fname_required" class="required"> *</b>
+                                        </div>
+                                        <div class="col-md-6 mb-3">
+                                            <input type="text"  class="form-control" formControlName="fname"  i18n-placeholder="@@add_user-fname_Pholder" placeholder="{{'ADD-MEMBER.name-p_holder' | translate}}" [ngClass]="{ 'is-invalid': submitted && f.fname.errors }" />
+                                            <div *ngIf="submitted && f.fname.errors" class="invalid-feedback">
+                                                <div i18n="@@add_user-fname_validation1" *ngIf="f.fname.errors.required">{{ 'ADD-MEMBER.name-validation1' | translate }}</div>
+                                                <div i18n="@@add_user-fname_validation2" *ngIf="f.fname.errors.pattern">{{ 'ADD-MEMBER.name-validation2' | translate }}</div>
+                                                <div i18n="@@add_user-fname_validation3" *ngIf="f.fname.errors.maxlength">{{ 'ADD-MEMBER.name-validation3' | translate }}</div>
+                                            </div>
+                                            
+                                        </div>
+                                        <div class="col-md-6 mb-3">
+                                            <input type="text" class="form-control" formControlName="lname"  id="lname" i18n-placeholder="@@add_user-lname_Pholder" placeholder="{{'ADD-MEMBER.lname-p_holder' | translate}}"  [ngClass]="{ 'is-invalid': submitted && f.lname.errors }" />
+                                            <div *ngIf="submitted && f.lname.errors" class="invalid-feedback">
+                                                <div i18n="@@add_user-lname_validation1" *ngIf="f.lname.errors.required">{{ 'ADD-MEMBER.lname-validation1' | translate }}</div>
+                                                <div i18n="@@add_user-lname_validation2" *ngIf="f.lname.errors.pattern">{{ 'ADD-MEMBER.lname-validation2' | translate }}</div>
+                                                <div i18n="@@add_user-lname_validation3" *ngIf="f.lname.errors.maxlength">{{ 'ADD-MEMBER.lname-validation3' | translate }} </div>
+                                            </div>
+                                        </div>
+                                        
+                                    </div>
+
+                                    
+                                    <div class="form-group row">
+                                        <div class="col-md-12">
+                                            <label i18n="@@add_user_email">{{ 'ADD-MEMBER.email' | translate }}</label><b i18n="@@add_user_email_required" class="required"> *</b>
+                                            <input type="email"  class="form-control" formControlName="email" id="email" i18n-placeholder="@@add_user-email_Pholder" placeholder="abc@example.com" [ngClass]="{ 'is-invalid': submitted && f.email.errors }"  />
+                                            <div *ngIf="submitted && f.email.errors" class="invalid-feedback">
+                                                <div i18n="@@add_user_email_validation" *ngIf="f.email.errors.required">{{ 'ADD-MEMBER.email-validation' | translate }}</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                      
+                                    <div class="form-group row">
+                                        <div class="col-sm-12"><label i18n="@@add_user_phone">{{ 'ADD-MEMBER.phone' | translate }}</label> </div>
+                                        <div class="col-md-6 mb-3">
+                                            <select class="form-control" formControlName="countryCode" [ngClass]="{ 'is-invalid': submitted && f.countryCode.errors }" id="userid" data-live-search="true">
+                                                <option i18n="@@add_user-phoneCode"  value="null"disabled>{{ 'ADD-MEMBER.phone-code' | translate }}</option>
+                                                <option *ngFor="let countryCode of countryCodes" [value]="countryCode.phonecode">{{countryCode.phonecode}}&nbsp;&nbsp;{{countryCode.name}}</option>
+                                            </select>
+                                            <!-- <div *ngIf="submitted && f.countryCode.errors" class="invalid-feedback">
+                                                <div *ngIf="f.countryCode.errors.required">Country code is required</div>
+                                            </div> -->
+                                        </div>
+                                        <div class="col-md-6 mb-3">
+                                            <input type="text" i18n-placeholder="@@add_user-phone_Pholder" placeholder="{{ 'ADD-MEMBER.phone-p_holder' | translate }}"  class="form-control" formControlName="telephone" data-parsley-type="" [ngClass]="{ 'is-invalid': submitted && f.telephone.errors }" />
+                                            <div *ngIf="submitted && f.telephone.errors" class="invalid-feedback">
+                                                <!-- <div *ngIf="f.telephone.errors.required">Phone no is required</div> -->
+                                                <div i18n="@@user_phone_validation1" *ngIf="f.telephone.errors.minlength">Phone number must be at least 10 digit long</div>
+                                                <div i18n="@@user_phone_validation2"*ngIf="f.telephone.errors.pattern">Only number allowed</div>
+                                            </div>
+                                        </div>
+                                    </div>
+ 
+                                    <div class="form-group row">
+                                        <div class="col-md-12">
+                                            <label i18n="@@add_user_timeZone">TIMEZONE</label>
+                                            <select class="form-control" formControlName="timeZone" [ngClass]="{ 'is-invalid': submitted && f.timeZone.errors }" id="userid" data-live-search="true">
+                                                <option i18n="@@add_user-timeZone_select" value="null"disabled>Select Time Zone</option>
+                                                <option *ngFor="let timeZone of timeZones" [value]="timeZone.id_name">{{timeZone.name}}</option>
+                                            </select>
+                                            <!-- <div *ngIf="submitted && f.timeZone.errors" class="invalid-feedback">
+                                                <div *ngIf="f.timeZone.errors.required">Time Zone is required</div>
+                                            </div> -->
+                                        </div>
+                                    </div>
+                                
+                                    <!-- <div class="form-group row">
+                                        <div class="col-sm-12"><label>EMPLOYEE Role</label></div>
+                                        <div class="col-md-6">
+                                            <p>Employees can communicate with coworkers and manage their shift schedules and tasks.</p>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <select class="form-control" formControlName="employee">
+                                                <option value="admin">Admin</option>
+                                                <option value="manager">Manager</option>
+                                                <option value="employee">Employee</option>
+                                            </select>
+                                        </div>
+                                    </div> -->
+                                    <hr>
+
+                                    <div class="form-group row">
+                                        <div class="col-md-6 ">
+                                            <i class=" mr-1"> </i><label i18n="@@add_user_system_role">SYSTEM ROLE</label>
+                                            <p i18n="@@add_user_system_role_desc">Admins have full access to manage the organization’s settings, employees and locations; they can create shift schedules and manage shift exchange requests and tasks in all locations.</p>
+                                        </div>
+                                        <div class="col-md-6 ">
+                                            <select class="form-control">
+                                                <option i18n="@@add_user_system_role_select" value="null">Select Role</option>
+                                                <option value="admin">Admin</option>
+                                                <option value="manager">Manager</option>
+                                                <option value="employee">Employee</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <hr>
+
+                                    <div class="form-group row">
+                                        <div class="col-md-6">
+                                           <i class="dripicons-lock-open mr-1"> </i><label i18n="@@add_user_password"> PASSWORD</label><b i18n="@@add_user_password_required" class="required"> *</b>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <input type="password" i18n-placeholder="@@add_user_password_Pholder" placeholder="Enter password" class="form-control" formControlName="password" id="password" autocomplete="on" [ngClass]="{ 'is-invalid': submitted && f.password.errors }"/>
+                                            <div *ngIf="submitted && f.password.errors" class="invalid-feedback">
+                                                <div i18n="@@add_user_password_validation1" *ngIf="f.password.errors.required">Password is required</div>
+                                                <div i18n="@@add_user_password_validation2" *ngIf="f.password.errors.minlength">Password must be at least 6 characters long</div>
+                                                <div i18n="@@add_user_password_validation3" *ngIf="f.password.errors.maxlength">Password can be max 15 characters long</div>
+                                            </div>
+                                        </div>
+                                        
+                                    </div>
+                                    
+                                    <div class="form-group row">
+                                        <div class="col-md-6">
+                                            <i class="dripicons-user mr-1"> </i><label i18n="@@add_user_empID"> EMPLOYEE ID</label>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <input type="text" i18n-placeholder="@@add_user_empID_Pholder" placeholder="Fill in employee ID" class="form-control" formControlName="empID" id="employee_id" [ngClass]="{ 'is-invalid': submitted && f.empID.errors }" />
+                                            <!-- <div *ngIf="submitted && f.empID.errors" class="invalid-feedback">
+                                                <div *ngIf="f.empID.errors.required">Employee ID is required</div>
+                                            </div> -->
+                                        </div>
+                                        
+                                    </div>
+                                    <hr>
+        
+                                    <div class="form-group row">
+                                        <div class="col-md-6">
+                                           <i class="dripicons-user-group mr-1"> </i><label i18n="@@add_user_team"> TEAMS</label>
+                                        </div>
+                                        <div class="col-md-6 ng-input">
+                                            <ng-select [multiple]="true" formControlName="team" class="form-control field_overlap" i18n-placeholder="@@add_user_team_Pholder" placeholder="Add Team" [ngClass]="{ 'is-invalid': submitted && f.team.errors }"  >
+                                                <ng-option *ngFor="let location of locations" [value]="location.name" [disabled]="location.disabled">{{location.name}} </ng-option>
+                                            </ng-select> 
+                                            <!-- <div *ngIf="submitted && f.team.errors" class="invalid-feedback">
+                                                <div *ngIf="f.team.errors.required">Team is required</div>
+                                            </div> -->
+                                        </div>
+                                    </div>
+                                    <div class="form-group row">
+                                        <div class="col-md-6">
+                                           <i class="dripicons-crosshair mr-1"> </i> <label i18n="@@add_user_position"> POSITIONS</label>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <ng-select [multiple]="true" class="form-control field_overlap" formControlName="position" i18n-placeholder="@@add_user_position_Pholder" placeholder="Add Position" [ngClass]="{ 'is-invalid': submitted && f.position.errors }" >
+                                                <ng-option *ngFor="let position of positions" [value]="position.name" [disabled]="position.disabled">{{position.name}} </ng-option>
+                                            </ng-select>  
+                                            <!-- <div *ngIf="submitted && f.position.errors" class="invalid-feedback">
+                                                <div *ngIf="f.position.errors.required">Position is required</div>
+                                            </div> -->
+                                        </div>                                     
+                                    </div>
+                                    
+                                    
+                                    <div class="form-group row">
+                                        <div class="col-md-6">
+                                           <i class="dripicons-user-group mr-1"> </i><label i18n="@@add_user_group"> GROUPS</label>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <ng-select [multiple]="true" class="form-control field_overlap" formControlName="group" i18n-placeholder="@@add_user_group_Pholder" placeholder="Add Group" [ngClass]="{ 'is-invalid': submitted && f.group.errors }"  >
+                                                <ng-option *ngFor="let group of groups" [value]="group.name" [disabled]="group.disabled">{{group.name}} </ng-option>
+                                            </ng-select>
+                                            <!-- <div *ngIf="submitted && f.group.errors" class="invalid-feedback">
+                                                <div *ngIf="f.group.errors.required">Group is required</div>
+                                            </div> -->
+                                        </div>
+                                    </div>
+
+                                    <!-- <div class="form-group row">
+                                        <div class="col-md-6">
+                                           <i class="dripicons-user-group"> </i><label> Confirm Password</label>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <input type="password" placeholder="Enter password" class="form-control" formControlName="password" id="password" />
+                                        </div>
+                                    </div> -->
+                                    <hr>
+                                    <div class="form-group col-md-12">
+                                        <div class="row">
+                                        <div class="col-sm-6">
+                                            <label i18n="@@add_user_invite_employee">INIVITE EMPLOYEE TO THIS ACCOUNT</label>
+                                            <p i18n="@@add_user_invite_employee_desc">Invite is sent via email by default.If no email is provided, invite is sent via sms</p>
+                                        </div>
+                                        <div class="col-md-3 ">
+                                            <div class="custom-control custom-switch switch-success">
+                                                <input type="checkbox" class="custom-control-input" id="customSwitchSuccess">
+                                                <label class="custom-control-label text-muted" for="customSwitchSuccess"></label>
+                                            </div>
+                                        </div>
+                                        </div>
+                                    </div>
+                                    
+                                    <hr>
+                                    <div class="form-group">
+                                        <div class="form-check">
+                                            <label class="required" for="invalidCheck">
+                                                (*) Mandatory fields
+                                            </label>
+                                        </div>
+                                    </div><!--end form-group-->
+                                    <div class="form-group mb-0">
+                                        <button class="btn btn-danger btn-sm text-light px-4 mt-3 float-right mb-0 ml-2" type="reset" type="reset">Reset</button>
+                                        <button  class="btn btn-primary btn-sm text-light px-4 mt-3 float-right mb-0" type="submit">Save</button>
+                                        
+                                    </div><!--end form-group-->
+
+                                    <!-- <div  class="row col-xs-12">
+                                        <p class="flash_msg"><flash-messages></flash-messages></p>
+                                    </div> -->
+                                    
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div> <!--end col-->
+            </div><!--end row-->

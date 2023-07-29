@@ -1,0 +1,18 @@
+/* You can add global styles to this file, and also import other style files */
+@import './assets/plugins/datatables/dataTables.bootstrap4.min.css';
+@import './assets/plugins/datatables/buttons.bootstrap4.min.css';
+@import './assets/plugins/datatables/responsive.bootstrap4.min.css';
+@import './assets/plugins/jvectormap/jquery-jvectormap-2.0.2.css';
+@import './assets/plugins/jquery-steps/jquery.steps.css';
+@import './assets/plugins/dropify/css/dropify.min.css';
+@import './assets/css/bootstrap.min.css';
+@import './assets/css/icons.css';
+@import './assets/css/metisMenu.min.css';
+@import './assets/css/style.css';
+@import './assets/plugins/select2/select2.min.css'; 
+@import "~@ng-select/ng-select/themes/default.theme.css";
+@import './assets/plugins/timepicker/bootstrap-material-datetimepicker.css';
+@import '../node_modules/angular-archwizard/archwizard.css';
+
+
+

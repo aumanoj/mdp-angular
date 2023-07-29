@@ -1,0 +1,41 @@
+{
+    "TOP-BAR": {
+      "TITLE": "Bonjour Angular avec ngx-translate !",
+      "SELECT": "Changer la langue"
+    },
+
+    "SUB-MENU":{
+        "dashboard":"tableau de bord"
+      },
+
+    "DASHBOARD-PAGE":{
+        "title":"tableau de bord",
+        "alert-notification":"Cette section utilise pour les notifications.",
+        "alert-notification-button":"Lire la suite"
+    },
+
+    "ADD-MEMBER":{
+        "title":"Ajouter un membre",
+        "name":"Nom",
+        "name-p_holder":"entrez votre prénom",
+        "name-validation1":"Le nom est requis ",
+        "name-validation2":"Uniquement alphanumérique autorisé",
+        "name-validation3":"Le nom ne peut pas comporter plus de 16 caractères",
+        "lname-p_holder":"Entrer le nom de famille",
+        "lname-validation1":"Le nom est obligatoire",
+        "lname-validation2":"Uniquement alphanumérique autorisé",
+        "lname-validation3":"Le nom ne peut pas comporter plus de 16 caractères",
+        "email":"EMAIL",
+        "email-validation":"Email est requis",
+        "phone":"téléphone",
+        "phone-code":"Sélectionnez le code du pays",
+        "phone-p_holder":"Entrez le numéro de téléphone"
+
+    },
+
+    "ADD-POSITION":{
+      "title":"Ajouter un Position",
+      "name":"POSITION NOM"
+    }
+}
+  

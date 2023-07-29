@@ -1,0 +1,226 @@
+
+<div class="row">
+    <div class="card-body">
+        <p class="text-center">
+            <button class="btn btn-success mybtn" data-toggle="modal" data-animation="bounce" data-target=".bs-example-modal-lg" onclick="">Register Company</button>
+        </p>
+    </div>
+</div>
+ 
+ <div class="modal fade bs-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+               <div class="card-body">
+                   <div class="modal-header">
+                        <h5 class="modal-title mt-0" id="myLargeModalLabel"></h5>
+                        <button typ
+                        se="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                    </div>
+                    <div *ngIf="error_message" class=" row alert alert-danger alert-dismissible col-xs-12" data-auto-dismiss role="alert" id="successMessage">
+                        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                            <span aria-hidden="true"><i class="mdi mdi-close"></i></span>
+                        </button>
+                        <strong> {{error_message}}</strong>
+                    </div>
+                    <div class="modal-body">
+                        <aw-wizard >
+                            
+                            <aw-wizard-step stepTitle="About Company" class="text-center">
+                                <form  (ngSubmit)="company_save()" [formGroup]="ngForm">
+
+                                    <fieldset><br>
+                                        <div class="row">
+                                            <div class="col-md-12">
+                                                <div class="form-group row">
+                                                    <label for="txtName" class="col-lg-3 col-form-label">Company Name</label>
+                                                    <div class="col-lg-9">
+                                                        <input id="txtName"  type="text" formControlName="name" class="form-control" placeholder=" Company Name" required >
+                                                    </div>
+                                                </div><!--end form-group-->
+                                            </div><!--end col-->
+                                        </div><!--end row-->
+                                        <div class="row">
+                                            <div class="col-md-12">
+                                                <div class="form-group row">
+                                                    <label for="industryType" class="col-lg-3 col-form-label">Industry Type</label>
+                                                    <div class="col-lg-9">
+                                                        <select id="industryType" formControlName="industry" class="form-control">
+                                                            <option value="">--Please Select--</option>
+                                                            <option value="Technology">Technology</option>
+                                                            <option value="Cafe">Cafe</option>
+                                                            <option value="Security">Security</option>
+                                                            <option value="Fitness">Fitness</option>
+                                                        </select>
+                                                    </div>
+                                                </div><!--end form-group-->
+                                            </div><!--end col-->
+                                        </div><!--end row-->
+                                        <div class="row">
+                                            <div class="col-md-12">
+                                                <div class="form-group row">
+                                                    <label for="numberOfEmployee" class="col-lg-3 col-form-label">Number of Employees</label>
+                                                    <div class="col-lg-9">
+                                                        <select id="numberOfEmployee" formControlName="employeeRange" class="form-control">
+                                                            <option value="">--Please Select--</option>
+                                                            <option value="0-20">0-20</option>
+                                                            <option value="21-50">21-50</option>
+                                                            <option value="51-100">51-100</option>
+                                                            <option value="101-151">101-151</option>
+                                                        </select>
+                                                    </div>
+                                                </div><!--end form-group-->
+                                            </div><!--end col-->
+                                        </div><!--end row-->
+                                    </fieldset><!--end fieldset-->
+                                    <button type="submit" class="btn btn-secondary" awNextStep>Next Step</button>
+                                </form>
+                            </aw-wizard-step>
+                            <aw-wizard-step stepTitle="Add Positions"  class="text-center">
+                               <form (ngSubmit)="position_save()" [formGroup]="ngForm_addPosition">
+                                <fieldset><br>
+                                    <div class="repeater-default">
+                                        <div class="row">
+                                            <div class="col-md-8">
+                                                <p class="text-center"><b>POSITION NAME</b></p>
+                                            </div>
+                                            <div class="col-md-4">
+                                                <p class="text-right"><b>CHOOSE COLOR</b></p>
+                                            </div>
+                                        </div>
+                                        <div data-repeater-list="Position">
+                                            <div data-repeater-item="">
+                                                <div class="form-group row d-flex align-items-end">
+                                                    <div class="col-sm-10 mt-2">
+                                                        <input type="text" name="postion[0][model]" value="" class="form-control" placeholder="Position Name">
+                                                    </div><!--end col-->
+                                                    <div class="col-sm-2 mt-2">
+                                                        <!-- <select name="postion[0][make]" class="form-control">
+                                                            <option value="" selected="">Select</option>
+                                                            <option value="">Green</option>
+                                                            <option value="">Orange</option>
+                                                        </select> -->
+                                                        <input type="color" class="form-control" value="#fcba03" name="">
+                                                    </div><!--end col-->
+                                                </div><!--end row-->
+                                            </div><!--end /div-->
+                        
+                                            <div data-repeater-item="">
+                                                <div class="form-group row d-flex align-items-end">
+                                                    <div class="col-sm-10 mt-2">
+                                                        <input type="text" name="postion[1][model]" value="" class="form-control" placeholder="Position Name">
+                                                    </div><!--end col-->
+                                                    <div class="col-sm-2 mt-2">
+                                                        <!-- <select name="postion[1][make]" class="form-control">
+                                                            <option value="" selected="">Select</option>
+                                                            <option value="">Green</option>
+                                                            <option value="">Orange</option>
+                                                        </select> -->
+                                                        <input type="color" class="form-control" value="#fcbabb" name="">
+                                                    </div><!--end col-->
+                                                </div><!--end row-->
+                                            </div><!--end /div-->
+                                            <div data-repeater-item="">
+                                                <div class="form-group row d-flex align-items-end">
+                                                    <div class="col-sm-10 mt-2">
+                                                        <input type="text" name="postion[2][model]" value="" class="form-control" placeholder="Position Name">
+                                                    </div><!--end col-->
+                                                    <div class="col-sm-2 mt-2">
+                                                        <!-- <select name="postion[2][make]" class="form-control">
+                                                            <option value="" selected="">Select</option>
+                                                            <option value="">Green</option>
+                                                            <option value="">Orange</option>
+                                                        </select> -->
+                                                        <input type="color" class="form-control" value="#fcff03" name="">
+                                                    </div><!--end col-->
+                                                </div><!--end row-->
+                                            </div><!--end /div-->
+                                        </div><!--end repet-list-->
+                                        <div class="form-group mb-0 row">
+                                            <div class="col-sm-3">
+                                                <span data-repeater-create="" class="btn btn-secondary">
+                                                    <span class="fas fa-plus"></span> Add Row
+                                                </span>
+                                            </div><!--end col-->
+                                        </div><!--end row-->
+                                    </div> <!--end repeter-->
+                                </fieldset><!--end fieldset-->
+                                    <button type="button" class="btn btn-secondary"  awPreviousStep>Go to previous step</button>
+                                    <button type="button" class="btn btn-secondary ml-2" awNextStep>Go to next step</button>
+                                </form> 
+                            </aw-wizard-step>
+                            <aw-wizard-step stepTitle="Add Employees"  class="text-center">
+                               <form>
+                                <fieldset><br>
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            <p class="text-center"><b>EMPLOYEE NAME</b></p>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <p class="text-center"><b>POSITION</b></p>
+                                        </div>
+                                    </div>
+                                    <div class="repeater-default">
+                                        <div data-repeater-list="Position">
+                                            <div data-repeater-item="">
+                                                <div class="form-group row d-flex align-items-end">
+                                                    <div class="col-sm-8 mt-2">
+                                                        <input type="text" name="postion[0][model]" value="" class="form-control" placeholder="Full Name">
+                                                    </div><!--end col-->
+                                                    <div class="col-sm-4 mt-2">
+                                                        <select name="postion[0][make]" class="form-control">
+                                                            <option value="" selected="">Select</option>
+                                                            <option value="">Android Developer</option>
+                                                            <option value="">Php Developer</option>
+                                                        </select>
+                                                    </div><!--end col-->
+                                                </div><!--end row-->
+                                            </div><!--end /div-->
+                        
+                                            <div data-repeater-item="">
+                                                <div class="form-group row d-flex align-items-end">
+                                                    <div class="col-sm-8 mt-2">
+                                                        <input type="text" name="postion[1][model]" value="" class="form-control" placeholder="Full Name">
+                                                    </div><!--end col-->
+                                                    <div class="col-sm-4 mt-2">
+                                                        <select name="postion[1][make]" class="form-control">
+                                                            <option value="" selected="">Select</option>
+                                                            <option value="">Android Developer</option>
+                                                            <option value="">Php Developer</option>
+                                                        </select>
+                                                    </div><!--end col-->
+                                                </div><!--end row-->
+                                            </div><!--end /div-->
+                                            <div data-repeater-item="">
+                                                <div class="form-group row d-flex align-items-end">
+                                                    <div class="col-sm-8 mt-2">
+                                                        <input type="text" name="postion[2][model]" value="" class="form-control" placeholder="Full Name">
+                                                    </div><!--end col-->
+                                                    <div class="col-sm-4 mt-2">
+                                                        <select name="postion[2][make]" class="form-control">
+                                                            <option value="" selected="">Select</option>
+                                                            <option value="">Android Developer</option>
+                                                            <option value="">Php Developer</option>
+                                                        </select>
+                                                    </div><!--end col-->
+                                                </div><!--end row-->
+                                            </div><!--end /div-->
+                                        </div><!--end repet-list-->
+                                        <div class="form-group mb-0 row">
+                                            <div class="col-sm-3">
+                                                <span data-repeater-create="" class="btn btn-secondary">
+                                                    <span class="fas fa-plus"></span> Add Row
+                                                </span>
+                                            </div><!--end col-->
+                                        </div><!--end row-->
+                                    </div> <!--end repeter-->
+                                </fieldset><!--end fieldset-->
+                                    <button type="button" class="btn btn-secondary"  awPreviousStep>Previous Step</button>
+                                    <button type="button" class="btn btn-secondary ml-2"  (click)="finishFunction()">Finish</button>
+                                </form>
+                            </aw-wizard-step>
+                          </aw-wizard>
+                    </div>
+               </div>
+        </div><!--model-content-->
+    </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->

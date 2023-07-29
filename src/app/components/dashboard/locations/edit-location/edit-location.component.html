@@ -1,0 +1,235 @@
+<!-- page content-->
+<div class="page-content">
+    <div class="container-fluid">
+            <!-- Page-Title -->
+            <div class="row">
+                <div class="col-sm-12">
+                    <div class="page-title-box">
+                        <div class="float-right">
+                            <ol class="breadcrumb">
+                                <li class="breadcrumb-item"><a [routerLink]="" >MDP</a></li>
+                                <li class="breadcrumb-item"><a [routerLink]="" (click)="locations()">Locations</a></li>
+                                <li class="breadcrumb-item ">Edit Location</li>
+                            </ol>
+                        </div>
+                        <h4 class="page-title">Edit Location</h4>
+                    </div><!--end page-title-box-->
+                </div><!--end col-->
+            </div>
+            <!-- end page title end breadcrumb -->
+            <div class="row">
+                <div class="col-lg-12 mx-auto">
+                    <div class="card dr-pro-pic">
+                        <div class="card-body form-card-body">
+                            <div *ngIf="error" class="alert alert-danger alert-dismissible col-xs-12" data-auto-dismiss role="alert" id="successMessage">
+                                <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                                    <span aria-hidden="true"><i class="mdi mdi-close"></i></span>
+                                </button>
+                                <strong> {{error_message}}</strong>
+                            </div>
+                            <form *ngFor="let team of location" class="form-horizontal form-material mb-0 form-parsley" (ngSubmit)="update()" [formGroup]="ngForm_editLocation" novalidate>
+
+                                <div class="hidden">
+                                    <input type="hidden" formControlName="teamid" [(ngModel)]="team.id"  class="form-control" id="id">
+                                </div>
+
+                                <div class="col-md-12">
+                                    <!-- <label>Company ID</label> -->
+                                    <input type="hidden" placeholder="Enter Company id" class="form-control" formControlName="companyID" value="companyID" [ngClass]="{ 'is-invalid': submitted && f.companyID.errors }"  />
+                                    <!-- <div *ngIf="submitted && f.companyID.errors" class="invalid-feedback"></div>
+                                    <div *ngIf="f.companyID.errors.required">Company Id is required</div> -->
+                                </div>
+                                    <div class="form-group row">
+                                        <div class="col-md-12">
+                                            <label i18n="@@edit_location_name">LOCATION NAME</label><b i18n="@@edit_location_name_required" class="required"> *</b>
+                                            <input type="text" i18n-placeholder="@@edit_location-name_Pholder" placeholder="e.g. Boston, Flatiron, Bryant Park" class="form-control" formControlName="name" [ngModel]="team.name" id="name" [ngClass]="{ 'is-invalid': submitted && f.name.errors }"/>
+                                            <div *ngIf="submitted && f.name.errors" class="invalid-feedback">
+                                                <div i18n="@@edit_location_name_validation" *ngIf="f.name.errors.required">Name is required</div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="form-group row">
+                                        <div class="col-md-12">
+                                            <label i18n="@@edit_location_address">ADDRESS</label>
+                                            <input type="text" i18n-placeholder="@@edit_location-address_Pholder" placeholder="e.g. 365 Broadway, etc." class="form-control" name="address" id="address" required/>
+                                        </div>
+                                    </div>
+
+                                    <div class="form-group row">
+                                        <div class="col-sm-12"><label i18n="@@edit_location_phone">PHONE</label> </div>
+                                        <div class="col-md-6 mb-3">
+                                            <select class="form-control" formControlName="countryCode" [ngModel]="team.country_code"[ngClass]="{ 'is-invalid': submitted && f.countryCode.errors }">
+                                                <option i18n="@@edit_location-phoneCode" value="null"disabled>Select Country Code</option>
+                                                <option [(ngValue)]="team.country_code">{{team.country_code}}</option>
+                                                <option *ngFor="let countryCode of countryCodes" [value]="countryCode.phonecode">{{countryCode.phonecode}}&nbsp;&nbsp;{{countryCode.name}}</option>
+                                            </select>
+                                        </div>
+                                        <div class="col-md-6 mb-3">
+                                            <input type="text" i18n-placeholder="@@edit_location-phone_Pholder" placeholder="Phone No" class="form-control" formControlName="telephone" [ngModel]="team.contact_no" data-parsley-type="" [ngClass]="{ 'is-invalid': submitted && f.telephone.errors }" />
+                                            <div *ngIf="submitted && f.telephone.errors" class="invalid-feedback">
+                                                <div i18n="@@edit_location-phone_validation1" *ngIf="f.telephone.errors.minlength">Phone number must be at least 10 digit long</div>
+                                                <div i18n="@@edit_location-phone_validation2" *ngIf="f.telephone.errors.pattern">Only number allowed</div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="form-group row">
+                                        <div class="col-md-12">
+                                            <label i18n="@@edit_location_timeZone">TIMEZONE</label>
+                                            <select class="form-control" formControlName="timeZone" [ngModel]="team.time_zone" [ngClass]="{ 'is-invalid': submitted && f.timeZone.errors }">
+                                                <option i18n="@@edit_location-timeZone" value="null"disabled>Select Time Zone</option>
+                                                <option [ngValue]="team.time_zone">{{team.time_zone}}</option>
+                                                <option *ngFor="let timeZone of timeZones" [value]="timeZone.id_name">{{timeZone.name}}</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="form-group row">
+                                        <div class="form-group col-md-12">
+                                            <label i18n="@@edit_location_employee">EMPLOYEES</label>
+                                            <ng-select [multiple]="true" [(ngModel)]="seluser" bindLabel="name" bindValue="id" formControlName="userid" i18n-placeholder="@@edit_location-emp_Pholder" placeholder="Add Employee"> 
+                                                <ng-option *ngFor="let user of users" [value]="user.id">{{user.name}} </ng-option>
+                                            </ng-select>
+                                        </div>
+                                    </div>
+
+                                    <!-- <div class="hidden" *ngFor="let user of team.team_users" >
+                                        <input type="hidden" formControlName="userid" [(ngModel)]="user.user_id"  class="form-control" id="id">
+                                    </div> -->
+                                    <hr>
+
+                                    
+                                    <div class="form-group row">
+                                        <div class="col-sm-12"><label i18n="@@edit_location_schedule">SCHEDULE</label></div>
+                                        <div class="col-md-9">
+                                            <p i18n="@@edit_location_schedule_desc">If you do not wish to see this location it can be hidden from your schedule.</p>
+                                        </div>
+                                        <div class="col-md-3">
+                                            <div class="custom-control custom-switch switch-success">
+                                                <input type="checkbox" class="custom-control-input" id="customSwitchSuccess">
+                                                <label class="custom-control-label text-muted" for="customSwitchSuccess"></label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <hr>
+
+                                    <div class="form-group row">
+                                        <div class="col-md-6">
+                                            <label i18n="@@edit_location_projectSales">PROJECTED SALES</label>
+                                            <p i18n="@@edit_location_projectSales_desc">Default projected sales values Set sales defaults for each day of the week to be able to estimate Labor %</p>
+                                        </div>
+                                    <div class="col-md-6">
+                                        <div class="form-group row">
+                                            <div class="col-md-4">
+                                               <label i18n="@@edit_location_monday">MONDAY</label>
+                                            </div>
+                                            <div class="col-md-8">
+                                                <input type="text" i18n-placeholder="@@edit_location_monday_Pholder" placeholder="$" class="form-control" name="" id="">
+                                            </div>
+                                        </div>
+                                        <div class="form-group row">
+                                            <div class="col-md-4">
+                                               <label i18n="@@edit_location_tuesday">TUESDAY</label>
+                                            </div>
+                                            <div class="col-md-8">
+                                                <input type="text" i18n-placeholder="@@edit_location_tuesday_Pholder" placeholder="$" class="form-control" name="" id="">
+                                            </div>
+                                        </div>
+                                        <div class="form-group row">
+                                            <div class="col-md-4">
+                                               <label i18n="@@edit_location_wednesday">WEDNESDAY</label>
+                                            </div>
+                                            <div class="col-md-8">
+                                                <input type="text" i18n-placeholder="@@edit_location_wednesday_Pholder" placeholder="$" class="form-control" name="" id="">
+                                            </div>
+                                        </div>
+
+                                        <div class="form-group row">
+                                            <div class="col-md-4">
+                                               <label i18n="@@edit_location_thursday">THURSDAY</label>
+                                            </div>
+                                            <div class="col-md-8">
+                                                <input type="text" i18n-placeholder="@@edit_location_thursday_Pholder" placeholder="$" class="form-control" name="" id="">
+                                            </div>
+                                        </div>
+                                        <div class="form-group row">
+                                            <div class="col-md-4">
+                                               <label i18n="@@edit_location_friday">FRIDAY</label>
+                                            </div>
+                                            <div class="col-md-8">
+                                                <input type="text" i18n-placeholder="@@edit_location_friday_Pholder"  placeholder="$" class="form-control" name="" id="">
+                                            </div>
+                                        </div>
+                                        <div class="form-group row">
+                                            <div class="col-md-4">
+                                               <label i18n="@@edit_location_saturday">SATURDAY</label>
+                                            </div>
+                                            <div class="col-md-8">
+                                                <input type="text" i18n-placeholder="@@edit_location_saturday_Pholder"  placeholder="$" class="form-control" name="" id="">
+                                            </div>
+                                        </div>
+                                        <div class="form-group row">
+                                            <div class="col-md-4">
+                                               <label i18n="@@edit_location_sunday">SUNDAY</label>
+                                            </div>
+                                            <div class="col-md-8">
+                                                <input type="text" i18n-placeholder="@@edit_location_sunday_Pholder" placeholder="$" class="form-control" name="" id="">
+                                            </div>
+                                        </div>
+                                        <div class="form-group row">
+                                            <div class="col-md-4">
+                                               <label><b i18n="@@edit_location_total">Total</b></label>
+                                            </div>
+                                            <div class="col-md-8">
+                                                <input type="text" i18n-placeholder="@@edit_location_total_Pholder" placeholder="$" class="form-control" name="" id="">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    </div>
+                                    <hr>
+
+                                    <div class="form-group row">
+                                        <div class="col-md-8">
+                                            <label i18n="@@edit_location_maxLaborBdgt">Maximum labor budget per week</label>
+                                            <p i18n="@@edit_location_maxLaborBdgt_desc">Set the upper limit, which you won't want to exceed</p>
+                                        </div>
+                                        <div class="col-md-4">
+                                            <input type="text" i18n-placeholder="@@edit_location_maxLaborBdgt_Pholder" placeholder="$" class="form-control" name="" id="">
+                                        </div>
+                                    </div>
+                                    <hr>
+
+                                    <div class="form-group row">
+                                        <div class="col-md-8">
+                                            <label i18n="@@edit_location_maxLaborHrs">Maximum labor hours per week</label>
+                                            <p i18n="@@edit_location_maxLaborHrs_desc">Set the upper limit, which you won't want to exceed</p>
+                                        </div>
+                                        <div class="col-md-4">
+                                            <input type="text" i18n-placeholder="@@edit_location-maxlaborHrs_Pholder" placeholder="None" class="form-control" name="" id="">
+                                        </div>
+                                    </div>
+
+                                    <hr>
+                                    <div class="form-group">
+                                        <div class="form-check">
+                                            <label class="required" for="invalidCheck">
+                                                (*) Mandatory fields
+                                            </label>
+                                        </div>
+                                    </div><!--end form-group-->
+                                    <div class="form-group mb-0">
+                                        <button class="btn btn-danger btn-sm text-light px-4 mt-3 float-right mb-0 ml-2" (click)="cancelEdit()">Cancel</button>
+                                        <button class="btn btn-primary btn-sm text-light px-4 mt-3 float-right mb-0" type="submit">Update</button>
+                                    </div><!--end form-group-->
+                                    <div  class="row col-xs-12">
+                                        <p><flash-messages></flash-messages></p>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div> <!--end col-->
+            </div><!--end row-->
+        </div><!-- container -->
+   

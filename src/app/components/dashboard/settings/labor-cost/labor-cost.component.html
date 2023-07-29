@@ -1,0 +1,267 @@
+
+
+    <div class="row">
+        <div class="col-12">
+            <div class="card">
+                <div class="card-body">
+                    <form class="form-horizontal form-material mb-0 form-parsley">
+                    <div class="form-group row">
+                        <div class="col-md-2"></div>
+                        <div class="col-md-8">
+                            <span i18n="@@labor-cost_settings_allow-you">These settings allow you to configure labor cost and specify access to it.</span>
+                            <hr>
+                        </div>
+                        <div class="col-md-2"></div>
+                    </div><!--end form-group-->
+
+                    <div class="form-group row">
+                        <div class="col-md-2"></div>
+                        <div class="col-md-8">
+                            <div class="form-group row">
+                                <div class="col-md-8">
+                                    <label i18n="@@labor-cost_settings_currency">Currency</label>
+                                </div>
+                                <div class="col-md-4">
+                                    <select class="form-control">
+                                        <option>USD</option>
+                                        <option>EUR</option>
+                                        <option>CAD</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <hr>
+                        </div>
+                        <div class="col-md-2"></div>
+                    </div><!--end form-group-->
+
+                    <div class="form-group row">
+                        <div class="col-md-2"></div>
+                        <div class="col-md-8">
+                            <div class="form-group row">
+                                <div class="col-md-8">
+                                    <label i18n="@@labor-cost_settings_payroll">Payroll period type</label>
+                                </div>
+                                <div class="col-md-4">
+                                    <select class="form-control">
+                                        <option>Monthly</option>
+                                        <option>Bi-Weekly</option>
+                                        <option>Semi-monthly</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-2"></div>
+
+                        <div class="col-md-2"></div>
+                        <div class="col-md-8">
+                             <label>Start date</label>
+                            <div class="form-group row">
+                                <div class="col-md-8">
+                                  <p i18n="@@labor-cost_settings_select-yourNext">Select your next payroll date so we know where to start</p>
+                                </div>
+                                <div class="col-md-4">
+                                    <input type="date" class="form-control" name="">
+                                </div>
+                            </div>
+                            <hr>
+                        </div>
+                        <div class="col-md-2"></div>
+                    </div><!--end form-group-->
+                    <div class="form-group row">
+                        <div class="col-md-2"></div>
+                        <div class="col-md-8">
+                            <div class="form-group row">
+                                <div class="col-md-8">
+                                   <label i18n="@@labor-cost_settings_overtime">Overtime</label>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="custom-control custom-switch switch-success">
+                                        <input type="checkbox" class="custom-control-input" id="customSwitchSuccessOT">
+                                        <label class="custom-control-label text-muted" for="customSwitchSuccessOT"></label>
+                                    </div>
+                                </div>
+                            </div>
+                            <hr>
+                        </div>
+                        <div class="col-md-2"></div>
+
+                        <div class="col-md-2"></div>
+                        <div class="col-md-8">
+                            <div class="form-group row">
+                                <div class="col-md-8">
+                                    <label i18n="@@labor-cost_settings_overtime-startAfter">Overtime starts after</label>
+                                    <p i18n="@@labor-cost_settings_overtime-startAfter_desc">Set threshold for weekly overtime</p>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="input-group">
+                                        <input type="text" id="example-input2-group1" name="example-input2-group1" class="form-control" placeholder="40">
+                                        <div class="input-group-append">
+                                            <span class="input-group-text" i18n="@@labor-cost_settings_hrs"><i class=""> </i>Hours</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-2"></div>
+
+                        <div class="col-md-2"></div>
+                        <div class="col-md-8">
+                            <div class="form-group row">
+                                <div class="col-md-8">
+                                    <label i18n="@@labor-cost_settings_paid-overtime">Paid overtime per hour</label>
+                                    <p i18n="@@labor-cost_settings_paid-overtime_desc">This rate will be applied to hours beyond prescribed threshold</p>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="input-group">
+                                        <div class="input-group-append">
+                                            <span class="input-group-text" i18n="@@labor-cost_settings_rateX1"><i class=""> </i>@ RATE X</span>
+                                        </div>
+                                        <input type="text" id="example-input1-group1" name="example-input1-group1" class="form-control" placeholder="1.2">
+                                    </div>
+                                </div>
+                            </div>
+                            <hr>
+                        </div>
+                        <div class="col-md-2"></div>
+                    </div><!--end form-group-->
+
+                    <div class="form-group row">
+                        <div class="col-md-2"></div>
+                        <div class="col-md-8">
+                            <div class="form-group row">
+                                <div class="col-md-8">
+                                   <label  i18n="@@labor-cost_settings_labor%">Labor %</label>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="custom-control custom-switch switch-success">
+                                        <input type="checkbox" class="custom-control-input" id="customSwitchSuccessLB">
+                                        <label class="custom-control-label text-muted" for="customSwitchSuccessLB"></label>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-2"></div>
+
+                        <div class="col-md-2"></div>
+                        <div class="col-md-8">
+                            <div class="form-group row">
+                                <div class="col-md-8">
+                                    <label i18n="@@labor-cost_settings_labor%goal">Labor % goal</label>
+                                    <p i18n="@@labor-cost_settings_labor%goal_desc">Set the upper limit, which you won't want to exceed</p>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="input-group">
+                                        <input type="text" id="example-input2-group1" name="example-input2-group1" class="form-control" placeholder="25">
+                                        <div class="input-group-append">
+                                            <span class="input-group-text" i18n="@@labor-cost_settings_%"><i class=""> </i>%</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <hr>
+                        </div>
+                        <div class="col-md-2"></div>
+                    </div><!--end form-group-->
+
+                    <div class="form-group row">
+                        <div class="col-md-2"></div>
+                        <div class="col-md-8">
+                            <div class="form-group row">
+                                <div class="col-md-8">
+                                   <label i18n="@@labor-cost_settings_holiday-pay">Holiday pay</label>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="custom-control custom-switch switch-success">
+                                        <input type="checkbox" class="custom-control-input" id="customSwitchSuccessHP">
+                                        <label class="custom-control-label text-muted" for="customSwitchSuccessHP"></label>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-2"></div>
+
+                        <div class="col-md-2"></div>
+                        <div class="col-md-8">
+                            <div class="form-group row">
+                                <div class="col-md-8">
+                                    <label i18n="@@labor-cost_settings_holiday-pay-multi">Set holiday pay multiplier</label>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="input-group">
+                                        <input type="text" id="example-input1-group1" name="example-input1-group1" class="form-control" placeholder="25">
+                                        <div class="input-group-append">
+                                            <span class="input-group-text" i18n="@@labor-cost_settings_rateX2"><i class=""> </i>@ RATE X</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <hr>
+                        </div>
+                        <div class="col-md-2"></div>
+                    </div><!--end form-group-->
+
+                    <div class="form-group row">
+                        <div class="col-md-2"></div>
+                        <div class="col-md-8">
+                            <div class="form-group row">
+                                <div class="col-md-8">
+                                   <label i18n="@@labor-cost_settings_spreadOfHours">Spread of hours</label>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="custom-control custom-switch switch-success">
+                                        <input type="checkbox" class="custom-control-input" id="customSwitchSuccessSH">
+                                        <label class="custom-control-label text-muted" for="customSwitchSuccessSH"></label>
+                                    </div>
+                                </div>
+                            </div>
+                            <hr>
+                        </div>
+                        <div class="col-md-2"></div>
+                    </div><!--end form-group-->
+
+                    <div class="form-group row">
+                        <div class="col-md-2"></div>
+                        <div class="col-md-8">
+                            <div class="form-group row">
+                                <div class="col-md-8">
+                                   <label i18n="@@labor-cost_settings_labor-costAccess">Labor cost access</label>
+                                   <p i18n="@@labor-cost_settings_labor-costAccess_desc">Add managers to grant access to labor cost, reports and wages</p>
+                                </div>
+                                <div class="col-md-4">
+                                    <input type="text" class="form-control" name="" placeholder="Add manager">
+                                </div>
+                            </div>
+                            <hr>
+                        </div>
+                        <div class="col-md-2"></div>
+                    </div><!--end form-group-->
+
+                    <div class="form-group row">
+                        <div class="col-md-2"></div>
+                        <div class="col-md-8">
+                            <div class="form-group row">
+                                <div class="col-md-8">
+                                   <label i18n="@@labor-cost_settings_empWage">Employee wages</label>
+                                   <p i18n="@@labor-cost_settings_empWage_desc">Allow employees to see their own wages</p>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="custom-control custom-switch switch-success">
+                                        <input type="checkbox" class="custom-control-input" id="customSwitchSuccessEW">
+                                        <label class="custom-control-label text-muted" for="customSwitchSuccessEW"></label>
+                                    </div>
+                                </div>
+                            </div>
+                            <hr>
+                        </div>
+                        <div class="col-md-2"></div>
+                    </div><!--end form-group-->
+                    <div class="form-group mb-0">
+                        <button class="btn btn-danger btn-sm text-light px-4 mt-3 float-right mb-0 ml-2" type="reset" type="reset">Reset</button>
+                        <button  class="btn btn-primary btn-sm text-light px-4 mt-3 float-right mb-0" type="submit">Save</button>
+                        <!-- <div *ngIf="error" class="alert alert-danger mt-3 mb-0">{{error_message}}</div> -->
+                    </div><!--end form-group-->
+                </form>
+                </div><!--end card-body-->
+            </div><!--end card-->
+        </div> <!--end col-->
+    </div><!--end row-->

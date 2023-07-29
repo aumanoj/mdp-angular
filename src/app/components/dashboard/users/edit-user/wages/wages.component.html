@@ -1,0 +1,190 @@
+<div class="row">
+    <div class="col-lg-12">
+        <div class="card">
+            <div class="card-body">
+                <div *ngIf="error_message" class=" row alert alert-danger alert-dismissible col-xs-12" data-auto-dismiss
+                    role="alert" id="successMessage">
+                    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                        <span aria-hidden="true"><i class="mdi mdi-close"></i></span>
+                    </button>
+                    <strong> {{error_message}}</strong>
+                </div>
+                <form *ngFor="let u of user" class="form-horizontal form-material mb-0 form-parsley"
+                    (ngSubmit)="create_wage()" [formGroup]="ngForm_createWage" novalidate>
+
+                    <div class="hidden">
+                        <input type="hidden" formControlName="user_id" [(ngModel)]="u.id" class="form-control" id="id">
+                    </div>
+
+                    <div  >
+                        <!-- <input type="hidden" formControlName="position_id" [(ngModel)]="p.id" class="form-control"
+                            id="id"> -->
+                            
+                    </div>
+                    <div class="col-md-6 " [style.display]="'none'">
+                        <ng-select [multiple]="true" [(ngModel)]="selposition" bindLabel="name" bindValue="id" formControlName="position_id" class="form-control field_overlap hidden" >
+                            <ng-option *ngFor="let p of u.positions" [value]="p.id" [disabled]="p.disabled" >{{p.name}} </ng-option>
+                        </ng-select>
+                    </div>
+
+                    
+                    <!-- <div class="col-md-6" class="hidden">
+                        <ng-select [multiple]="true" class="form-control field_overlap hidden" formControlName="position_id"   >
+                            <ng-option *ngFor="let p of u.positions" [value]="p.id" >{{p.name}} </ng-option>
+                        </ng-select>  
+                        
+                    </div> -->
+                    <div class="form-row">
+                        <div class="col-md-8 mb-2">
+                            <label i18n="@@wage_pay_type">Pay Type</label>
+                            <p i18n="@@wage_pay_type_desc">Specify pay type for this employee so their cost is properly
+                                reflected on MDP.</p>
+                        </div>
+                        <div class="col-md-2">
+                            <select class="form-control" formControlName="pay_type"
+                                [ngClass]="{ 'is-invalid': submitted && f_wage.pay_type.errors }">
+                                <option i18n="@@wage_select" value="" disabled>Select Pay Type</option>
+                                <option value="HOURLY">Hourly</option>
+                                <option value="ANNUALLY">Annual Salary</option>
+                            </select>
+                            <div *ngIf="submitted && f_wage.pay_type.errors" class="invalid-feedback">
+                                <div i18n="@@wage_select_validation" *ngIf="f_wage.pay_type.errors.required">Pay Type is
+                                    required</div>
+                            </div>
+                        </div>
+                    </div>
+                    <hr>
+
+                    <button type="button" class="btn btn-primary mb-2 float-right" (click)="addRate()">Add Rate</button>
+                    <div class="form-row">
+                        <div class="col-md-7 mb-2">
+                            <label i18n="@@wage_empBaseWage">Employee base wage</label>
+                            <p i18n="@@wage_empBaseWage_desc">This is the default wage applied to all positions assigned
+                                to you,
+                                unless a base position wage or employee<br> position wage has been set.</p>
+                        </div>
+                        <div class="col-md-2 mb-2">
+                            <p class="text-center" i18n="@@wage_effectiveFrom">EFFECTIVE FROM</p>
+
+                        </div>
+                        <div class="col-md-2">
+                            <p class="text-center" i18n="@@wage_empWage">EMPLOYEE BASE WAGE
+                            </p>
+
+                        </div>
+
+                    </div>
+                    <!--end row-->
+
+
+                    <section *ngFor="let add of addrates; let i = index;">
+                        <button type="button" class="btn btn-danger btn- float-right ml-5"
+                            (click)="removeAddRate(i)"><span class="far fa-trash-alt mr-1 mb-2"></span></button>
+                        <div class="form-row">
+                            <div class="col-md-7 mb-2"></div>
+                            <div class="col-md-2 mb-2">
+                                <!-- <p class="text-center" i18n="@@wage_effectiveFrom">EFFECTIVE FROM</p> -->
+                                <input type="date" placeholder="Enter date" class="form-control"
+                                    formControlName="effective_from"
+                                    [ngClass]="{ 'is-invalid': submitted && f_wage.effective_from.errors }" />
+                                <div *ngIf="submitted && f_wage.effective_from.errors" class="invalid-feedback">
+                                    <div i18n="@@wage_effectiveFrom_validation"
+                                        *ngIf="f_wage.effective_from.errors.required">Effective from is required</div>
+                                </div>
+                            </div>
+                            <div class="col-md-2 mb-2">
+                                <!-- <p class="text-center" i18n="@@wage_empWage">EMPLOYEE BASE WAGE<p> -->
+                                <input type="text" placeholder="$" class="form-control" formControlName="wage"
+                                    [ngClass]="{ 'is-invalid': submitted && f_wage.wage.errors }" /> 
+                                <div *ngIf="submitted && f_wage.wage.errors" class="invalid-feedback">
+                                    <div i18n="@@wage_empWage_validation" *ngIf="f_wage.wage.errors.required">Wage is
+                                        required</div>
+                                </div>
+                            </div>
+
+                            <!-- <button type="button" class="btn btn-primary mb-2" (click)="addRate()"><span class="fas fa-plus"></span> Add Rate</button>
+                            <section *ngFor="let add of addrates; let i = index;">
+                                
+                                <div class="col-6 text-right">
+                                    <button type="button" class="btn btn-danger btn-sm" (click)="removeAddRate(i)">Remove</button>
+                                </div>
+                                <label>EFFECTIVE FROM</label>
+                                <input type="text" [(ngModel)]="add.effective_from" class="form-control"
+                                  name="effective_from_{{add.id}}"/>
+                                <label>EMPLOYEE BASE WAGE</label>
+                                <input type="text" [(ngModel)]="add.wage" class="form-control"
+                                  name="wage_{{add.id}}"/>
+                            </section> -->
+
+                            <!-- <span data-repeater-create="" class="btn btn-secondary">
+                                <span class="fas fa-plus"></span> Add Rate
+                            </span> -->
+                            <!-- <button type="button" class="btn btn-outline-info dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="fas fa-ellipsis-v"></i></button>
+                            <div class="dropdown-menu">
+                                <a class="dropdown-item" [routerLink]="">Add rate</a>
+                            </div> -->
+                        </div>
+                        <!--end row-->
+                    </section>
+                    <hr>
+
+                    <!-- <div class="row col-xs-12">
+                        <p class="flash_msg">
+                            <flash-messages></flash-messages>
+                        </p>
+                    </div> -->
+                    <div class="form-group mb-0">
+                        <button class="btn btn-danger btn-sm text-light px-4 mt-3 float-right mb-0 ml-2" type="reset"
+                            type="reset">Reset</button>
+                        <button class="btn btn-primary btn-sm text-light px-4 mt-3 float-right mb-0"
+                            type="submit">Save</button>
+                    </div>
+                    <!--end form-group-->
+                </form>
+
+            </div>
+            <!--end card-body-->
+            <div class="card-body">
+                <div class="form-row" *ngFor="let u of user" >
+                    <div class="table-responsive" >
+                        <table  id="#" class="table" >
+                           
+                                <thead class="thead-light">
+                                    <tr>
+                                        <th>POSITION</th>
+                                        <th>EFFECTIVE FORM</th>
+                                        <th>WAGE</th>
+                                        <th class="text-right">OPTIONS</th>
+                                    </tr>
+                                    <!--end tr-->
+                                </thead>
+                            
+                                <ng-container *ngFor="let wage of wages;let i = index">
+                                <tbody   *ngFor="let p of u.positions;"  >
+                                    
+                                    <tr *ngIf="wage.position_id==p.id">
+                                        <td>{{p.name}}</td>
+                                        <td>{{wage.effective_from}}</td>
+                                        <td>{{wage.wage | currency:"USD"}}</td>
+                                        <td class="text-right">
+                                            <button class="btn btn-primary btn-sm text-light mb-1" (click)="edit_wage(wage.id)"> <a class="mr-2"><i
+                                                        class="fas fa-edit text-light font-16"></i></a></button>
+                                            <button class="btn btn-danger btn-sm text-light ml-2 mb-1"(click)="delete_wage(wage.id,i)"> <a><i
+                                                        class="fas fa-trash-alt text-light font-16"></i></a></button>
+                                        </td>
+                                    </tr>
+                                <!--end tr-->
+                                </tbody>
+                            </ng-container>  
+                            
+                        </table>
+                    </div>
+                </div>
+                <!--end row-->
+            </div>
+        </div>
+        <!--end card-->
+    </div>
+    <!--end col-->
+</div>
+<!--end row-->

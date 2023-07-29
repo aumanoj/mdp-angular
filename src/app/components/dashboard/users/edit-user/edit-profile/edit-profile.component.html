@@ -1,0 +1,364 @@
+
+        <!-- Page-Title -->
+        <div class="row">
+            <div class="col-sm-12">
+                <div class="page-title-box">
+                    <div class="float-right">
+                        <ol class="breadcrumb">
+                            <li class="breadcrumb-item"><a [routerLink]="">MDP</a></li>
+                            <li class="breadcrumb-item"><a [routerLink]="" (click)="employees()">User</a></li>
+                            <li class="breadcrumb-item active">Edit Profile</li>
+                        </ol>
+                    </div>
+                    <h4 class="page-title">Profile</h4>
+                </div><!--end page-title-box-->
+            </div><!--end col-->
+        </div>
+        <!-- end page title end breadcrumb -->
+        <div class="row">
+            <div class="col-12">
+                <div class="card">
+                    <div class="card-body  met-pro-bg">
+                        <div class="met-profile">
+                            <div class="row" *ngFor="let u of user">
+                                <div class="col-lg-4 align-self-center mb-3 mb-lg-0">
+                                    <div class="met-profile-main">
+                                        <div class="met-profile-main-pic">
+                                            <img src="./assets/images/users/user-4.jpg" alt="" class="rounded-circle">
+                                            <span class="fro-profile_main-pic-change">
+                                                <i class="fas fa-camera"></i>
+                                                <!-- <input class="file-upload" type="file" accept="image/*"/> -->
+                                            </span>
+                                        </div>
+                                        <div class="met-profile_user-detail" >
+                                            <h5 class="met-user-name">{{u.fname}} {{u.lname}}</h5>
+                                            <tr>
+                                                <td *ngFor="let p of u.positions; let isLast=last" class="mb-0 met-user-name-post">{{p.name}} {{isLast ? '' : ', '}}</td>
+                                            </tr>
+                                        </div>
+                                    </div>
+                                </div><!--end col-->
+                                <div class="col-lg-4 ml-auto">
+                                    <ul class="list-unstyled personal-detail">
+                                        <li *ngIf="u.telephone" class=""><i class="dripicons-phone mr-2 text-info font-18"></i> <b> Phone </b> : {{u.telephone}}</li>
+                                        <li *ngIf="u.email" class="mt-2"><i class="dripicons-mail text-info font-18 mt-2 mr-2"></i> <b> Email </b> : {{u.email}}</li>
+                                        <!-- <li class="mt-2"><i class="dripicons-location text-info font-18 mt-2 mr-2"></i> <b>Location</b> : USA</li> -->
+                                    </ul>
+                                    <div class="button-list btn-social-icon">
+                                        <button type="button" class="btn btn-blue btn-round">
+                                            <i class="fab fa-facebook-f"></i>
+                                        </button>
+
+                                        <button type="button" class="btn btn-secondary btn-round ml-2">
+                                            <i class="fab fa-twitter"></i>
+                                        </button>
+
+                                        <button type="button" class="btn btn-pink btn-round  ml-2">
+                                            <i class="fab fa-dribbble"></i>
+                                        </button>
+                                    </div>
+                                </div><!--end col-->
+                            </div><!--end row-->
+                        </div><!--end f_profile-->
+                    </div><!--end card-body-->
+                    <div class="card-body" *ngFor="let u of user">
+                        <ul class="nav nav-pills mb-0" id="pills-tab" role="tablist">
+                            <li class="nav-item">
+                                <a class="nav-link active" id="general_detail_tab" data-toggle="pill" href="#general_detail">Profile</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" id="education_detail_tab" data-toggle="pill" href="#Unavailability" >Unavailability</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" id="portfolio_detail_tab" data-toggle="pill" href="#Wages">Wages</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" id="settings_detail_tab" data-toggle="pill" href="#Notes">Notes</a>
+                            </li>
+                        </ul>
+                    </div><!--end card-body-->
+                </div><!--end card-->
+            </div><!--end col-->
+        </div><!--end row-->
+
+        <div class="row">
+            <div class="col-12">
+                <div class="tab-content detail-list" id="pills-tabContent">
+                    <div class="tab-pane fade show active" id="general_detail">
+                        <div class="row">
+                            <div class="col-12">
+                                <div class="card">
+                                    <div class="card-body">
+                                        <div *ngIf="error" class=" row alert alert-danger alert-dismissible col-xs-12" data-auto-dismiss role="alert" id="successMessage">
+                                            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                                                <span aria-hidden="true"><i class="mdi mdi-close"></i></span>
+                                            </button>
+                                            <strong> {{error_message}}</strong>
+                                        </div>
+                                    <form *ngFor="let u of user" class="form-horizontal form-material mb-0 form-parsley" (ngSubmit)="update()" [formGroup]="ngForm_editUser" novalidate>
+                                       <div class="row">
+                                           <div class="">
+                                               <!-- <img src="./assets/images/small/user-pro.jpg" alt="" class="img-fluid"> -->
+                                           </div>
+                                           <div class="col-md-10">
+                                                <!-- <form class="needs-validation" method="" novalidate> -->
+                                                    <div class="hidden">
+                                                        <input type="hidden" formControlName="id" [(ngModel)]="u.id"  class="form-control" id="id">
+                                                    </div>
+        
+                                                    <div class="form-group row">
+                                                        <div class="col-md-12">
+                                                            <!-- <label>Company ID</label>     -->
+                                                            <input type="hidden" placeholder="Enter Company id" class="form-control" formControlName="companyID" value="companyID" [ngClass]="{ 'is-invalid': submitted && f.companyID.errors }"  />
+                                                            <!-- <div *ngIf="submitted && f.companyID.errors" class="invalid-feedback"></div>
+                                                            <div *ngIf="f.companyID.errors.required">Company Id is required</div> -->
+                                                        </div>
+                                                    </div>
+                                                    
+                                                    <div class="form-row">
+                                                        <div class="col-md-6 mb-3">
+                                                            <label i18n="@@edit_user_fname" for="validationCustom01">FIRST NAME </label><b i18n="@@edit_user_fname_required" class="required"> *</b>
+                                                            <input type="text" i18n-placeholder="@@edit-user_fname_Pholder" placeholder="Enter first name" class="form-control" formControlName="fname" [(ngModel)]="u.fname"  [ngClass]="{ 'is-invalid': submitted && f.fname.errors }" />
+                                                            <div *ngIf="submitted && f.fname.errors" class="invalid-feedback">
+                                                                <div i18n="@@edit_user_fname_validation1" *ngIf="f.fname.errors.required">Name is required </div>
+                                                                <div i18n="@@edit_user_fname_validation2" *ngIf="f.fname.errors.pattern">Only alphanumeric allowed</div>
+                                                                <div i18n="@@edit_user_fname_validation3" *ngIf="f.fname.errors.maxlength">Name can't be more than 16 characters </div>
+                                                            </div>
+                                                        </div><!--end col-->
+                                                        <div class="col-md-6 mb-3">
+                                                            <label i18n="@@edit_user_lname" for="validationCustom02">LAST NAME</label><b i18n="@@edit_user_lname_required" class="required"> *</b>
+                                                            <input type="text" i18n-placeholder="@@edit-user_lname_Pholder"  placeholder="Enter last name" class="form-control" formControlName="lname" [(ngModel)]="u.lname" id="lname" [ngClass]="{ 'is-invalid': submitted && f.lname.errors }" />
+                                                            <div *ngIf="submitted && f.lname.errors" class="invalid-feedback">
+                                                                <div i18n="@@edit_user_lname_validation1" *ngIf="f.lname.errors.required">Last name is required </div>
+                                                                <div i18n="@@edit_user_lname_validation2" *ngIf="f.lname.errors.pattern">Only alphanumeric allowed</div>
+                                                                <div i18n="@@edit_user_lname_validation3" *ngIf="f.lname.errors.maxlength">Name can't be more than 16 characters </div>
+                                                            </div>
+                                                        </div><!--end col-->
+                                                    </div><!--end form-rpw-->
+                                                    <div class="form-row">
+                                                        <!-- <div class="col-md-6 mb-3">
+                                                            <label for="validationCustomUsername">USERNAME</label>
+                                                            <div class="input-group">
+                                                                <div class="input-group-prepend">
+                                                                    <span class="input-group-text" id="inputGroupPrepend">@</span>
+                                                                </div>
+                                                                 <input type="text" class="form-control" id="validationCustomUsername" placeholder="Username" aria-describedby="inputGroupPrepend" required>
+                                                                <div class="invalid-feedback">Please choose a username.
+                                                                </div>
+                                                            </div>
+                                                        </div> -->
+                                                         <div class="col-md-12 mb-3">
+                                                                <label i18n="@@edit_user_email" for="validationCustom03">EMAIL</label><b i18n="@@edit_user_email_required" class="required"> *</b>
+                                                                <input type="email" i18n-placeholder="@@edit-user_email_Pholder" placeholder="abc@example.com" class="form-control" formControlName="email" [(ngModel)]="u.email" id="email" [ngClass]="{ 'is-invalid': submitted && f.email.errors }"  />
+                                                                <div *ngIf="submitted && f.email.errors" class="invalid-feedback">
+                                                                    <div i18n="@@edit-user_email_validation" *ngIf="f.email.errors.required">Email is required</div>
+                                                                </div>
+                                                        </div><!--end col-->
+                                                    </div><!--end form-row-->
+                                                    <div class="form-row">
+                                                        <div class="col-md-6 mb-3">
+                                                                <label i18n="@@edit_user_countryCode" for="validationCustom03">COUNTRY CODE</label>
+                                                                <select class="form-control" formControlName="countryCode" [(ngModel)]="u.country_code" [ngClass]="{ 'is-invalid': submitted && f.countryCode.errors }">
+                                                                    <option i18n="@@edit-user_phoneCode"  value="null"disabled>Select Country Code</option>
+                                                                    <option [(ngValue)]="u.country_code">{{u.country_code}}</option>
+                                                                    <option *ngFor="let countryCode of countryCodes" [value]="countryCode.phonecode">{{countryCode.phonecode}}&nbsp;&nbsp;{{countryCode.name}}</option>
+                                                                </select>
+                                                        </div><!--end col-->
+                                                        <div class="col-md-6 mb-3">
+                                                             <label i18n="@@edit_user_phone" for="validationCustom04">PHONE</label>
+                                                             <input type="text" i18n-placeholder="@@edit-user_phone_Pholder" placeholder="Enter phone No"  class="form-control" formControlName="telephone" [(ngModel)]="u.telephone" data-parsley-type="" [ngClass]="{ 'is-invalid': submitted && f.telephone.errors }" />
+                                                             <div *ngIf="submitted && f.telephone.errors" class="invalid-feedback">
+                                                                 <div *ngIf="f.telephone.errors.required">Phone no is required</div>
+                                                                 <div *ngIf="f.telephone.errors.minlength">Phone number must be at least 10 digit long</div>
+                                                                 <div *ngIf="f.telephone.errors.pattern">Only number allowed</div>
+                                                             </div>
+                                                        </div><!--end col-->
+                                                    </div><!--end form-row-->
+        
+                                                    <div class="form-row">
+                                                        <div class="col-md-6 mb-3">
+                                                             <label i18n="@@edit_user_timeZone" for="validationCustom04">TIMEZONE</label>
+                                                             <select class="form-control" formControlName="timeZone" [(ngModel)]="u.time_zone"  [ngClass]="{ 'is-invalid': submitted && f.timeZone.errors }"> 
+                                                                <option i18n="@@edit-user_timeZone_select" value="null"disabled>Select Time Zone</option>
+                                                                <option [ngValue]="u.time_zone">{{u.time_zone}}</option>
+                                                                <option *ngFor="let timeZone of timeZones" [value]="timeZone.id_name">{{timeZone.name}}</option> 
+                                                            </select>
+                                                        </div><!--end col-->
+                                                        <div class="col-md-6 mb-3">
+                                                             <label i18n="@@edit_user_dob" for="validationCustom04">DATE OF BIRTH</label>
+                                                             <input type="date" class="form-control" formControlName="dob"  [(ngModel)]="u.dob">
+                                                        </div><!--end col-->
+                                                    </div>
+                                                <hr>
+        
+                                                <label i18n="@@edit_user_status">STATUS</label>
+                                                <div class="form-row">
+                                                    <div class="col-md-9 mb-2">
+                                                        <p i18n="@@edit_user_status_desc">You have not verified your email address yet. To be able to use your Sling account fully you need to verify your email address first.</p>
+                                                    </div>
+                                                    <div class="col-md-3">
+                                                        <button class="btn btn-primary" type="button">Resend Varification</button>
+                                                    </div>
+                                                </div>
+                                                <hr>
+        
+                                                <div class="form-row">
+                                                    <div class="col-md-8 mb-2">
+                                                      <label i18n="@@edit_user_empID">EMPLOYEE ID</label>
+                                                    </div>
+                                                    <div class="col-md-3">
+                                                        <input type="text" i18n-placeholder="@@edit-user_empID_Pholder" placeholder="Fill in employee ID" class="form-control" formControlName="empID" [(ngModel)]="u.emp_id" id="employee_id" [ngClass]="{ 'is-invalid': submitted && f.empID.errors }" />
+                                                            <!-- <div *ngIf="submitted && f.empID.errors" class="invalid-feedback">
+                                                            <div *ngIf="f.empID.errors.required">Employee ID is required</div>
+                                                            </div> -->
+                                                    </div>
+                                                </div>
+                                                <hr>
+        
+                                                <label i18n="@@edit_user_system_role">SYSTEM ROLE</label>
+                                                <div class="form-row">
+                                                    <div class="col-md-8 mb-3">
+                                                        <p i18n="@@edit_user_system_role_desc">Admins have full access to manage the organization’s settings, employees and locations; they can create shift schedules and manage shift exchange requests and tasks in all locations.</p>
+                                                    </div>
+                                                    <div class="col-md-4 ">
+                                                        <select class="form-control">
+                                                            <option i18n="@@edit-user_system_role_select" value="null">Select Role</option>
+                                                            <option value="admin">Admin</option>
+                                                            <option value="manager">Manager</option>
+                                                            <option value="employee">Employee</option>
+                                                        </select>
+                                                    </div>
+                                                </div>
+                                                <hr>
+        
+                                                <div class="form-row">
+                                                    <div class="col-md-6 mb-3">
+                                                        <label i18n="@@edit_user_locations">LOCATIONS</label>
+                                                    </div>
+                                                    <div class="col-md-6">
+                                                        <ng-select  [multiple]="true" [(ngModel)]="selteam" bindLabel="name" bindValue="id" formControlName="team"  class="form-control field_overlap" i18n-placeholder="@@edit-user_team_Pholder" placeholder="Add locations"  [ngClass]="{ 'is-invalid': submitted && f.team.errors }" >
+                                                            <ng-option *ngFor="let location of locations" [value]="location.name" [disabled]="location.disabled">{{location.name}} </ng-option>
+                                                        </ng-select> 
+                                                    </div>
+                                                </div>
+                                                <hr>
+        
+                                                <div class="form-row">
+                                                    <div class="col-md-6 mb-3">
+                                                        <label i18n="@@edit_user_positions">POSITIONS</label>
+                                                    </div>
+                                                    <div class="col-md-6">
+                                                        <ng-select [multiple]="true" [(ngModel)]="selposition" bindLabel="name" bindValue="id" formControlName="position" class="form-control field_overlap" i18n-placeholder="@@edit-user_position_Pholder" placeholder="Add positions" [ngClass]="{ 'is-invalid': submitted && f.position.errors }" >
+                                                            <ng-option *ngFor="let position of positions" [value]="position.name" [disabled]="position.disabled">{{position.name}} </ng-option>
+                                                        </ng-select>
+                                                    </div>
+                                                </div>
+                                                <hr>
+        
+                                                <div class="form-row">
+                                                    <div class="col-md-6 mb-3">
+                                                        <label i18n="@@edit_user_groups">GROUPS</label>
+                                                    </div>
+                                                    <div class="col-md-6">
+                                                        <ng-select [multiple]="true" [(ngModel)]="selgroup" bindLabel="name" bindValue="id" formControlName="group" class="form-control field_overlap" i18n-placeholder="@@edit-user_group_Pholder" placeholder="Add groups" [ngClass]="{ 'is-invalid': submitted && f.group.errors }" >
+                                                            <ng-option *ngFor="let group of groups" [value]="group.name" [disabled]="group.disabled">{{group.name}} </ng-option>
+                                                        </ng-select>
+                                                    </div>
+                                                </div>
+                                                <hr>
+        
+                                                <div class="form-row">
+                                                    <div class="col-md-6 mb-3">
+                                                        <label i18n="@@edit_user_hireDate">HIRE DATE</label>
+                                                    </div>
+                                                    <div class="col-md-6">
+                                                        <input type="date" class="form-control" formControlName="hireDate" [(ngModel)]="u.hire_date" >
+                                                    </div>
+                                                </div>
+                                                <hr>
+        
+                                                <div class="form-row">
+                                                    <div class="col-md-6 mb-3">
+                                                        <label i18n="@@edit_user_preferredHours">PREFERRED HOURS PER WEEK</label>
+                                                    </div>
+                                                    <div class="col-md-6">
+                                                        <input type="text" i18n-placeholder="@@edit-user-labor_Pholder" placeholder="none" class="form-control" name="">
+                                                    </div>
+                                                </div>
+                                                <hr>
+        
+                                                <label i18n="@@edit_user_password">PASSWORD</label>
+                                                <div class="form-row">
+                                                    <div class="col-md-8 mb-3">
+                                                        <p i18n="@@edit_user_password_desc">Click the button on the right if you need to reset your password.</p>
+                                                    </div>
+                                                    <div class="col-md-4 ">
+                                                        <button class="btn btn-primary" data-toggle="modal" data-target=".bd-example-modal-xl" type="button" (click)="reset_pass()" >Reset Password</button>
+                                                    </div>
+                                                </div> 
+                                                <hr>
+        
+                                                <label i18n="@@edit_user_hireFromSchedule">HIRE FROM YOUR SCHEDULE</label>
+                                                <div class="form-row">
+                                                    <div class="col-md-8 mb-3">
+                                                        <p i18n="@@edit_user_hireFromSchedule_desc">If this employee's time is not tracked or scheduled,
+                                                            their shifts, time offs and availability can be hidden from your schedule.
+                                                        </p>
+                                                    </div>
+                                                    <div class="col-md-4 ">
+                                                        <div class="custom-control custom-switch switch-success">
+                                                            <input type="checkbox" class="custom-control-input" id="customSwitchSuccess">
+                                                            <label class="custom-control-label text-muted" for="customSwitchSuccess"></label>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <hr>
+        
+                                           </div>
+                                           <div class="col-md-2"></div>
+                                       </div>
+                                       <div class="form-group">
+                                        <div class="form-check">
+                                            <label class="required" for="invalidCheck">
+                                                (*) Mandatory fields
+                                            </label>
+                                        </div>
+                                        </div><!--end form-group-->
+                                       <div class="form-group mb-0">
+                                            <button class="btn btn-danger btn-sm text-light px-4 mt-3 float-right mb-0 ml-2" (click)="cancelEdit()">Cancel</button>
+                                            <button id="update" class="btn btn-primary btn-sm text-light px-4 mt-3 float-right mb-0" type="submit">Update</button>
+                                            <!-- <div *ngIf="error" class="alert alert-danger mt-3 mb-0">{{error_message}}</div> -->
+                                        </div><!--end form-group-->
+                                        <!-- </span> -->
+                                        <!-- <div class="row col-xs-10">
+                                            <div *ngIf="showMsg" class=" row alert alert-success alert-dismissible col-xs-10" data-auto-dismiss role="alert" id="successMessage">
+                                                <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                                                    <span aria-hidden="true"></span>
+                                                </button>
+                                                <strong> Record updated successfully</strong>
+                                            </div>
+                                        </div> -->
+                                   </form>
+                                    </div><!--end card-body-->
+                                </div><!--end card-->
+                            </div><!--end col-->
+                        </div><!--end row-->
+                    </div><!--end general detail-->              
+
+        <div class="tab-pane fade" id="Unavailability">
+            <app-unavailability></app-unavailability>
+        </div><!--end Unavailability-->
+
+        <div class="tab-pane fade " id="Wages">
+            <app-wages></app-wages>
+        </div><!--end Wages-->
+
+        <div class="tab-pane fade " id="Notes">
+            <app-notes></app-notes>
+        </div><!--end notes-->
+
+    </div><!--end tab-content-->
+</div><!--end col-->
+</div><!--end row-->
+<ngx-ui-loader  overlayColor="rgba(40,40,40,0)" pbThickness="0" fgsColor="#09357d" fgsType="rectangle-bounce" [loaderId]="'loader-01'" ></ngx-ui-loader>
+

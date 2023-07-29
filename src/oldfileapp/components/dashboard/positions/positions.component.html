@@ -1,0 +1,59 @@
+ <div class="container-fluid">
+                    <!-- Page-Title -->
+                    <div class="row">
+                        <div class="col-sm-12">
+                            <div class="page-title-box">
+                                <div class="float-right">
+                                    <ol class="breadcrumb">
+                                        <li class="breadcrumb-item"><a href="dashboard.php">MDP</a></li>
+                                        <li class="breadcrumb-item"><a href="positions.php">Positions</a></li>
+                                        <li class="breadcrumb-item active">Position</li>
+                                    </ol>
+                                </div>
+                                <h4 class="page-title">Positions</h4>
+                            </div><!--end page-title-box-->
+                        </div><!--end col-->
+                    </div>
+                    <!-- end page title end breadcrumb -->
+                    <div class="row">
+                        <div class="col-12">
+                            <div class="card">
+                                <div class="card-body">
+                                    <button type="button" class="btn btn-primary px-4 mt-0 mb-3" onclick="location.href='add-position.php'"><i class="mdi mdi-plus-circle-outline mr-2"></i>Add New Position</button>
+                                    <div class="table-responsive">
+                                        <table id="datatable" class="table">
+                                            <thead class="thead-light">
+                                            <tr>
+                                                <th>Name</th>
+                                                <th>No. of Employees</th>
+
+                                                <th class="text-right">Action</th>
+                                            </tr><!--end tr-->
+                                            </thead>
+
+                                            <tbody>
+                                            <tr>
+                                                <td><a href="#"><img src="./assets/images/users/user-10.jpg" alt="" class="thumb-sm rounded-circle mr-2">Php Developer</a></td>
+                                                <td>0 Employees</td>
+                                                <td class="text-right">
+                                                    <a href="#" class="mr-2"><i class="fas fa-edit text-info font-16"></i></a>
+                                                    <a href="#"><i class="fas fa-trash-alt text-danger font-16"></i></a>
+                                                </td>
+                                            </tr><!--end tr-->
+                                            <tr>
+                                                <td><a href="#"><img src="./assets/images/users/user-9.jpg" alt="" class="thumb-sm rounded-circle mr-2">Android Developer</a></td>
+                                                <td>0 Employees</td>
+
+                                                <td class="text-right">
+                                                    <a href="#" class="mr-2"><i class="fas fa-edit text-info font-16"></i></a>
+                                                    <a href="#"><i class="fas fa-trash-alt text-danger font-16"></i></a>
+                                                </td>
+                                            </tr><!--end tr-->
+
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div><!--end card-body-->
+                            </div><!--end card-->
+                        </div> <!--end col-->
+                    </div><!--end row-->

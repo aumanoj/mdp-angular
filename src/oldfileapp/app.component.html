@@ -1,0 +1,21 @@
+
+        <header *ngIf="user">
+            <app-top-navbar></app-top-navbar>
+
+        </header>
+     
+       <div class="page-wrapper">
+             <div *ngIf="user">
+            <app-left-main-menu></app-left-main-menu>
+            <app-left-inner-menu></app-left-inner-menu>
+            </div>
+          <div class="page-content">  
+            
+       <!-- <app-dashboard></app-dashboard> -->
+         <router-outlet></router-outlet>
+        <footer>
+            <app-footer></app-footer>
+       </footer>  
+            
+       </div>
+       </div>

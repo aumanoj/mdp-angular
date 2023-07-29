@@ -1,0 +1,2703 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
+  <file source-language="en-US" datatype="plaintext" original="ng2.template">
+     <body>
+      <!--Login Page-->
+      <trans-unit id="user_name" datatype="html">
+        <source>Username</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/login/login.component.html</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="user_name_required" datatype="html">
+        <source>*</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/login/login.component.html</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="user_Placeholder" datatype="html">
+        <source>Enter registered email</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/login/login.component.html</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="login_email" datatype="html">
+        <source>Username is required</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/login/login.component.html</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="login_email_validation" datatype="html">
+        <source>Email must be a valid email address</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/login/login.component.html</context>
+        </context-group>
+      </trans-unit>
+      
+      <trans-unit id="login_password_name" datatype="html">
+        <source>Password</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/login/login.component.html</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="login_password_required" datatype="html">
+        <source>*</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/login/login.component.html</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="login_password_Placeholder" datatype="html">
+        <source>Please enter correct password</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/login/login.component.html</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="login_password_validation1" datatype="html">
+        <source>Password is required</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/login/login.component.html</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="login_password_validation2" datatype="html">
+        <source>Password must be at least 6 characters long</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/login/login.component.html</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="login_password_validation3" datatype="html">
+        <source>Password can be max 15 characters long</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/login/login.component.html</context>
+        </context-group>
+      </trans-unit>
+      <!--End login-->
+
+      <!--Forgot password-->
+      <trans-unit id="forgot_password_email" datatype="html">
+        <source>EMAIL</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/forgot-password/forgot-password.component.html</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="forgot_password_email_required" datatype="html">
+        <source>*</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/forgot-password/forgot-password.component.html</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="forgot_password_email_Pholder" datatype="html">
+        <source>Enter Registered Email</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/forgot-password/forgot-password.component.html</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="forgot_password_email_validation1" datatype="html">
+        <source>email is required</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/forgot-password/forgot-password.component.html</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="forgot_password_email_validation2" datatype="html">
+        <source>Email must be a valid email address</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/forgot-password/forgot-password.component.html</context>
+        </context-group>
+      </trans-unit>
+      <!--end forgot-password-->
+
+       <!--Register Page-->
+      <trans-unit id="reg_fname" datatype="html">
+        <source>Fist Name</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/register/register.component.html</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="reg_fname_required" datatype="html">
+        <source>*</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/register/register.component.html</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="reg_fname_Placeholder" datatype="html">
+        <source>Enter first name</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/register/register.component.html</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="reg_fname_validation1" datatype="html">
+        <source>Name is required</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/register/register.component.html</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="reg_fname_validation2" datatype="html">
+        <source>Only alphanumeric allowed</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/register/register.component.html</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="reg_fname_validation3" datatype="html">
+        <source>Name can't be more than 16 characters</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/register/register.component.html</context>
+        </context-group>
+      </trans-unit>
+
+      <trans-unit id="reg_lname" datatype="html">
+        <source>List Name</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/register/register.component.html</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="reg_lname_required" datatype="html">
+        <source>*</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/register/register.component.html</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="reg_lname_Placeholder" datatype="html">
+        <source>Enter last name</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/register/register.component.html</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="reg_lname_validation1" datatype="html">
+        <source>Last Name is required</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/register/register.component.html</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="reg_lname_validation2" datatype="html">
+        <source>Only alphanumeric allowed</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/register/register.component.html</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="reg_lname_validation3" datatype="html">
+        <source>Name can't be more than 16 characters</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/register/register.component.html</context>
+        </context-group>
+      </trans-unit>
+
+      <trans-unit id="reg_email" datatype="html">
+        <source>Email</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/register/register.component.html</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="reg_email_required" datatype="html">
+        <source>*</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/register/register.component.html</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="email_Placeholder" datatype="html">
+        <source>abc@example.com</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/register/register.component.html</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="reg_email_validation" datatype="html">
+        <source>Email is required</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/register/register.component.html</context>
+        </context-group>
+      </trans-unit>
+
+      <trans-unit id="reg_password" datatype="html">
+        <source>Password</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/register/register.component.html</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="reg_password_required" datatype="html">
+        <source>*</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/register/register.component.html</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="reg-password_Placeholder" datatype="html">
+        <source>Enter password</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/register/register.component.html</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="reg_password_validation1" datatype="html">
+        <source>Password is required</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/register/register.component.html</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="reg_password_validation2" datatype="html">
+        <source>Password must be at least 6 characters long</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/register/register.component.html</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="reg_password_validation3" datatype="html">
+        <source>Password can be max 15 characters long</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/register/register.component.html</context>
+        </context-group>
+      </trans-unit>
+
+      <trans-unit id="reg_password_confirm" datatype="html">
+        <source>Confirm Password</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/register/register.component.html</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="reg_password_confirm_required" datatype="html">
+        <source>*</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/register/register.component.html</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="reg-confirm-pwd_Placeholder" datatype="html">
+        <source>Confirm Password</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/register/register.component.html</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="reg_confirm-pwd_validation1" datatype="html">
+        <source>Confirmation Password is required</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/register/register.component.html</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="reg_confirm-pwd_validation2" datatype="html">
+        <source>Passsword and Confirm-Password didn't match</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/register/register.component.html</context>
+        </context-group>
+      </trans-unit>
+      
+      <trans-unit id="reg_phone" datatype="html">
+        <source>Mobile Number</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/register/register.component.html</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="reg_phone_required" datatype="html">
+        <source>*</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/register/register.component.html</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="phone_Placeholder" datatype="html">
+        <source>Enter Only Number</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/register/register.component.html</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="reg_phone_validation1" datatype="html">
+        <source>Phone number is required</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/register/register.component.html</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="reg_phone_validation2" datatype="html">
+        <source>Phone number must be at least 10 digit long</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/register/register.component.html</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="reg_phone_validation3" datatype="html">
+        <source>Only number allowed</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/register/register.component.html</context>
+        </context-group>
+      </trans-unit>
+
+      <trans-unit id="reg_agreeTermCondition" datatype="html">
+        <source>Agree to terms and conditions</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/register/register.component.html</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="reg_agreeTermCondition_validation" datatype="html">
+        <source>You must agree before submitting.</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/register/register.component.html</context>
+        </context-group>
+      </trans-unit>
+      <!--End register-->
+
+      <!--Create company-->
+
+      <trans-unit id="company_name" datatype="html">
+        <source>Company Name</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/company/company.component.html</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="company_name_required" datatype="html">
+        <source>*</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/company/company.component.html</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="company_name_pholder" datatype="html">
+        <source>Enter Company Name</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/company/company.component.html</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="company_name_validation" datatype="html">
+        <source>Name is required</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/company/company.component.html</context>
+        </context-group>
+      </trans-unit>
+
+      <trans-unit id="industry_type" datatype="html">
+        <source>Industry Type</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/company/company.component.html</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="industry_type_required" datatype="html">
+        <source>*</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/company/company.component.html</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="industry_type_select" datatype="html">
+        <source>Please Select</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/company/company.component.html</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="industry_type_validation" datatype="html">
+        <source>Please Select Industry</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/company/company.component.html</context>
+        </context-group>
+      </trans-unit>
+
+      <trans-unit id="no_of_employee" datatype="html">
+        <source>Number of Employees</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/company/company.component.html</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="no_of_employee_required" datatype="html">
+        <source>*</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/company/company.component.html</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="no_of_employee_select" datatype="html">
+        <source>Please Select</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/company/company.component.html</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="no_of_employee_validation" datatype="html">
+        <source>Please Select Employee Range</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/company/company.component.html</context>
+        </context-group>
+      </trans-unit>
+      <!--end create company-->
+
+      <!--Account page-->
+      <trans-unit id="account_company_name" datatype="html">
+        <source>Company Name</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/account/account.component.html</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="account_company_name_required" datatype="html">
+        <source>*</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/account/account.component.html</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="account_company_name_validation" datatype="html">
+        <source>Name is required</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/account/account.component.html</context>
+        </context-group>
+      </trans-unit>
+
+      <trans-unit id="account_industry" datatype="html">
+        <source>Industry</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/account/account.component.html</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="account_industry_required" datatype="html">
+        <source>*</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/account/account.component.html</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="account_industry_validation" datatype="html">
+        <source>Please Select Industry</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/account/account.component.html</context>
+        </context-group>
+      </trans-unit>
+
+      <trans-unit id="account_delete_company" datatype="html">
+        <source>Delete company account</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/account/account.component.html</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="account_delete_company_desc" datatype="html">
+        <source>If you don't think your company will use Sling again, you can permanently delete your company account. The account will be deleted for all users.</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/account/account.component.html</context>
+        </context-group>
+      </trans-unit>
+      <!--end Account-->
+
+      <!--Add-user-page-->
+      <trans-unit id="add_user_fname" datatype="html">
+        <source>NAME</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/dashboard/users/add-user/add-user.component.html</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="add_user_fname_required" datatype="html">
+        <source>*</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/dashboard/users/add-user/add-user.component.html</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="add_user-fname_Pholder" datatype="html">
+        <source>Enter first name</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/dashboard/users/add-user/add-user.component.html</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="add_user-fname_validation1" datatype="html">
+        <source>Name is required</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/dashboard/users/add-user/add-user.component.html</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="add_user-fname_validation2" datatype="html">
+        <source>Only alphanumeric allowed</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/dashboard/users/add-user/add-user.component.html</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="add_user-fname_validation3" datatype="html">
+        <source>Name can't be more than 16 characters</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/dashboard/users/add-user/add-user.component.html</context>
+        </context-group>
+      </trans-unit>
+
+      <trans-unit id="add_user-lname_Pholder" datatype="html">
+        <source>Enter last name</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/dashboard/users/add-user/add-user.component.html</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="add_user-lname_validation1" datatype="html">
+        <source>Last name is required</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/dashboard/users/add-user/add-user.component.html</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="add_user-lname_validation2" datatype="html">
+        <source>Only alphanumeric allowed</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/dashboard/users/add-user/add-user.component.html</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="add_user-lname_validation3" datatype="html">
+        <source>Name can't be more than 16 characters</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/dashboard/users/add-user/add-user.component.html</context>
+        </context-group>
+      </trans-unit>
+
+      <trans-unit id="add_user_email" datatype="html">
+        <source>EMAIL</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/dashboard/users/add-user/add-user.component.html</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="add_user_email_required" datatype="html">
+        <source>*</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/dashboard/users/add-user/add-user.component.html</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="add_user-email_Pholder" datatype="html">
+        <source>abc@example.com</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/dashboard/users/add-user/add-user.component.html</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="add_user_email_validation" datatype="html">
+        <source>Email is required</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/dashboard/users/add-user/add-user.component.html</context>
+        </context-group>
+      </trans-unit>
+      
+      <trans-unit id="add_user_phone" datatype="html">
+        <source>PHONE</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/dashboard/users/add-user/add-user.component.html</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="add_user-phoneCode" datatype="html">
+        <source>Select Country Code</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/dashboard/users/add-user/add-user.component.html</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="add_user-phone_Pholder" datatype="html">
+        <source>Enter phone no</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/dashboard/users/add-user/add-user.component.html</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="user_phone_validation1" datatype="html">
+        <source>Phone number must be at least 10 digit long</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/dashboard/users/add-user/add-user.component.html</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="user_phone_validation2" datatype="html">
+        <source>Only number allowed</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/dashboard/users/add-user/add-user.component.html</context>
+        </context-group>
+      </trans-unit>
+
+      <trans-unit id="add_user_timeZone" datatype="html">
+        <source>TIMEZONE</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/dashboard/users/add-user/add-user.component.html</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="add_user-timeZone_select" datatype="html">
+        <source>Select Time Zone</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/dashboard/users/add-user/add-user.component.html</context>
+        </context-group>
+      </trans-unit>
+
+      <trans-unit id="add_user_system_role" datatype="html">
+        <source>SYSTEM ROLE</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/dashboard/users/add-user/add-user.component.html</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="add_user_system_role_desc" datatype="html">
+        <source>Admins have full access to manage the organization’s settings, employees and locations; they can create shift schedules and manage shift exchange requests and tasks in all locations.</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/dashboard/users/add-user/add-user.component.html</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="add_user_system_role_select" datatype="html">
+        <source>Select Role</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/dashboard/users/add-user/add-user.component.html</context>
+        </context-group>
+      </trans-unit>
+
+      <trans-unit id="add_user_password" datatype="html">
+        <source>PASSWORD</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/dashboard/users/add-user/add-user.component.html</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="add_user_password_required" datatype="html">
+        <source>*</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/dashboard/users/add-user/add-user.component.html</context>
+        </context-group>
+      </trans-unit>
+       <trans-unit id="add_user_password_Pholder" datatype="html">
+        <source>Enter password</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/dashboard/users/add-user/add-user.component.html</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="add_user_password_validation1" datatype="html">
+        <source>Password is required</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/dashboard/users/add-user/add-user.component.html</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="add_user_password_validation2" datatype="html">
+        <source>Password must be at least 6 characters long</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/dashboard/users/add-user/add-user.component.html</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="add_user_password_validation3" datatype="html">
+        <source>Password can be max 15 characters long</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/dashboard/users/add-user/add-user.component.html</context>
+        </context-group>
+      </trans-unit>
+
+      <trans-unit id="add_user_empID" datatype="html">
+        <source>EMPLOYEE ID</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/dashboard/users/add-user/add-user.component.html</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="add_user_empID_Pholder" datatype="html">
+        <source>Fill in employee ID</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/dashboard/users/add-user/add-user.component.html</context>
+        </context-group>
+      </trans-unit>
+
+      <trans-unit id="add_user_position" datatype="html">
+        <source>POSITIONS</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/dashboard/users/add-user/add-user.component.html</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="add_user_position_Pholder" datatype="html">
+        <source>Add Position</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/dashboard/users/add-user/add-user.component.html</context>
+        </context-group>
+      </trans-unit>
+
+      <trans-unit id="add_user_team" datatype="html">
+        <source>LOCATIONS</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/dashboard/users/add-user/add-user.component.html</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="add_user_team_Pholder" datatype="html">
+        <source>Add Team</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/dashboard/users/add-user/add-user.component.html</context>
+        </context-group>
+      </trans-unit>
+
+      <trans-unit id="add_user_group" datatype="html">
+        <source>GROUPS</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/dashboard/users/add-user/add-user.component.html</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="add_user_group_Pholder" datatype="html">
+        <source>Add Group</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/dashboard/users/add-user/add-user.component.html</context>
+        </context-group>
+      </trans-unit>
+
+      <trans-unit id="add_user_invite_employee" datatype="html">
+        <source>INIVITE EMPLOYEE TO THIS ACCOUNT</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/dashboard/users/add-user/add-user.component.html</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="add_user_invite_employee_desc" datatype="html">
+        <source>Invite is sent via email by default.If no email is provided, invite is sent via sms</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/dashboard/users/add-user/add-user.component.html</context>
+        </context-group>
+      </trans-unit>
+      <!--End-add-user-->
+
+      <!--Edit-user-->
+      <trans-unit id="edit_user_fname" datatype="html">
+        <source>FIRST NAME</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/dashboard/users/edit-user/edit-user.component.html</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="edit_user_fname_required" datatype="html">
+        <source>*</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/dashboard/users/edit-user/edit-user.component.html</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="edit-user_fname_Pholder" datatype="html">
+        <source>Enter first name</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/dashboard/users/edit-user/edit-user.component.html</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="edit_user_fname_validation1" datatype="html">
+        <source>Name is required</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/dashboard/users/edit-user/edit-user.component.html</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="edit_user_fname_validation2" datatype="html">
+        <source>Only alphanumeric allowed</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/dashboard/users/edit-user/edit-user.component.html</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="edit_user_fname_validation3" datatype="html">
+        <source>Name can't be more than 16 characters</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/dashboard/users/edit-user/edit-user.component.html</context>
+        </context-group>
+      </trans-unit>
+      
+      <trans-unit id="edit_user_lname" datatype="html">
+        <source>LAST NAME</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/dashboard/users/edit-user/edit-user.component.html</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="edit_user_lname_required" datatype="html">
+        <source>*</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/dashboard/users/edit-user/edit-user.component.html</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="edit-user_lname_Pholder" datatype="html">
+        <source>Enter last name</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/dashboard/users/edit-user/edit-user.component.html</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="edit_user_lname_validation1" datatype="html">
+        <source>Last name is required</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/dashboard/users/edit-user/edit-user.component.html</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="edit_user_lname_validation2" datatype="html">
+        <source>Only alphanumeric allowed</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/dashboard/users/edit-user/edit-user.component.html</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="edit_user_lname_validation3" datatype="html">
+        <source>Name can't be more than 16 characters</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/dashboard/users/edit-user/edit-user.component.html</context>
+        </context-group>
+      </trans-unit>
+
+      <trans-unit id="edit_user_email" datatype="html">
+        <source>EMAIL</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/dashboard/users/edit-user/edit-user.component.html</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="edit_user_email_required" datatype="html">
+        <source>*</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/dashboard/users/edit-user/edit-user.component.html</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="edit-user_email_Pholder" datatype="html">
+        <source>abc@example.com</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/dashboard/users/edit-user/edit-user.component.html</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="edit-user_email_validation" datatype="html">
+        <source>Email is required</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/dashboard/users/edit-user/edit-user.component.html</context>
+        </context-group>
+      </trans-unit>
+
+      <trans-unit id="edit_user_countryCode" datatype="html">
+        <source>COUNTRY CODE</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/dashboard/users/edit-user/edit-user.component.html</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="edit-user_phoneCode" datatype="html">
+        <source>Select Country Code</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/dashboard/users/edit-user/edit-user.component.html</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="edit_user_phone" datatype="html">
+        <source>PHONE</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/dashboard/users/edit-user/edit-user.component.html</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="edit-user_phone_Pholder" datatype="html">
+        <source>Enter phone no</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/dashboard/users/edit-user/edit-user.component.html</context>
+        </context-group>
+      </trans-unit>
+      
+      <trans-unit id="edit_user_timeZone" datatype="html">
+        <source>TIME ZONE</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/dashboard/users/edit-user/edit-user.component.html</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="edit-user_timeZone_select" datatype="html">
+        <source>Select Time Zone</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/dashboard/users/edit-user/edit-user.component.html</context>
+        </context-group>
+      </trans-unit>
+
+      <trans-unit id="edit_user_dob" datatype="html">
+        <source>DATE of BIRTH</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/dashboard/users/edit-user/edit-user.component.html</context>
+        </context-group>
+      </trans-unit>
+
+      <trans-unit id="edit_user_status" datatype="html">
+        <source>STATUS</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/dashboard/users/edit-user/edit-user.component.html</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="edit_user_status_desc" datatype="html">
+        <source>You have not verified your email address yet. To be able to use your Sling account fully you need to verify your email address first.</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/dashboard/users/edit-user/edit-user.component.html</context>
+        </context-group>
+      </trans-unit>
+
+      <trans-unit id="edit_user_system_role" datatype="html">
+        <source>SYSTEM ROLE</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/dashboard/users/edit-user/edit-user.component.html</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="edit_user_system_role_desc" datatype="html">
+        <source>Admins have full access to manage the organization’s settings, employees and locations; they can create shift schedules and manage shift exchange requests and tasks in all locations.</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/dashboard/users/edit-user/edit-user.component.html</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="edit-user_system_role_select" datatype="html">
+        <source>Select Role</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/dashboard/users/edit-user/edit-user.component.html</context>
+        </context-group>
+      </trans-unit>
+      
+      <trans-unit id="edit_user_empID" datatype="html">
+        <source>EMPLOYEE ID</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/dashboard/users/edit-user/edit-user.component.html</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="edit-user_empID_Pholder" datatype="html">
+        <source>Fill in employee ID</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/dashboard/users/edit-user/edit-user.component.html</context>
+        </context-group>
+      </trans-unit>
+      
+      <trans-unit id="edit_user_positions" datatype="html">
+        <source>POSITIONS</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/dashboard/users/edit-user/edit-user.component.html</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="edit-user_position_Pholder" datatype="html">
+        <source>Add Position</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/dashboard/users/edit-user/edit-user.component.html</context>
+        </context-group>
+      </trans-unit>
+
+      <trans-unit id="edit_user_locations" datatype="html">
+        <source>LOCATIONS</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/dashboard/users/edit-user/edit-user.component.html</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="edit-user_team_Pholder" datatype="html">
+        <source>Add Team</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/dashboard/users/edit-user/edit-user.component.html</context>
+        </context-group>
+      </trans-unit>
+
+      <trans-unit id="edit_user_groups" datatype="html">
+        <source>GROUPS</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/dashboard/users/edit-user/edit-user.component.html</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="edit-user_group_Pholder" datatype="html">
+        <source>Add Group</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/dashboard/users/edit-user/edit-user.component.html</context>
+        </context-group>
+      </trans-unit>
+      
+      <trans-unit id="edit_user_hireDate" datatype="html">
+        <source>HIRE DATE</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/dashboard/users/edit-user/edit-user.component.html</context>
+        </context-group>
+      </trans-unit>
+
+      <trans-unit id="edit_user_preferredHours" datatype="html">
+        <source>PREFERRED HOURS PER WEEK</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/dashboard/users/edit-user/edit-user.component.html</context>
+        </context-group>
+      </trans-unit>
+
+      <trans-unit id="edit_user_password" datatype="html">
+        <source>PASSWORD</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/dashboard/users/edit-user/edit-user.component.html</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="edit_user_password_desc" datatype="html">
+        <source>Click the button on the right if you need to reset your password.</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/dashboard/users/edit-user/edit-user.component.html</context>
+        </context-group>
+      </trans-unit>
+
+      <trans-unit id="edit_user_hireFromSchedule" datatype="html">
+        <source>HIRE FROM YOUR SCHEDULE</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/dashboard/users/edit-user/edit-user.component.html</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="edit_user_hireFromSchedule_desc" datatype="html">
+        <source>If this employee's time is not tracked or scheduled,their shifts, time offs and availability can be hidden from your schedule.</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/dashboard/users/edit-user/edit-user.component.html</context>
+        </context-group>
+      </trans-unit>
+
+      <trans-unit id="edit-user-labor_Pholder" datatype="html">
+        <source>none</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/dashboard/users/edit-user/edit-user.component.html</context>
+        </context-group>
+      </trans-unit>
+      <!--End edit-user-->
+
+      <!--Create wage-->
+      <trans-unit id="wage_pay_type" datatype="html">
+        <source>Pay Type</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/dashboard/users/edit-user/wages.component.html</context>
+        </context-group>
+      </trans-unit> 
+      <trans-unit id="wage_pay_type_desc" datatype="html">
+        <source>Specify pay type for this employee so their cost is properly reflected on MDP.</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/dashboard/users/edit-user/wages.component.html</context>
+        </context-group>
+      </trans-unit>
+
+      <trans-unit id="wage_select" datatype="html">
+        <source>Select Pay Type</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/dashboard/users/edit-user/edit-user.component.html</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="wage_select_validation" datatype="html">
+        <source>Pay Type</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/dashboard/users/edit-user/wages.component.html</context>
+        </context-group>
+      </trans-unit> 
+      <trans-unit id="wage_empBaseWage" datatype="html">
+        <source>Employee base wage</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/dashboard/users/edit-user/wages.component.html</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="wage_empBaseWage_desc" datatype="html">
+        <source>This is the default wage applied to all positions assigned to you,
+        unless a base position wage or employee position wage has been set.</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/dashboard/users/edit-user/wages.component.html</context>
+        </context-group>
+      </trans-unit>
+
+      <trans-unit id="wage_effectiveFrom" datatype="html">
+        <source>Employee base wage</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/dashboard/users/edit-user/wages.component.html</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="wage_effectiveFrom_validation" datatype="html">
+        <source>Pay Type is required</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/dashboard/users/edit-user/wages.component.html</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="wage_empWage" datatype="html">
+        <source>Employee base wage</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/dashboard/users/edit-user/wages.component.html</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="wage_empWage_validation" datatype="html">
+        <source>Wage is required</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/dashboard/users/edit-user/wages.component.html</context>
+        </context-group>
+      </trans-unit>
+      <!--end wage-->
+
+      <!--Position page-->
+      <trans-unit id="add_position_name" datatype="html">
+        <source>POSITION NAME</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/dashboard/positions/add-position/add-position.component.html</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="add_position_name_required" datatype="html">
+        <source>*</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/dashboard/positions/add-position/add-position.component.html</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="add_position-name_Pholder" datatype="html">
+        <source>e.g. Assistant manager, Bartender, Server</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/dashboard/positions/add-position/add-position.component.html</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="add_position_name_validation" datatype="html">
+        <source>Name is required</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/dashboard/positions/add-position/add-position.component.html</context>
+        </context-group>
+      </trans-unit>
+
+      <trans-unit id="add_position_employee" datatype="html">
+        <source>EMPLOYEES</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/dashboard/positions/add-position/add-position.component.html</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="add_position-add-emp_Pholder" datatype="html">
+        <source>Add Employee</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/dashboard/positions/add-position/add-position.component.html</context>
+        </context-group>
+      </trans-unit>
+
+      <trans-unit id="add_position_schedule" datatype="html">
+        <source>SCHEDULE</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/dashboard/positions/add-position/add-position.component.html</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="add_position_schedule_desc" datatype="html">
+        <source>If you do not wish to see this position it can be hidden from your schedule.</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/dashboard/positions/add-position/add-position.component.html</context>
+        </context-group>
+      </trans-unit>
+
+      <trans-unit id="add_position_externalID" datatype="html">
+        <source>External ID (optional)</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/dashboard/positions/add-position/add-position.component.html</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="add_position_externalID_desc" datatype="html">
+        <source>Optional string identifier to be used on reports.</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/dashboard/positions/add-position/add-position.component.html</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="add_position_externalID_Pholder" datatype="html">
+        <source>Enter External ID</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/dashboard/positions/add-position/add-position.component.html</context>
+        </context-group>
+      </trans-unit>
+
+      <trans-unit id="add_position_wage" datatype="html">
+        <source>WAGES</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/dashboard/positions/add-position/add-position.component.html</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="add_position_wage_desc" datatype="html">
+        <source>Base wage is applied to all employees on this position,unless their wages are specifically defined.</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/dashboard/positions/add-position/add-position.component.html</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="add_position_baseWage" datatype="html">
+        <source>BASE WAGES</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/dashboard/positions/add-position/add-position.component.html</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="add_position_effectiveFrom" datatype="html">
+        <source>EFFECTIVE FROM</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/dashboard/positions/add-position/add-position.component.html</context>
+        </context-group>
+      </trans-unit>
+      <!--End position-->
+
+      <!--Edit-Position-->
+      <trans-unit id="edit_position_name" datatype="html">
+        <source>POSITION NAME</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/dashboard/positions/edit-position/edit-position.component.html</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="edit_position_name_required" datatype="html">
+        <source>*</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/dashboard/positions/edit-position/edit-position.component.html</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="edit-position-name_Pholder" datatype="html">
+        <source>e.g. Assistant manager, Bartender, Server</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/dashboard/positions/edit-position/edit-position.component.html</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="edit-position_name_validation" datatype="html">
+        <source>Name is required</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/dashboard/positions/edit-position/edit-position.component.html</context>
+        </context-group>
+      </trans-unit>
+
+      <trans-unit id="edit_position_employee" datatype="html">
+        <source>EMPLOYEES</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/dashboard/positions/edit-position/edit-position.component.html</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="edit-position-add-emp_Pholder" datatype="html">
+        <source>Add Employee</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/dashboard/positions/edit-position/edit-position.component.html</context>
+        </context-group>
+      </trans-unit>
+
+      <trans-unit id="edit_position_schedule" datatype="html">
+        <source>SCHEDULE</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/dashboard/positions/edit-position/edit-position.component.html</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="edit_position_schedule_desc" datatype="html">
+        <source>If you do not wish to see this position it can be hidden from your schedule.</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/dashboard/positions/edit-position/edit-position.component.html</context>
+        </context-group>
+      </trans-unit>
+
+      <trans-unit id="edit_position_externalID" datatype="html">
+        <source>External ID (optional)</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/dashboard/positions/add-position/add-position.component.html</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="edit_position_externalID_desc" datatype="html">
+        <source>Optional string identifier to be used on reports.</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/dashboard/positions/add-position/add-position.component.html</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="edit_position_externalID_Pholder" datatype="html">
+        <source>Enter External ID</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/dashboard/positions/add-position/add-position.component.html</context>
+        </context-group>
+      </trans-unit>
+
+      <trans-unit id="edit_position_wage" datatype="html">
+        <source>WAGES</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/dashboard/positions/add-position/add-position.component.html</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="edit_position_wage_desc" datatype="html">
+        <source>Base wage is applied to all employees on this position,unless their wages are specifically defined.</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/dashboard/positions/add-position/add-position.component.html</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="edit_position_baseWage" datatype="html">
+        <source>BASE WAGES</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/dashboard/positions/add-position/add-position.component.html</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="edit_position_effectiveFrom" datatype="html">
+        <source>EFFECTIVE FROM</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/dashboard/positions/add-position/add-position.component.html</context>
+        </context-group>
+      </trans-unit>
+      <!--end edit-position-->
+
+      <!--Location page-->
+      <trans-unit id="add_location_name" datatype="html">
+        <source>LOCATION NAME</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/dashboard/locations/add-location/add-location.component.html</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="add_location_name_required" datatype="html">
+        <source>*</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/dashboard/locations/add-location/add-location.component.html</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="add_location-name_Pholder" datatype="html">
+        <source>e.g. Boston, Flatiron, Bryant Park</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/dashboard/locations/add-location/add-location.component.html</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="add_location_name_validation" datatype="html">
+        <source>Name is required</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/dashboard/locations/add-location/add-location.component.html</context>
+        </context-group>
+      </trans-unit>
+
+      <trans-unit id="add_location_address" datatype="html">
+        <source>ADDRESS</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/dashboard/locations/add-location/add-location.component.html</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="add_location-address_Pholder" datatype="html">
+        <source>e.g. 365 Broadway, etc</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/dashboard/locations/add-location/add-location.component.html</context>
+        </context-group>
+      </trans-unit>
+
+      <trans-unit id="add_location_phone" datatype="html">
+        <source>PHONE</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/dashboard/locations/add-location/add-location.component.html</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="add_location-phoneCode" datatype="html">
+        <source>Select Country Code</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/dashboard/locations/add-location/add-location.component.html</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="add_location-phone_Pholder" datatype="html">
+        <source>Enter phone no</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/dashboard/locations/add-location/add-location.component.html</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="add_location-phone_validation1" datatype="html">
+        <source>Phone number must be at least 10 digit long</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/dashboard/locations/add-location/add-location.component.html</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="add_location-phone_validation2" datatype="html">
+        <source>Only number allowed</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/dashboard/locations/add-location/add-location.component.html</context>
+        </context-group>
+      </trans-unit>
+
+      <trans-unit id="add_location_timeZone" datatype="html">
+        <source>TIMEZONE</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/dashboard/locations/add-location/add-location.component.html</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="add_location-timeZone" datatype="html">
+        <source>Select Time Zone</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/dashboard/locations/add-location/add-location.component.html</context>
+        </context-group>
+      </trans-unit>
+      
+      <trans-unit id="add_location_employee" datatype="html">
+        <source>EMPLOYEES</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/dashboard/locations/add-location/add-location.component.html</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="add_location-emp_Pholder" datatype="html">
+        <source>Add employee</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/dashboard/locations/add-location/add-location.component.html</context>
+        </context-group>
+      </trans-unit>
+
+      <trans-unit id="add_location_schedule" datatype="html">
+        <source>SCHEDULE</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/dashboard/locations/add-location/add-location.component.html</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="add_location_schedule_desc" datatype="html">
+        <source>If you do not wish to see this location it can be hidden from your schedule.</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/dashboard/locations/add-location/add-location.component.html</context>
+        </context-group>
+      </trans-unit>
+
+      <trans-unit id="add_location_externalID" datatype="html">
+        <source>External ID (optional)</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/dashboard/locations/add-location/add-location.component.html</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="add_location_externalID_desc" datatype="html">
+        <source>Optional string identifier to be used on reports.</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/dashboard/locations/add-location/add-location.component.html</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="add_location_externalID_Pholder" datatype="html">
+        <source>Enter External ID</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/dashboard/locations/add-location/add-location.component.html</context>
+        </context-group>
+      </trans-unit>
+
+      <trans-unit id="add_location_projectSales" datatype="html">
+        <source>PROJECTED SALES</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/dashboard/locations/add-location/add-location.component.html</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="add_location_projectSales_desc" datatype="html">
+        <source>Default projected sales values Set sales defaults for each day of the week to be able to estimate Labor %PROJECTED SALES</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/dashboard/locations/add-location/add-location.component.html</context>
+        </context-group>
+      </trans-unit>
+
+      <trans-unit id="add_location_monday" datatype="html">
+        <source>MONDAY</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/dashboard/locations/add-location/add-location.component.html</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="add_location_monday_Pholder" datatype="html">
+        <source>$</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/dashboard/locations/add-location/add-location.component.html</context>
+        </context-group>
+      </trans-unit>
+
+      <trans-unit id="add_location_tuesday" datatype="html">
+        <source>TUESDAY</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/dashboard/locations/add-location/add-location.component.html</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="add_location_tuesday_Pholder" datatype="html">
+        <source>$</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/dashboard/locations/add-location/add-location.component.html</context>
+        </context-group>
+      </trans-unit>
+
+      <trans-unit id="add_location_wednesday" datatype="html">
+        <source>WEDNESDAY</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/dashboard/locations/add-location/add-location.component.html</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="add_location_wednesday_Pholder" datatype="html">
+        <source>$</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/dashboard/locations/add-location/add-location.component.html</context>
+        </context-group>
+      </trans-unit>
+
+      <trans-unit id="add_location_thursday" datatype="html">
+        <source>THURSDAY</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/dashboard/locations/add-location/add-location.component.html</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="add_location_thursday_Pholder" datatype="html">
+        <source>$</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/dashboard/locations/add-location/add-location.component.html</context>
+        </context-group>
+      </trans-unit>
+
+      <trans-unit id="add_location_friday" datatype="html">
+        <source>FRIDAY</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/dashboard/locations/add-location/add-location.component.html</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="add_location_friday_Pholder" datatype="html">
+        <source>$</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/dashboard/locations/add-location/add-location.component.html</context>
+        </context-group>
+      </trans-unit>
+
+      <trans-unit id="add_location_saturday" datatype="html">
+        <source>SATURDAY</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/dashboard/locations/add-location/add-location.component.html</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="add_location_saturday_Pholder" datatype="html">
+        <source>$</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/dashboard/locations/add-location/add-location.component.html</context>
+        </context-group>
+      </trans-unit>
+
+      <trans-unit id="add_location_sunday" datatype="html">
+        <source>SUNDAY</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/dashboard/locations/add-location/add-location.component.html</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="add_location_sunday_Pholder" datatype="html">
+        <source>$</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/dashboard/locations/add-location/add-location.component.html</context>
+        </context-group>
+      </trans-unit>
+
+      <trans-unit id="add_location_total" datatype="html">
+        <source>TOTAL</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/dashboard/locations/add-location/add-location.component.html</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="add_location_total_Pholder" datatype="html">
+        <source>$</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/dashboard/locations/add-location/add-location.component.html</context>
+        </context-group>
+      </trans-unit>
+
+      <trans-unit id="add_location_maxLaborBdgt" datatype="html">
+        <source>Maximum labor budget per week</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/dashboard/locations/add-location/add-location.component.html</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="add_location_maxLaborBdgt_desc" datatype="html">
+        <source>Set the upper limit, which you won't want to exceed</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/dashboard/locations/add-location/add-location.component.html</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="add_location_maxLaborBdgt_Pholder" datatype="html">
+        <source>$</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/dashboard/locations/add-location/add-location.component.html</context>
+        </context-group>
+      </trans-unit>
+
+      
+      <trans-unit id="add_location_maxLaborHrs" datatype="html">
+        <source>Maximum labor hours per week</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/dashboard/locations/add-location/add-location.component.html</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="add_location_maxLaborHrs_desc" datatype="html">
+        <source>Set the upper limit, which you won't want to exceed</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/dashboard/locations/add-location/add-location.component.html</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="add_location-maxlaborHrs_Pholder" datatype="html">
+        <source>none</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/dashboard/locations/add-location/add-location.component.html</context>
+        </context-group>
+      </trans-unit>
+      <!--End location-->
+
+      <!--Edit-location-->
+      <trans-unit id="edit_location_name" datatype="html">
+        <source>LOCATION NAME</source>
+        <context-group purpose="location"> 
+          <context context-type="sourcefile">src/app/components/dashboard/locations/edit-location/edit-location.component.html</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="edit_location_name_required" datatype="html">
+        <source>*</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/dashboard/locations/edit-location/edit-location.component.html</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="edit_location-name_Pholder" datatype="html">
+        <source>e.g. Boston, Flatiron, Bryant Park</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/dashboard/locations/edit-location/edit-location.component.html</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="edit_location_name_validation" datatype="html">
+        <source>Name is required</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/dashboard/locations/edit-location/edit-location.component.html</context>
+        </context-group>
+      </trans-unit>
+
+      <trans-unit id="edit_location_address" datatype="html">
+        <source>ADDRESS</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/dashboard/locations/edit-location/edit-location.component.html</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="edit_location-address_Pholder" datatype="html">
+        <source>e.g. 365 Broadway, etc</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/dashboard/locations/edit-location/edit-location.component.html</context>
+        </context-group>
+      </trans-unit>
+
+      <trans-unit id="edit_location_phone" datatype="html">
+        <source>PHONE</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/dashboard/locations/edit-location/edit-location.component.html</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="edit_location-phoneCode" datatype="html">
+        <source>Select Country Code</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/dashboard/locations/edit-location/edit-location.component.html</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="edit_location-phone_Pholder" datatype="html">
+        <source>Enter phone no</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/dashboard/locations/edit-location/edit-location.component.html</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="edit_location-phone_validation1" datatype="html">
+        <source>Phone number must be at least 10 digit long</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/dashboard/locations/add-location/add-location.component.html</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="edit_location-phone_validation2" datatype="html">
+        <source>Only number allowed</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/dashboard/locations/add-location/add-location.component.html</context>
+        </context-group>
+      </trans-unit>
+
+      <trans-unit id="edit_location_timeZone" datatype="html">
+        <source>TIMEZONE</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/dashboard/locations/edit-location/edit-location.component.html</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="edit_location-timeZone" datatype="html">
+        <source>Select Time Zone</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/dashboard/locations/edit-location/edit-location.component.html</context>
+        </context-group>
+      </trans-unit>
+      
+      <trans-unit id="edit_location_employee" datatype="html">
+        <source>EMPLOYEES</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/dashboard/locations/edit-location/edit-location.component.html</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="edit_location-emp_Pholder" datatype="html">
+        <source>edit employee</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/dashboard/locations/edit-location/edit-location.component.html</context>
+        </context-group>
+      </trans-unit>
+
+      <trans-unit id="edit_location_schedule" datatype="html">
+        <source>SCHEDULE</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/dashboard/locations/edit-location/edit-location.component.html</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="edit_location_schedule_desc" datatype="html">
+        <source>If you do not wish to see this location it can be hidden from your schedule.</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/dashboard/locations/edit-location/edit-location.component.html</context>
+        </context-group>
+      </trans-unit>
+
+      <trans-unit id="edit_location_externalID" datatype="html">
+        <source>External ID (optional)</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/dashboard/locations/edit-location/edit-location.component.html</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="edit_location_externalID_desc" datatype="html">
+        <source>Optional string identifier to be used on reports.</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/dashboard/locations/edit-location/edit-location.component.html</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="edit_location_externalID_Pholder" datatype="html">
+        <source>Enter External ID</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/dashboard/locations/edit-location/edit-location.component.html</context>
+        </context-group>
+      </trans-unit>
+
+      <trans-unit id="edit_location_projectSales" datatype="html">
+        <source>PROJECTED SALES</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/dashboard/locations/edit-location/edit-location.component.html</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="edit_location_projectSales_desc" datatype="html">
+        <source>Default projected sales values Set sales defaults for each day of the week to be able to estimate Labor %PROJECTED SALES</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/dashboard/locations/edit-location/edit-location.component.html</context>
+        </context-group>
+      </trans-unit>
+
+      <trans-unit id="edit_location_monday" datatype="html">
+        <source>MONDAY</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/dashboard/locations/edit-location/edit-location.component.html</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="edit_location_monday_Pholder" datatype="html">
+        <source>$</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/dashboard/locations/edit-location/edit-location.component.html</context>
+        </context-group>
+      </trans-unit>
+
+      <trans-unit id="edit_location_tuesday" datatype="html">
+        <source>TUESDAY</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/dashboard/locations/edit-location/edit-location.component.html</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="edit_location_tuesday_Pholder" datatype="html">
+        <source>$</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/dashboard/locations/edit-location/edit-location.component.html</context>
+        </context-group>
+      </trans-unit>
+
+      <trans-unit id="edit_location_wednesday" datatype="html">
+        <source>WEDNESDAY</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/dashboard/locations/edit-location/edit-location.component.html</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="edit_location_wednesday_Pholder" datatype="html">
+        <source>$</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/dashboard/locations/edit-location/edit-location.component.html</context>
+        </context-group>
+      </trans-unit>
+
+      <trans-unit id="edit_location_thursday" datatype="html">
+        <source>THURSDAY</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/dashboard/locations/edit-location/edit-location.component.html</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="edit_location_thursday_Pholder" datatype="html">
+        <source>$</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/dashboard/locations/edit-location/edit-location.component.html</context>
+        </context-group>
+      </trans-unit>
+
+      <trans-unit id="edit_location_friday" datatype="html">
+        <source>FRIDAY</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/dashboard/locations/edit-location/edit-location.component.html</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="edit_location_friday_Pholder" datatype="html">
+        <source>$</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/dashboard/locations/edit-location/edit-location.component.html</context>
+        </context-group>
+      </trans-unit>
+
+      <trans-unit id="edit_location_saturday" datatype="html">
+        <source>SATURDAY</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/dashboard/locations/edit-location/edit-location.component.html</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="edit_location_saturday_Pholder" datatype="html">
+        <source>$</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/dashboard/locations/edit-location/edit-location.component.html</context>
+        </context-group>
+      </trans-unit>
+
+      <trans-unit id="edit_location_sunday" datatype="html">
+        <source>SUNDAY</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/dashboard/locations/edit-location/edit-location.component.html</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="edit_location_sunday_Pholder" datatype="html">
+        <source>$</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/dashboard/locations/edit-location/edit-location.component.html</context>
+        </context-group>
+      </trans-unit>
+
+      <trans-unit id="edit_location_total" datatype="html">
+        <source>TOTAL</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/dashboard/locations/edit-location/edit-location.component.html</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="edit_location_total_Pholder" datatype="html">
+        <source>$</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/dashboard/locations/edit-location/edit-location.component.html</context>
+        </context-group>
+      </trans-unit>
+
+      <trans-unit id="edit_location_maxLaborBdgt" datatype="html">
+        <source>Maximum labor budget per week</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/dashboard/locations/edit-location/edit-location.component.html</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="edit_location_maxLaborBdgt_desc" datatype="html">
+        <source>Set the upper limit, which you won't want to exceed</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/dashboard/locations/edit-location/edit-location.component.html</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="edit_location_maxLaborBdgt_Pholder" datatype="html">
+        <source>$</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/dashboard/locations/edit-location/edit-location.component.html</context>
+        </context-group>
+      </trans-unit>
+
+      
+      <trans-unit id="edit_location_maxLaborHrs" datatype="html">
+        <source>Maximum labor hours per week</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/dashboard/locations/edit-location/edit-location.component.html</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="edit_location_maxLaborHrs_desc" datatype="html">
+        <source>Set the upper limit, which you won't want to exceed</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/dashboard/locations/edit-location/edit-location.component.html</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="edit_location-maxlaborHrs_Pholder" datatype="html">
+        <source>none</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/dashboard/locations/edit-location/edit-location.component.html</context>
+        </context-group>
+      </trans-unit>
+      <!--End edit-location-->
+
+      <!--Group page-->
+      <trans-unit id="add_group_name" datatype="html">
+        <source>GROUP NAME</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/dashboard/groups/add-groups/add-groups.component.html</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="add_group_name_required" datatype="html">
+        <source>*</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/dashboard/groups/add-groups/add-groups.component.html</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="add_group-name_Pholder" datatype="html">
+        <source>e.g. IT Department, Party Committee</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/dashboard/groups/add-groups/add-groups.component.html</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="add_group_name_validation" datatype="html">
+        <source>Name is required</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/dashboard/groups/add-groups/add-groups.component.html</context>
+        </context-group>
+      </trans-unit>
+
+      <trans-unit id="add_group_employee" datatype="html">
+        <source>EMPLOYEES</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/dashboard/groups/add-groups/add-groups.component.html</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="add_group-emp_Pholder" datatype="html">
+        <source>Add employee</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/dashboard/groups/add-groups/add-groups.component.html</context>
+        </context-group>
+      </trans-unit>
+
+      <trans-unit id="add_group_schedule" datatype="html">
+        <source>SCHEDULE</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/dashboard/groups/add-groups/add-groups.component.html</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="add_group_schedule_desc" datatype="html">
+        <source>If you do not wish to see this group it can be hidden from your schedule.</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/dashboard/groups/add-groups/add-groups.component.html</context>
+        </context-group>
+      </trans-unit>
+      <!--End group-->
+
+      <!--Edit-Group-->
+      <trans-unit id="edit_group_name" datatype="html">
+        <source>GROUP NAME</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/dashboard/groups/add-groups/add-groups.component.html</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="edit_group_name_required" datatype="html">
+        <source>*</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/dashboard/groups/add-groups/add-groups.component.html</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="edit-group-name_Pholder" datatype="html">
+        <source>e.g. IT Department, Party Committee</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/dashboard/groups/add-groups/add-groups.component.html</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="edit-group_name_validation" datatype="html">
+        <source>Name is required</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/dashboard/groups/add-groups/add-groups.component.html</context>
+        </context-group>
+      </trans-unit>
+
+      <trans-unit id="edit_group_employee" datatype="html">
+        <source>EMPLOYEES</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/dashboard/groups/add-groups/add-groups.component.html</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="edit-group-emp_Pholder" datatype="html">
+        <source>Add employee</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/dashboard/groups/add-groups/add-groups.component.html</context>
+        </context-group>
+      </trans-unit>
+
+      <trans-unit id="edit_group_schedule" datatype="html">
+        <source>SCHEDULE</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/dashboard/groups/add-groups/add-groups.component.html</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="edit_group_schedule_desc" datatype="html">
+        <source>If you do not wish to see this group it can be hidden from your schedule.</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/dashboard/groups/add-groups/add-groups.component.html</context>
+        </context-group>
+      </trans-unit>
+      <!--End edit-group-->
+
+      <!--settings page-->
+      <!--preferences Tab-->
+      <trans-unit id="preference_msg" datatype="html">
+        <source>Your preferences define the look and feel of your Sling. They don’t affect other employees in your organization.</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/dashboard/settings/preferences/preferences.component.html</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="preference_time_format" datatype="html">
+        <source>TIME FORMAT</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/dashboard/settings/preferences/preferences.component.html</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="preference_time_format_desc" datatype="html">
+        <source>Select the time format for shifts and availability.</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/dashboard/settings/preferences/preferences.component.html</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="preference_name_format" datatype="html">
+        <source>NAME FORMAT</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/dashboard/settings/preferences/preferences.component.html</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="preference_name_format_desc" datatype="html">
+        <source>Select the name format for employee lists</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/dashboard/settings/preferences/preferences.component.html</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="preference_world_clock" datatype="html">
+        <source>WORLD CLOCK</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/dashboard/settings/preferences/preferences.component.html</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="preference_world_clock_desc" datatype="html">
+        <source>Display calendar events and schedule according to my local time (Asia/Calcutta)
+        When disabled you see and schedule events within their locations timezone</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/dashboard/settings/preferences/preferences.component.html</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="preference_sound_effect" datatype="html">
+        <source>SOUND EFFECTS</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/dashboard/settings/preferences/preferences.component.html</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="preference_sound_effect_desc" datatype="html">
+        <source>Enable sound effects, so you know when you have received a new message or have sent one</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/dashboard/settings/preferences/preferences.component.html</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="preference_showOther_msg" datatype="html">
+        <source>Show others when I am typing Allow others to see when you are typing a message</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/dashboard/settings/preferences/preferences.component.html</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="preference_csv_delimeter" datatype="html">
+        <source>CSV Delimiter</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/dashboard/settings/preferences/preferences.component.html</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="preference_csv_delimeter_desc" datatype="html">
+        <source>Delimiter for exports to CSV files</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/dashboard/settings/preferences/preferences.component.html</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="preference_google_cal" datatype="html">
+        <source>Google calendar synchronization</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/dashboard/settings/preferences/preferences.component.html</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="preference_google_cal_desc" datatype="html">
+        <source>Subscribe to your personal schedule on Google calendar Learn More</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/dashboard/settings/preferences/preferences.component.html</context>
+        </context-group>
+      </trans-unit>
+      <!--end preferences-->
+
+      <!--Notification Tab-->
+      <trans-unit id="notification_msg" datatype="html">
+        <source>Indicate how you want to be alerted about updates on your account, in addition to the default notifications, by selecting the channels below.</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/dashboard/settings/notifications/notifications.component.html</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="notification_shift_alarm" datatype="html">
+        <source>SHIFT ALARM</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/dashboard/settings/notifications/notifications.component.html</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="notification_shift_alarm_desc" datatype="html">
+        <source>Enable shift alarms, so you get a reminder for upcoming shifts</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/dashboard/settings/notifications/notifications.component.html</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="notification_timeBeforeShift" datatype="html">
+        <source>Time before shift</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/dashboard/settings/notifications/notifications.component.html</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="notification_timeBeforeShift_desc" datatype="html">
+        <source>Indicate when you’d like to be reminded of an upcoming shift,so you make it to work on time</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/dashboard/settings/notifications/notifications.component.html</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="notification_viaSms" datatype="html">
+        <source>Via SMS to my mobile phone PREMIUM</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/dashboard/settings/notifications/notifications.component.html</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="notification_viaPushMobile_device" datatype="html">
+        <source>Via push notifications to my mobile device Download the MDP app for iOS or Android</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/dashboard/settings/notifications/notifications.component.html</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="notification_dashboardNotification" datatype="html">
+        <source>DASHBOARD NOTIFICATIONS</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/dashboard/settings/notifications/notifications.component.html</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="notification_dashboardNotification_desc" datatype="html">
+        <source>Dashboard notifications include updates on shifts, tasks and announcements relevant to you. By default, these notifications are displayed on your Dashboard.</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/dashboard/settings/notifications/notifications.component.html</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="notification_sendMeAdditional_alert" datatype="html">
+        <source>Send me additional alerts when:</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/dashboard/settings/notifications/notifications.component.html</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="notification_dashboard_viaPushNotification" datatype="html">
+        <source>Via push notifications to my mobile device Download the MDP app for</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/dashboard/settings/notifications/notifications.component.html</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="notification_dashboard_viaMail" datatype="html">
+        <source>Via Mail</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/dashboard/settings/notifications/notifications.component.html</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="notification_message_notification" datatype="html">
+        <source>MESSAGES NOTIFICATIONS</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/dashboard/settings/notifications/notifications.component.html</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="notification_message_notification_desc" datatype="html">
+        <source>Message notifications inform you of any new messages in conversations you are a part of. By default, these notifications are displayed as badges on the Messages tab.</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/dashboard/settings/notifications/notifications.component.html</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="notification_message_sendMeAdditional" datatype="html">
+        <source>Send me additional alerts when:</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/dashboard/settings/notifications/notifications.component.html</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="notification_message_viaPushNotification" datatype="html">
+        <source>Via push notifications to my mobile device Download the MDP app for</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/dashboard/settings/notifications/notifications.component.html</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="notification_message_viaMail" datatype="html">
+        <source>Via Mail</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/dashboard/settings/notifications/notifications.component.html</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="notification_message_viaNotification" datatype="html">
+        <source>Via notifications to my web browser</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/dashboard/settings/notifications/notifications.component.html</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="notification_newsfeed" datatype="html">
+        <source>NEWSFEED</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/dashboard/settings/notifications/notifications.component.html</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="notification_newsfeed_desc" datatype="html">
+        <source>Newsfeed notifications inform you of any new posts on pages you follow. By default, these notifications are displayed as badges on the Newsfeed tab.</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/dashboard/settings/notifications/notifications.component.html</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="notification_newsfeed_sendMEAdditional" datatype="html">
+        <source>Send me additional alerts when:</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/dashboard/settings/notifications/notifications.component.html</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="notification_newsfeed_viaPushNotification" datatype="html">
+        <source>Via push notifications to my mobile device Download the MDP app for</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/dashboard/settings/notifications/notifications.component.html</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="notification_newsfeed_viaMail" datatype="html">
+        <source>Via Mail</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/dashboard/settings/notifications/notifications.component.html</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="notification_newsfeed_viaNotification" datatype="html">
+        <source>Via notifications to my web browser</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/dashboard/settings/notifications/notifications.component.html</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="notification_daily_emailReport" datatype="html">
+        <source>DAILY EMAIL REPORT</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/dashboard/settings/notifications/notifications.component.html</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="notification_daily_emailReport_desc" datatype="html">
+        <source>Send me a daily email report Get information about your employees and hours scheduled</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/dashboard/settings/notifications/notifications.component.html</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="notification_daily_emailReport_timeOfDay" datatype="html">
+        <source>Time of day to deliver email report</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/dashboard/settings/notifications/notifications.component.html</context>
+        </context-group>
+      </trans-unit>
+
+      <trans-unit id="notification_timeClock" datatype="html">
+        <source>TIME CLOCK</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/dashboard/settings/notifications/notifications.component.html</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="notification_timeClock_desc" datatype="html">
+        <source>Enable notifications when employees edit their timesheets</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/dashboard/settings/notifications/notifications.component.html</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="notification_checkIn" datatype="html">
+        <source>CHECK IN</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/dashboard/settings/notifications/notifications.component.html</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="notification_checkIn_desc1" datatype="html">
+        <source>Send dashboard notifications when:</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/dashboard/settings/notifications/notifications.component.html</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="notification_checkIn_desc2" datatype="html">
+        <source>Define late in number of minutes after a shift is scheduled to start</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/dashboard/settings/notifications/notifications.component.html</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="notification_checkOut" datatype="html">
+        <source>CHECK OUT</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/dashboard/settings/notifications/notifications.component.html</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="notification_checkOut_desc1" datatype="html">
+        <source>Send dashboard notifications when:</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/dashboard/settings/notifications/notifications.component.html</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="notification_checkOut_desc2" datatype="html">
+        <source>Define late in number of minutes after a shift is scheduled to end</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/dashboard/settings/notifications/notifications.component.html</context>
+        </context-group>
+      </trans-unit>
+      <!--end notifications-->
+
+      <!--Schedule-intervals-->
+      <trans-unit id="schedule-intervals_dayPart" datatype="html">
+        <source>DAY PARTS</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/dashboard/settings/schedule-intervals/schedule-intervals.component.html</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="schedule-intervals_timeBlock" datatype="html">
+        <source>TIME BLOCKS</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/dashboard/settings/schedule-intervals/schedule-intervals.component.html</context>
+        </context-group>
+      </trans-unit>
+      <!--end schedule-intervals-->
+
+      <!--Company-settings-->
+      <trans-unit id="cmpy_settings_msg" datatype="html">
+        <source>Company settings define the way Sling functions for your team. These settings apply to everyone within your company and can be managed only by Admins.</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/dashboard/settings/company-settings/company-settings.component.html</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="cmpy_settings_general" datatype="html">
+        <source>GENERAL</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/dashboard/settings/company-settings/company-settings.component.html</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="cmpy_settings_hrs-of-operation" datatype="html">
+        <source>Hours of operation</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/dashboard/settings/company-settings/company-settings.component.html</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="cmpy_settings_hrs-of-operation_desc" datatype="html">
+        <source>Set hours of operation to define the operational calendar for your company.</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/dashboard/settings/company-settings/company-settings.component.html</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="cmpy_settings_from" datatype="html">
+        <source>From</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/dashboard/settings/company-settings/company-settings.component.html</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="cmpy_settings_enable-cutoff" datatype="html">
+        <source>Enable a cutoff time for overnight hours</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/dashboard/settings/company-settings/company-settings.component.html</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="cmpy_settings_enable-cutoff_desc" datatype="html">
+        <source>shifts that cross 12:00 AM between days - set a cutoff time to split the hours between days on schedule and payroll.</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/dashboard/settings/company-settings/company-settings.component.html</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="cmpy_settings_first-day-week" datatype="html">
+        <source>First day of the week</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/dashboard/settings/company-settings/company-settings.component.html</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="cmpy_settings_first-day-week_desc" datatype="html">
+        <source>Select the first day of your work week</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/dashboard/settings/company-settings/company-settings.component.html</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="cmpy_settings_break-choose-whether" datatype="html">
+        <source>Breaks Choose whether breaks are enabled for shifts</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/dashboard/settings/company-settings/company-settings.component.html</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="cmpy_settings_paid-unpaid-break" datatype="html">
+        <source>Paid or unpaid breaks</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/dashboard/settings/company-settings/company-settings.component.html</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="cmpy_settings_default-break-length" datatype="html">
+        <source>Default break length</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/dashboard/settings/company-settings/company-settings.component.html</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="cmpy_settings_default-break-length_desc" datatype="html">
+        <source>Set the default length of the breaks here, so you do not have to adjust it when scheduling</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/dashboard/settings/company-settings/company-settings.component.html</context>
+        </context-group>
+      </trans-unit>
+
+      <trans-unit id="cmpy_settings_restrictions" datatype="html">
+        <source>RESTRICTIONS</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/dashboard/settings/company-settings/company-settings.component.html</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="cmpy_settings_restrictions_desc" datatype="html">
+        <source>Contact details Allow employees to see each other’s phone numbers and emails</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/dashboard/settings/company-settings/company-settings.component.html</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="cmpy_settings_restrictions_schedule-hrs-of-coworkers" datatype="html">
+        <source>Scheduled hours of coworkers Allow employees to see total hours for coworkers</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/dashboard/settings/company-settings/company-settings.component.html</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="cmpy_settings_restrictions_visibility-of-schedules" datatype="html">
+        <source>Visibility of schedules for managers Allow managers to view other locations' schedules</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/dashboard/settings/company-settings/company-settings.component.html</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="cmpy_settings_restrictions_visibility-of-schedules-for-emp" datatype="html">
+        <source>Visibility of schedules for employees Allow employees to view other employees' schedules</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/dashboard/settings/company-settings/company-settings.component.html</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="cmpy_settings_restrictions_visibility-of-coworkers" datatype="html">
+        <source>Visibility of coworkers across locations Allow employees to view and communicate with coworkers assigned to different locations</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/dashboard/settings/company-settings/company-settings.component.html</context>
+        </context-group>
+      </trans-unit>
+
+      <trans-unit id="cmpy_settings_message" datatype="html">
+        <source>MESSAGES</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/dashboard/settings/company-settings/company-settings.component.html</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="cmpy_settings_message_desc" datatype="html">
+        <source>Enable messages feature Send messages to groups or individuals. Easily reach employees within groups, locations or specific positions. Share anything you like, files, photos, videos or links.</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/dashboard/settings/company-settings/company-settings.component.html</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="cmpy_settings_message_allow-emp" datatype="html">
+        <source>Allow employees to start conversations Employees will be able to create new conversations</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/dashboard/settings/company-settings/company-settings.component.html</context>
+        </context-group>
+      </trans-unit>
+
+      <trans-unit id="cmpy_settings_task" datatype="html">
+        <source>TASKS</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/dashboard/settings/company-settings/company-settings.component.html</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="cmpy_settings_task_desc" datatype="html">
+        <source>Enable tasks feature Assign tasks and follow their progress. Create to-do lists for yourself or your employees. Set due dates and get reminded as the dates approach.</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/dashboard/settings/company-settings/company-settings.component.html</context>
+        </context-group>
+      </trans-unit>
+
+      <trans-unit id="cmpy_settings_newsfeed" datatype="html">
+        <source>NEWSFEED</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/dashboard/settings/company-settings/company-settings.component.html</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="cmpy_settings_newsfeed_desc" datatype="html">
+        <source>Enable newsfeed feature Set up pages on your newsfeed for any purpose you like. Share updates, files, pictures and videos. Create your own social space – interact... have fun.</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/dashboard/settings/company-settings/company-settings.component.html</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="cmpy_settings_newsfeed_allow-emp" datatype="html">
+        <source>Allow employees to create pages Employees will be able to create pages</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/dashboard/settings/company-settings/company-settings.component.html</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="cmpy_settings_newsfeed_available-shift" datatype="html">
+        <source>Available shifts and shift exchanges</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/dashboard/settings/company-settings/company-settings.component.html</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="cmpy_settings_newsfeed_available-shift_desc" datatype="html">
+        <source>Allow employees to give away their shifts When disabled, employees are not able to offer their shifts or make them available</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/dashboard/settings/company-settings/company-settings.component.html</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="cmpy_settings_newsfeed_allow-emp-swap-shift" datatype="html">
+        <source>Allow employees to give away their shifts When disabled, employees are not able to offer their shifts or make them available</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/dashboard/settings/company-settings/company-settings.component.html</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="cmpy_settings_newsfeed_allow-emp-swap-shift_desc" datatype="html">
+        <source>Restrict offers and swaps by location and position When enabled, employees can only offer or swap a shift with an employee if the recipient is also assigned to the location and position of the shift</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/dashboard/settings/company-settings/company-settings.component.html</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="cmpy_settings_newsfeed_automatically-approve" datatype="html">
+        <source>Automatically approve applicants When disabled, shift applications and offers require manager’s approval</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/dashboard/settings/company-settings/company-settings.component.html</context>
+        </context-group>
+      </trans-unit>
+
+      <trans-unit id="cmpy_settings_unavailability" datatype="html">
+        <source>UNAVAILABILITY</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/dashboard/settings/company-settings/company-settings.component.html</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="cmpy_settings_unavailability_desc" datatype="html">
+        <source>Unavailability Allow employees to set and edit their unavailability</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/dashboard/settings/company-settings/company-settings.component.html</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="cmpy_settings_unavailability_approval" datatype="html">
+        <source>Approval Require a manager's approval for unavailability changes</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/dashboard/settings/company-settings/company-settings.component.html</context>
+        </context-group>
+      </trans-unit>
+      <!--end company-settings-->
+
+      <!--Time-clock-->
+      <trans-unit id="time-clcok_settings_timeClock" datatype="html">
+        <source>TIME CLOCK</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/dashboard/settings/time-clock/time-clock.component.html</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="time-clcok_settings_mobileWeb" datatype="html">
+        <source>Mobile and web time clock</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/dashboard/settings/time-clock/time-clock.component.html</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="time-clcok_settings_mobileWeb_desc" datatype="html">
+        <source>Allow employees to clock in and out of their shifts from the Sling mobile or web apps.</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/dashboard/settings/time-clock/time-clock.component.html</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="time-clcok_settings_kiosk" datatype="html">
+        <source>Kiosk</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/dashboard/settings/time-clock/time-clock.component.html</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="time-clcok_settings_kiosk_desc" datatype="html">
+        <source>Allow employees to clock in and out of their shifts from designated terminals.</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/dashboard/settings/time-clock/time-clock.component.html</context>
+        </context-group>
+      </trans-unit>
+      <!--end time-clock-->
+
+      <!--Labor-cost-->
+      <trans-unit id="labor-cost_settings_allow-you" datatype="html">
+        <source>Allow employees to clock in and out of their shifts from designated terminals.</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/dashboard/settings/labor-cost/labor-cost.component.html</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="labor-cost_settings_currency" datatype="html">
+        <source>Currency</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/dashboard/settings/labor-cost/labor-cost.component.html</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="labor-cost_settings_payroll" datatype="html">
+        <source>Payroll period type</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/dashboard/settings/labor-cost/labor-cost.component.html</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="labor-cost_settings_select-yourNext" datatype="html">
+        <source>Select your next payroll date so we know where to start</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/dashboard/settings/labor-cost/labor-cost.component.html</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="labor-cost_settings_overtime" datatype="html">
+        <source>Overtime</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/dashboard/settings/labor-cost/labor-cost.component.html</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="labor-cost_settings_overtime-startAfter" datatype="html">
+        <source>Overtime starts after</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/dashboard/settings/labor-cost/labor-cost.component.html</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="labor-cost_settings_overtime-startAfter_desc" datatype="html">
+        <source>Set threshold for weekly overtime</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/dashboard/settings/labor-cost/labor-cost.component.html</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="labor-cost_settings_hrs" datatype="html">
+        <source>Hours</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/dashboard/settings/labor-cost/labor-cost.component.html</context>
+        </context-group>
+      </trans-unit>
+
+      <trans-unit id="labor-cost_settings_paid-overtime" datatype="html">
+        <source>Paid overtime per hour</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/dashboard/settings/labor-cost/labor-cost.component.html</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="labor-cost_settings_paid-overtime_desc" datatype="html">
+        <source>This rate will be applied to hours beyond prescribed threshold</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/dashboard/settings/labor-cost/labor-cost.component.html</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="labor-cost_settings_rateX1" datatype="html">
+        <source>@ RATE X</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/dashboard/settings/labor-cost/labor-cost.component.html</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="labor-cost_settings_labor%" datatype="html">
+        <source>Labor %</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/dashboard/settings/labor-cost/labor-cost.component.html</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="labor-cost_settings_labor%goal" datatype="html">
+        <source>Labor % goal</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/dashboard/settings/labor-cost/labor-cost.component.html</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="labor-cost_settings_labor%goal_desc" datatype="html">
+        <source>Set the upper limit, which you won't want to exceed</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/dashboard/settings/labor-cost/labor-cost.component.html</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="labor-cost_settings_%" datatype="html">
+        <source>%</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/dashboard/settings/labor-cost/labor-cost.component.html</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="labor-cost_settings_holiday-pay" datatype="html">
+        <source>Holiday pay</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/dashboard/settings/labor-cost/labor-cost.component.html</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="labor-cost_settings_holiday-pay-multi" datatype="html">
+        <source>Set holiday pay multiplier</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/dashboard/settings/labor-cost/labor-cost.component.html</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="labor-cost_settings_rateX2" datatype="html">
+        <source>@ RATE X</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/dashboard/settings/labor-cost/labor-cost.component.html</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="labor-cost_settings_spreadOfHours" datatype="html">
+        <source>Spread of hours</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/dashboard/settings/labor-cost/labor-cost.component.html</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="labor-cost_settings_labor-costAccess" datatype="html">
+        <source>Labor cost access</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/dashboard/settings/labor-cost/labor-cost.component.html</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="labor-cost_settings_labor-costAccess_desc" datatype="html">
+        <source>Add managers to grant access to labor cost, reports and wages</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/dashboard/settings/labor-cost/labor-cost.component.html</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="labor-cost_settings_empWage" datatype="html">
+        <source>Employee wages</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/dashboard/settings/labor-cost/labor-cost.component.html</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="labor-cost_settings_empWage_desc" datatype="html">
+        <source>Allow employees to see their own wages</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/dashboard/settings/labor-cost/labor-cost.component.html</context>
+        </context-group>
+      </trans-unit>
+      <!--end labor-cost-->
+
+      <!--Time-off-->
+      <trans-unit id="time-off_settings_timeOff" datatype="html">
+        <source>TIME OFF SETTINGS</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/dashboard/settings/labor-cost/labor-cost.component.html</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="time-off_settings_timeOffRequest" datatype="html">
+        <source> Time off requests Allow employees to request time off </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/dashboard/settings/labor-cost/labor-cost.component.html</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="time-off_settings_approval-manager" datatype="html">
+        <source> Approval Require manager approval of time off requests </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/dashboard/settings/labor-cost/labor-cost.component.html</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="time-off_settings_cutoffTime" datatype="html">
+        <source> Cutoff time Time off requests must be submitted in advance </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/dashboard/settings/labor-cost/labor-cost.component.html</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="time-off_settings_comments" datatype="html">
+        <source> Comments Require comments for time off requests</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/dashboard/settings/labor-cost/labor-cost.component.html</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="time-off_settings_timeOffCapping" datatype="html">
+        <source> Time off capping</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/dashboard/settings/labor-cost/labor-cost.component.html</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="time-off_settings_timeOffCapping_desc" datatype="html">
+        <source> Enable paid time off tracking Allow capping leave for paid time off</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/dashboard/settings/labor-cost/labor-cost.component.html</context>
+        </context-group>
+      </trans-unit>
+      <!--end time-off-->
+
+      <!--Account-activity-->
+      <trans-unit id="account-activity_settings_msg" datatype="html">
+        <source> Account activity lists all open sessions associated with your account and allows you to sign out any of them. A session is added any time your account is used to log into Sling from a web browser or a mobile device.</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/dashboard/settings/account-activity/account-activity.component.html</context>
+        </context-group>
+      </trans-unit>
+      <!--end account-activity-->
+
+      <!--integrations-->
+      <trans-unit id="integrations_settings_integrations" datatype="html">
+        <source> My App</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/dashboard/settings/integrations/integrations.component.html</context>
+        </context-group>
+      </trans-unit>
+      <!--end integrations-->
+
+      <!--end settings-->
+
+    </body>
+  </file>
+</xliff>

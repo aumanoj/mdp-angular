@@ -1,0 +1,87 @@
+<!-- <div ngxUiLoaderBlurred> -->
+<div class="container-fluid">
+    <!-- Page-Title -->
+    <div class="row">
+        <div class="col-sm-12">
+            <div class="page-title-box">
+                <div class="float-right">
+                    <ol class="breadcrumb">
+                        <li class="breadcrumb-item"><a [routerLink]="">MDP</a></li>
+                        <li class="breadcrumb-item">Employees</li>
+                    </ol>
+                </div>
+                <h4 class="page-title">All Staff</h4>
+            </div>
+            <!--end page-title-box-->
+        </div>
+        <!--end col-->
+    </div>
+    <!-- end page title end breadcrumb -->
+    <div ngxUiLoaderBlurred>
+
+        <div class="row">
+            <div class="col-12">
+                <div class="card">
+                    <div class="card-body">
+                        <button type="button" class="btn btn-primary px-4 mt-0 mb-3" (click)="add_user()"><i
+                                class="mdi mdi-plus-circle-outline mr-2"></i>Add New Member</button>
+                        <div class="table-responsive">
+                            <table id="datatable" class="table">
+                                <thead class="thead-light">
+                                    <tr>
+                                        <th>Name</th>
+                                        <th>Positions</th>
+                                        <th>Team</th>
+                                        <th>Email</th>
+                                        <th>Phone</th>
+                                        <th>Status</th>
+                                        <th class="text-right">Action</th>
+                                    </tr>
+                                    <!--end tr-->
+                                </thead>
+
+                                <tbody>
+                                    <tr *ngFor="let user of users; let i = index;">
+                                        <td><a [routerLink]="" (click)="edit_user(user.id)"><img
+                                                    src="./assets/images/users/user-10.jpg" alt=""
+                                                    class="thumb-sm rounded-circle mr-2">{{user.fname}}
+                                                {{user.lname}}</a></td>
+                                        <td>
+                                            <div *ngFor="let position of user.positions; let isLast=last">
+                                                {{position.name}} {{isLast ? '' : ', '}}</div>
+                                        </td>
+                                        <td>
+                                            <div *ngFor="let team of user.teams;let isLast=last">{{team.name}}
+                                                {{isLast ? '' : ', '}}</div>
+                                        </td>
+                                        <td>{{user.email}}</td>
+                                        <td>{{user.country_code}} {{user.telephone}}</td>
+                                        <td>Active</td>
+                                        <td class="text-right">
+                                            <button class="btn btn-primary btn-sm text-light mb-1"
+                                                (click)="edit_user(user.id)"> <a (click)="edit_user(user.id)"
+                                                    class="mr-2"><i
+                                                        class="fas fa-edit text-light font-16"></i></a></button>
+                                            <button class="btn btn-danger btn-sm text-light ml-2 mb-1"
+                                                (click)="delete_user(user.id, user.fname,i)"><a><i
+                                                        class="fas fa-trash-alt text-light font-16"></i></a></button>
+                                        </td>
+                                    </tr>
+                                    <!--end tr-->
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                    <!--end card-body-->
+                </div>
+                <!--end card-->
+            </div>
+            <!--end col-->
+        </div>
+        <!--end row-->
+        <ngx-ui-loader overlayColor="rgba(40,40,40,0)" pbThickness="0" fgsColor="#09357d" fgsType="rectangle-bounce"
+            [loaderId]="'loader-01'"></ngx-ui-loader>
+    </div>
+</div><!-- end-page content-->
+<!-- </div>
+            <ngx-ui-loader></ngx-ui-loader>  -->

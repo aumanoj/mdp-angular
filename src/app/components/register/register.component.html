@@ -1,0 +1,172 @@
+<body class="account-body accountbg">
+    
+    <!-- page content-->
+    <!-- Log In page -->
+    <div class="row vh-100 ">
+        <div class="col-lg-12 align-self-center">
+            <div class="auth-page">
+                <div class="card auth-card shadow-lg">
+                    <div class="card-body">
+                        <div class="px-3">
+                            <div class="auth-logo-box">
+                                <a [routerLink]="" class="logo logo-admin"><img src="./assets/images/logo-sm.png" height="55" alt="logo" class="auth-logo"></a>
+                            </div><!--end auth-logo-box--><br>
+
+                            <div class="text-center auth-logo-text">
+                                <h4 class="mt-0 mb-3 mt-4">Free Register for MDP</h4>
+                                <p class="text-muted mb-0">Get your free MDP account now.</p>
+                            </div> <!--end auth-logo-text-->
+
+                            <div *ngIf="errors" class=" row alert alert-danger alert-dismissible col-xs-12" data-auto-dismiss role="alert" id="successMessage">
+                                <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                                    <span aria-hidden="true"><i class="mdi mdi-close"></i></span>
+                                </button>
+                                <strong> {{error_message}}</strong>
+                            </div>
+
+                            <form class="form-horizontal auth-form my-4 needs-validation"  (ngSubmit)="register()" [formGroup]="ngForm"  novalidate>
+
+                                <div class="form-group">
+                                    <label i18n="@@reg_fname" for="username">First Name</label><b i18n="@@reg_fname_required" class="required"> *</b>
+                                    <div class="input-group mb-3">
+                                        <span class="auth-form-icon">
+                                            <i class="dripicons-user"></i>
+                                        </span>
+                                        <input type="text" formControlName="fname" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.fname.errors }"   i18n-placeholder="@@reg_fname_Placeholder" placeholder="Enter first name" required />
+                                        <div *ngIf="submitted && f.fname.errors" class="invalid-feedback">
+                                            <div i18n="@@reg_fname_validation1" *ngIf="f.fname.errors.required">Name is required</div>
+                                            <div i18n="@@reg_fname_validation2" *ngIf="f.fname.errors.pattern">Only alphanumeric allowed</div>
+                                            <div i18n="@@reg_fname_validation3" *ngIf="f.fname.errors.maxlength">Name can't be more than 16 characters </div>
+                                        </div>
+                                    </div>
+                                </div><!--end form-group-->
+
+                                <div class="form-group">
+                                    <label i18n="@@reg_lname" for="lname">Last Name</label><b i18n="@@reg_lname_required" class="required"> *</b>
+                                    <div class="input-group mb-3"> 
+                                        <span class="auth-form-icon">
+                                            <i class="dripicons-user"></i>
+                                        </span>
+                                        <input type="text" formControlName="lname" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.lname.errors }"   i18n-placeholder="@@reg_lname_Placeholder" placeholder="Enter last name" required />
+                                        <div *ngIf="submitted && f.lname.errors" class="invalid-feedback">
+                                            <div i18n="@@reg_lname_validation1" *ngIf="f.lname.errors.required">Last name is required</div>
+                                            <div i18n="@@reg_lname_validation2" *ngIf="f.lname.errors.pattern">Only alphanumeric allowed</div>
+                                            <div i18n="@@reg_lname_validation3" *ngIf="f.lname.errors.maxlength">Name can't be more than 16 characters </div>
+                                        </div>
+                                    </div>
+                                </div><!--end form-group-->
+
+                                <div class="form-group">
+                                    <label i18n="@@reg_email" for="useremail">Email</label><b i18n="@@reg_email_required" class="required"> *</b>
+                                    <div class="input-group mb-3">
+                                        <span class="auth-form-icon">
+                                            <i class="dripicons-mail"></i>
+                                        </span>
+                                        <input type="email" formControlName="email" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.email.errors }" i18n-placeholder="@@email_Placeholder" placeholder="abc@example.com" required/>
+                                        <div *ngIf="submitted && f.email.errors" class="invalid-feedback">
+                                            <div i18n="@@reg_email_validation" *ngIf="f.email.errors.required">Email is required</div>
+                                            
+                                        </div>
+                                    </div>
+                                </div><!--end form-group-->
+
+                                <div class="form-group">
+                                    <label i18n="@@reg_password" for="userpassword">Password</label><b i18n="@@reg_password_required" class="required"> *</b>
+                                    <div class="input-group mb-3">
+                                        <span class="auth-form-icon">
+                                            <i class="dripicons-lock"></i>
+                                        </span>
+                                        <input type="password" class="form-control" formControlName="password" id="password" autocomplete="on" [ngClass]="{ 'is-invalid': submitted && f.password.errors }" i18n-placeholder="@@reg-password_Placeholder" placeholder="Enter password" required/>
+                                        <div *ngIf="submitted && f.password.errors" class="invalid-feedback">
+                                            <div i18n="@@reg_password_validation1" *ngIf="f.password.errors.required">Password is required</div>
+                                            <div i18n="@@reg_password_validation2"*ngIf="f.password.errors.minlength">Password must be at least 6 characters long</div>
+                                            <div i18n="@@reg_password_validation3"*ngIf="f.password.errors.maxlength">Password can be max 15 characters long</div>
+                                        </div>
+                                    </div>
+                                </div><!--end form-group-->
+
+                                <div class="form-group">
+                                    <label i18n="@@reg_password_confirm" for="conf_password">Confirm Password</label><b i18n="@@reg_password_confirm_required" class="required"> *</b>
+                                    <div class="input-group mb-3">
+                                        <span class="auth-form-icon">
+                                            <i class="dripicons-lock-open"></i>
+                                        </span>
+                                        <input type="password" class="form-control" formControlName="password_confirmation" id="conf_password" autocomplete="on" [ngClass]="{ 'is-invalid': submitted && f.password_confirmation.errors }" i18n-placeholder="@@reg-confirm-pwd_Placeholder" placeholder="Enter Confirm Password" required/>
+                                        <div *ngIf="submitted && f.password_confirmation.errors" class="invalid-feedback">
+                                            <div i18n="@@reg_confirm-pwd_validation1" *ngIf="f.password_confirmation.errors.required">Confirmation Password is required</div>
+                                            <div i18n="@@reg_confirm-pwd_validation2" *ngIf="f.password_confirmation.errors.mustMatch">Passsword and Confirm-Password didn't match.</div>
+                                        </div>
+                                    </div>
+
+                                    <div class="form-group">
+                                        <label i18n="@@reg_phone" for="mo_number">Mobile Number</label><b i18n="@@reg_phone_required" class="required"> *</b>
+                                        <div class="input-group mb-3">
+                                            <span class="auth-form-icon">
+                                                <i class="dripicons-phone"></i>
+                                            </span>
+                                            <input type="text" class="form-control" formControlName="telephone" id="m_number" pattern="\d*" [ngClass]="{ 'is-invalid': submitted && f.telephone.errors }" i18n-placeholder="@@phone_Placeholder" placeholder="Enter Only Number" required/>
+                                            <div *ngIf="submitted && f.telephone.errors" class="invalid-feedback">
+                                                <div i18n="@@reg_phone_validation1" *ngIf="f.telephone.errors.required">Phone number is required</div>
+                                                <div i18n="@@reg_phone_validation2" *ngIf="f.telephone.errors.minlength">Phone number must be at least 10 digit long</div>
+                                                <div i18n="@@reg_phone_validation3" *ngIf="f.telephone.errors.pattern">Only number allowed</div>
+                                            </div>
+                                        </div>
+                                    </div><!--end form-group-->
+                                </div><!--end form-group-->
+
+                                    <div class="form-group">
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="checkbox"  id="check" required/>
+                                            <label i18n="@@reg_agreeTermCondition" class="form-check-label" for="invalidCheck">
+                                                Agree to terms and conditions
+                                            </label>
+                                            <div class="invalid-feedback" i18n="@@reg_agreeTermCondition_validation">
+                                                You must agree before submitting.
+                                            </div>
+                                        </div>
+                                    </div><!--end form-group-->
+
+                                <div class="form-group mb-0 row">
+                                    <div class="col-12 mt-2">
+                                        <!-- <button type="submit" class="btn btn-primary btn-round btn-block waves-effect waves-light mt-0 mb-3" data-toggle="modal" data-animation="bounce" data-target=".bs-example-modal-lg">Register<i class="fas fa-sign-in-alt ml-1"></i></button> -->
+                                        <button class="btn btn-primary btn-round btn-block waves-effect waves-light" type="submit" >Register <i class="fas fa-sign-in-alt ml-1"></i></button>
+                                    </div><!--end col-->
+                                </div> <!--end form-group--><br>
+                                <!-- <div  class="row col-xs-12">
+                                    <p class="flash_msg"><flash-messages></flash-messages></p>
+                                </div> -->
+                            </form><!--end form-->
+                        </div><!--end /div-->
+                        <div class="m-2 text-center text-muted">
+                            <p class="">Already have an account ? <a [routerLink]="" (click)="login()" class="text-primary ml-2">Sign in</a></p>
+                        </div>
+                        <div class="form-group">
+                            <div class="form-check">
+                                <label class="required" for="invalidCheck">
+                                    (*) Mandatory fields
+                                </label>
+                            </div>
+                        </div><!--end form-group-->
+                    </div><!--end card-body-->
+                </div><!--end card-->
+            </div><br><br><!--end auth-card-->
+        </div><!--end col-->
+    </div><!--end row-->
+    <!-- End Log In page -->
+    <!-- end-page content-->
+
+    <!-- footer section-->
+  
+            <footer class="footer text-center text-sm-left">
+                &nbsp;&nbsp;&copy; 2020 MDP <span class="text-muted d-none d-sm-inline-block float-right">Developed <i class="mdi mdi-heart text-danger"></i> by Aphroecs</span>
+            </footer><!--end footer-->
+        
+    <!-- end page-wrapper -->
+    
+</body>
+ <script>
+        $('.dropify').dropify();
+        // Datatable
+        $('#datatable').DataTable();
+</script>
+

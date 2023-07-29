@@ -1,0 +1,487 @@
+
+    <div class="row">
+        <div class="col-12">
+            <div class="card">
+                <div class="card-body">
+                    <div *ngIf="error" class=" row alert alert-danger alert-dismissible col-xs-12" data-auto-dismiss role="alert" id="successMessage">
+                        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                            <span aria-hidden="true"><i class="mdi mdi-close"></i></span>
+                        </button>
+                        <strong> {{error_message}}</strong>
+                    </div>
+                    <form *ngFor="let u of user" class="form-horizontal form-material mb-0 form-parsley"  (ngSubmit)="update()" [formGroup]="ngForm_settings_notifications">
+
+                        <div class="form-group row">
+                            <div class="col-md-12">
+                                <input type="hidden" class="form-control" formControlName="id" value="id"   />
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                        <div class="col-md-2"></div>
+                        <div class="col-md-8">
+                            <span i18n="@@notification_msg">Indicate how you want to be alerted about updates on your account, in addition to the default notifications, by selecting the channels below.</span>
+                            <hr>
+                        </div>
+                        <div class="col-md-2"></div>
+
+                        <div class="col-md-2"></div>
+                        <div class="col-md-8">
+                            <label class="text-primary"><b i18n="@@notification_shift_alarm">SHIFT ALARM</b></label>
+                            <div class="form-group row">
+                                <div class="col-md-8">
+                                    <p i18n="@@notification_shift_alarm_desc">Enable shift alarms, so you get a reminder for upcoming shifts</p>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="custom-control custom-switch switch-success">
+                                        <input type="checkbox" class="custom-control-input" formControlName="notification_shift_alarm" [(ngModel)]="u.notification_shift_alarm" id="customSwitchSuccess4">
+                                    <label class="custom-control-label text-muted" for="customSwitchSuccess4"></label>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-2"></div>
+
+                        <div class="col-md-2"></div>
+                        <div class="col-md-8">
+                            <label i18n="@@notification_timeBeforeShift">Time before shift</label>
+                            <div class="form-group row">
+                                <div class="col-md-8">
+                                    <p i18n="@@notification_timeBeforeShift_desc">Indicate when you’d like to be reminded of an upcoming shift,so you make it to work on time</p>
+                                </div>
+                                <div class="col-md-2 mb-3">
+                                    <select class="form-control" formControlName="notification_time_before_shift" [(ngModel)]="u.notification_time_before_shift">
+                                        <option [ngValue]="u.notification_time_before_shift">{{u.notification_time_before_shift}}</option>
+                                        <option value="1">1</option>
+                                        <option value="2">2</option>
+                                        <option value="3">3</option>
+                                        <option value="4">4</option>
+                                        <option value="5">5</option>
+                                    </select>
+                                </div>
+                                <div class="col-md-2 mb-3">
+                                    <select class="form-control">
+                                        <option value="minutes">Minutes</option>
+                                        <option value="hours">Hours</option>
+                                    </select>
+                                </div>
+                            </div>
+                            
+                        </div>
+                        <div class="col-md-2"></div>
+
+                        <div class="col-md-2"></div>
+                        <div class="col-md-8">
+                            <label></label>
+                            <div class="form-group row">
+                                <div class="col-md-8">
+                                    <p i18n="@@notification_viaSms">Via SMS to my mobile phone PREMIUM</p>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="custom-control custom-switch switch-success">
+                                        <input type="checkbox" class="custom-control-input" formControlName="notification_shift_sms" [(ngModel)]="u.notification_shift_sms" id="customSwitchSuccess4.1">
+                                        <label class="custom-control-label text-muted" for="customSwitchSuccess4.1"></label>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-2"></div>
+
+                        <div class="col-md-2"></div>
+                        <div class="col-md-8">
+                            <label></label>
+                            <div class="form-group row">
+                                <div class="col-md-8">
+                                    <p i18n="@@notification_viaPushMobile_device">Via push notifications to my mobile device Download the MDP app for iOS or Android</p>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="custom-control custom-switch switch-success">
+                                        <input type="checkbox" class="custom-control-input" formControlName="notification_shift_push" [(ngModel)]="u.notification_shift_push" id="customSwitchSuccess4.2">
+                                        <label class="custom-control-label text-muted" for="customSwitchSuccess4.3"></label>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-2"></div>
+
+                        <div class="col-md-2"></div>
+                        <div class="col-md-8">
+                            <label></label>
+                            <div class="form-group row">
+                                <div class="col-md-8">
+                                    <p>Via Email</p>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="custom-control custom-switch switch-success">
+                                        <input type="checkbox" class="custom-control-input" formControlName="notification_shift_email" [(ngModel)]="u.notification_shift_email" id="customSwitchSuccess4.3">
+                                        <label class="custom-control-label text-muted"  for="customSwitchSuccess4.3"></label>
+                                    </div>
+                                </div>
+                            </div>
+                            <hr>
+                        </div>
+                        <div class="col-md-2"></div>
+
+                        <div class="col-md-2"></div>
+                        <div class="col-md-8">
+                            <label class="text-primary"><b i18n="@@notification_dashboardNotification">DASHBOARD NOTIFICATIONS</b></label>
+                            <hr>
+                            <div class="form-group row">
+                                <div class="col-md-12">
+                                    <p i18n="@@notification_dashboardNotification_desc">Dashboard notifications include updates on shifts, tasks and announcements relevant to you. By default, these notifications are displayed on your Dashboard.</p>
+                                </div>
+                            </div>
+
+                        </div>
+                        <div class="col-md-2"></div>
+
+                        <div class="col-md-2"></div>
+                        <div class="col-md-8">
+                            <label i18n="@@notification_sendMeAdditional_alert">Send me additional alerts when:</label>
+                            <div class="form-group row">
+                                <div class="col-md-12">
+                                    <select class="form-control" formControlName="notification_dashboard" [(ngModel)]="u.notification_dashboard">
+                                        <option [ngValue]="u.notification_dashboard">{{u.notification_dashboard}}</option>
+                                        <option value="NEVER">Never</option>
+                                        <option value="ALWAYS_NEW">Always new</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-2"></div>
+
+                        <div class="col-md-2"></div>
+                        <div class="col-md-8">
+                            <label></label>
+                            <div class="form-group row">
+                                <div class="col-md-8">
+                                    <p i18n="@@notification_dashboard_viaPushNotification">Via push notifications to my mobile device Download the MDP app for<a href="#"><u> iOS</u></a> or <a href="#"><u> Android</u></a></p>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="custom-control custom-switch switch-success">
+                                        <input type="checkbox" class="custom-control-input" formControlName="notification_dashboard_push" [(ngModel)]="u.notification_dashboard_push" id="customSwitchSuccess5">
+                                        <label class="custom-control-label text-muted" for="customSwitchSuccess5"></label>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-2"></div>
+
+                        <div class="col-md-2"></div>
+                        <div class="col-md-8">
+                            <label></label>
+                            <div class="form-group row">
+                                <div class="col-md-8">
+                                    <p i18n="@@notification_dashboard_viaMail">Via Mail</p>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="custom-control custom-switch switch-success">
+                                        <input type="checkbox" class="custom-control-input" formControlName="notification_dashboard_email" [(ngModel)]="u.notification_dashboard_email" id="customSwitchSuccess6">
+                                        <label class="custom-control-label text-muted" for="customSwitchSuccess6"></label>
+                                    </div>
+                                </div>
+                            </div>
+                            <hr>
+                        </div>
+                        <div class="col-md-2"></div>
+
+                        <div class="col-md-2"></div>
+                        <div class="col-md-8">
+                            <label class="text-primary"><b i18n="@@notification_message_notification">MESSAGES NOTIFICATIONS</b></label>
+                            <div class="form-group row">
+                                <div class="col-md-12">
+                                    <p i18n="@@notification_message_notification_desc">Message notifications inform you of any new messages in conversations you are a part of. By default, these notifications are displayed as badges on the Messages tab.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-2"></div>
+
+                        <div class="col-md-2"></div>
+                        <div class="col-md-8">
+                            <label i18n="@@notification_message_sendMeAdditional">Send me additional alerts when:</label>
+                            <div class="form-group row">
+                                <div class="col-md-12">
+                                    <select class="form-control" formControlName="notification_message" [(ngModel)]="u.notification_message">
+                                        <option [ngValue]="u.notification_message">{{u.notification_message}}</option>
+                                        <option value="NEVER">Never</option>
+                                        <option value="ALWAYS_NEW">Always new</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-2"></div>
+
+                        <div class="col-md-2"></div>
+                        <div class="col-md-8">
+                            <label></label>
+                            <div class="form-group row">
+                                <div class="col-md-8">
+                                    <p i18n="@@notification_message_viaPushNotification">Via push notifications to my mobile device Download the MDP app for<a href="#"><u> iOS</u></a> or <a href="#"><u> Android</u></a></p>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="custom-control custom-switch switch-success">
+                                        <input type="checkbox" class="custom-control-input" formControlName="notification_message_push" [(ngModel)]="u.notification_message_push" id="customSwitchSuccess7">
+                                        <label class="custom-control-label text-muted" for="customSwitchSuccess7"></label>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-2"></div>
+
+                        <div class="col-md-2"></div>
+                        <div class="col-md-8">
+                            <label></label>
+                            <div class="form-group row">
+                                <div class="col-md-8">
+                                    <p i18n="@@notification_message_viaMail">Via Mail</p>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="custom-control custom-switch switch-success">
+                                        <input type="checkbox" class="custom-control-input" formControlName="notification_message_email" [(ngModel)]="u.notification_message_email" id="customSwitchSuccess8">
+                                        <label class="custom-control-label text-muted" for="customSwitchSuccess8"></label>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-2"></div>
+
+                        <div class="col-md-2"></div>
+                        <div class="col-md-8">
+                            <label></label>
+                            <div class="form-group row">
+                                <div class="col-md-8">
+                                    <p i18n="@@notification_message_viaNotification">Via notifications to my web browser</p>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="custom-control custom-switch switch-success">
+                                        <input type="checkbox" class="custom-control-input" formControlName="notification_message_browser" [(ngModel)]="u.notification_message_browser" id="customSwitchSuccess9">
+                                        <label class="custom-control-label text-muted"  for="customSwitchSuccess9"></label>
+                                    </div>
+                                </div>
+                            </div>
+                            <hr>
+                        </div>
+                        <div class="col-md-2"></div>
+
+                        <div class="row"><!--newsfeed-->
+                            <div class="col-md-2"></div>
+                        <div class="col-md-8">
+                            <label class="text-primary"><b i18n="@@notification_newsfeed">NEWSFEED</b></label>
+                            <div class="form-group row">
+                                <div class="col-md-12">
+                                    <p i18n="@@notification_newsfeed_desc">Newsfeed notifications inform you of any new posts on pages you follow. By default, these notifications are displayed as badges on the Newsfeed tab.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-2"></div>
+
+                        <div class="col-md-2"></div>
+                        <div class="col-md-8">
+                            <label i18n="@@notification_newsfeed_sendMEAdditional">Send me additional alerts when:</label>
+                            <div class="form-group row">
+                                <div class="col-md-12">
+                                    <select class="form-control" formControlName="notification_newsfeed" [(ngModel)]="u.notification_newsfeed">
+                                        <option [ngValue]="u.notification_newsfeed">{{u.notification_newsfeed}}</option>
+                                        <option value="NEVER">Never</option>
+                                        <option value="ALWAYS_NEW">Always new</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-2"></div>
+
+                        <div class="col-md-2"></div>
+                        <div class="col-md-8">
+                            <label></label>
+                            <div class="form-group row">
+                                <div class="col-md-8">
+                                    <p i18n="@@notification_newsfeed_viaPushNotification">Via push notifications to my mobile device Download the MDP app for<a href="#"><u> iOS</u></a> or <a href="#"><u> Android</u></a></p>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="custom-control custom-switch switch-success">
+                                        <input type="checkbox" class="custom-control-input" formControlName="notification_newsfeed_push" [(ngModel)]="u.notification_newsfeed_push" id="customSwitchSuccess10">
+                                        <label class="custom-control-label text-muted" for="customSwitchSuccess10"></label>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-2"></div>
+
+                        <div class="col-md-2"></div>
+                        <div class="col-md-8">
+                            <label></label>
+                            <div class="form-group row">
+                                <div class="col-md-8">
+                                    <p i18n="@@notification_newsfeed_viaMail">Via Mail</p>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="custom-control custom-switch switch-success">
+                                        <input type="checkbox" class="custom-control-input" formControlName="notification_newsfeed_email" [(ngModel)]="u.notification_newsfeed_email" id="customSwitchSuccess11">
+                                        <label class="custom-control-label text-muted" for="customSwitchSuccess11"></label>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-2"></div>
+
+                        <div class="col-md-2"></div>
+                        <div class="col-md-8">
+                            <label></label>
+                            <div class="form-group row">
+                                <div class="col-md-8">
+                                    <p i18n="@@notification_newsfeed_viaNotification"> Via notifications to my web browser</p>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="custom-control custom-switch switch-success">
+                                        <input type="checkbox" class="custom-control-input" formControlName="notification_newsfeed_browser" [(ngModel)]="u.notification_newsfeed_browser" id="customSwitchSuccess12">
+                                        <label class="custom-control-label text-muted" for="customSwitchSuccess12"></label>
+                                    </div>
+                                </div>
+                            </div>
+                            <hr>
+                        </div>
+                        <div class="col-md-2"></div>
+                        </div><!--end newsfeed-->
+
+                        <div class="col-md-2"></div>
+                        <div class="col-md-8">
+                            <label class="text-primary"><b i18n="@@notification_daily_emailReport">DAILY EMAIL REPORT</b></label>
+                            <div class="form-group row">
+                                <div class="col-md-8">
+                                    <p i18n="@@notification_daily_emailReport_desc">Send me a daily email report Get information about your employees and hours scheduled</p>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="custom-control custom-switch switch-success">
+                                        <input type="checkbox" class="custom-control-input" formControlName="notification_daily_email_report" [(ngModel)]="u.notification_daily_email_report" id="customSwitchSuccess13">
+                                        <label class="custom-control-label text-muted" for="customSwitchSuccess13"></label>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-2"></div>
+
+                        <div class="col-md-2"></div>
+                        <div class="col-md-8">
+                            <label></label>
+                            <div class="form-group row">
+                                <div class="col-md-8">
+                                    <p i18n="@@notification_daily_emailReport_timeOfDay">Time of day to deliver email report</p>
+                                </div>
+                                <div class="col-md-4">
+                                    <select class="form-control" formControlName="notification_daily_time" [(ngModel)]="u.notification_daily_time">
+                                        <option [ngValue]="u.notification_daily_time">{{u.notification_daily_time}}</option>
+                                        <option value="07:00">07:00AM</option>
+                                        <option value="01:00">01:00PM</option>
+                                        <option value="02:00">02:00PM</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <hr>
+                        </div>
+                        <div class="col-md-2"></div>
+
+                        <div class="col-md-2"></div>
+                        <div class="col-md-8">
+                            <label class="text-primary"><b i18n="@@notification_timeClock">TIME CLOCK</b></label>
+                            <div class="form-group row">
+                                <div class="col-md-8">
+                                    <p i18n="@@notification_timeClock_desc">Enable notifications when employees edit their timesheets</p>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="custom-control custom-switch switch-success">
+                                        <input type="checkbox" class="custom-control-input" formControlName="notification_timeclock_timesheet_edit" [(ngModel)]="u.notification_timeclock_timesheet_edit" id="customSwitchSuccess14">
+                                        <label class="custom-control-label text-muted" for="customSwitchSuccess14"></label>
+                                    </div>
+                                </div>
+                            </div>
+                            <hr>
+                        </div>
+                        <div class="col-md-2"></div>
+
+                        <div class="col-md-2"></div>
+                        <div class="col-md-8">
+                            <label i18n="@@notification_checkIn">CHECK IN</label>
+                                <p i18n="@@notification_checkIn_desc1">Send dashboard notifications when:</p>
+                            <div class="form-group row">
+                                <div class="col-md-12">
+                                    <select class="form-control" formControlName="notification_timeclock_checkin" [(ngModel)]="u.notification_timeclock_checkin">
+                                        <option [ngValue]="u.notification_timeclock_checkin">{{u.notification_timeclock_checkin}}</option>
+                                        <option value="ALWAYS_NEW">Always new</option>
+                                        <option value="NEVER">Never</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-2"></div>
+
+                        <div class="col-md-2"></div>
+                        <div class="col-md-8">
+                            <label></label>
+                            <div class="form-group row">
+                                <div class="col-md-8">
+                                    <p i18n="@@notification_checkIn_desc2">Define late in number of minutes after a shift is scheduled to start</p>
+                                </div>
+                                <div class="col-md-4">
+                                    <select class="form-control" formControlName="notification_timeclock_checkin_define_last_minutes" [(ngModel)]="u.notification_timeclock_checkin_define_last_minutes">
+                                        <option [ngValue]="u.notification_timeclock_checkin_define_last_minutes">{{u.notification_timeclock_checkin_define_last_minutes}}</option>
+                                        <option value="20">20 Minutes</option>
+                                        <option value="30">30 Minutes</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-2"></div>
+
+                        <div class="col-md-2"></div>
+                        <div class="col-md-8">
+                            <label i18n="@@notification_checkOut">CHECK OUT</label>
+                                <p i18n="@@notification_checkOut_desc1">Send dashboard notifications when:</p>
+                            <div class="form-group row">
+                                <div class="col-md-12">
+                                    <select class="form-control" formControlName="notification_timeclock_checkout" [ngModel]="u.notification_timeclock_checkout">
+                                        <option [ngValue]="u.notification_timeclock_checkout">{{u.notification_timeclock_checkout}}</option>
+                                        <option value="ALWAYS_NEW">Always new </option>
+                                        <option value="NEVER">Never</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <hr>
+                        </div>
+                        <div class="col-md-2"></div>
+
+                        <div class="col-md-2"></div>
+                        <div class="col-md-8">
+                            <label></label>
+                            <div class="form-group row">
+                                <div class="col-md-8">
+                                    <p i18n="@@notification_checkOut_desc2">Define late in number of minutes after a shift is scheduled to end</p>
+                                </div>
+                                <div class="col-md-4">
+                                    <select class="form-control" formControlName="notification_timeclock_checkout_define_last_minutes" [(ngModel)]="u.notification_timeclock_checkout_define_last_minutes">
+                                        <option [ngValue]="u.notification_timeclock_checkout_define_last_minutes">{{u.notification_timeclock_checkout_define_last_minutes}}</option>
+                                        <option value="15">15 Minutes</option>
+                                        <option value="20">20 Minutes</option>
+                                        <option value="30">30 Minutes</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-2"></div>
+                    </div>
+                    <div class="form-group mb-0">
+                        <button class="btn btn-danger btn-sm text-light px-4 mt-3 float-right mb-0 ml-2" type="reset" type="reset">Reset</button>
+                        <button  class="btn btn-primary btn-sm text-light px-4 mt-3 float-right mb-0" type="submit">Save</button>
+                        <!-- <div *ngIf="error" class="alert alert-danger mt-3 mb-0">{{error_message}}</div> -->
+                    </div><!--end form-group-->
+                    <!-- <div  class="row col-xs-12">
+                        <div *ngIf="showMsg" class=" row alert alert-success alert-dismissible col-xs-12" data-auto-dismiss role="alert" id="successMessage">
+                            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                               
+                            </button>
+                            <strong> Record updated successfully</strong>
+                        </div>
+                    </div> -->
+                </form>
+                </div><!--end card-body-->
+            </div><!--end card-->
+        </div> <!--end col-->
+    </div><!--end row-->

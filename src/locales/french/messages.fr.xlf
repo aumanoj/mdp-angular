@@ -1,0 +1,603 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
+  <file source-language="en-US" datatype="plaintext" original="ng2.template">
+    <body>
+      <!--Login Page-->
+      <trans-unit id="user_Placeholder" datatype="html">
+        <source>Enter registered email</source>
+        <target state="translated">Γιατί είναι τόσο </target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/login/login.component.html</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="email" datatype="html">
+        <source>Username is required.</source>
+        <target>Γιατί είναι τόσο σημαντική η διεθνοποίηση</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/login/login.component.html</context>
+        </context-group>
+      </trans-unit>
+
+      <trans-unit id="password_Placeholder" datatype="html">
+        <source>Please enter correct password</source>
+        <target state="translated">σημαντική διεθνοποίηση </target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/login/login.component.html</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="password" datatype="html">
+        <source>Password is required.</source>
+        <target>Γιατί είναι τόσο σημαντική διεθνοποίηση</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/login/login.component.html</context>
+        </context-group>
+      </trans-unit>
+      <!--End login-->
+
+      <!--Register Page-->
+      <trans-unit id="fname_Placeholder" datatype="html">
+        <source>Enter first name</source>
+        <target>σημαντική διεθνοποίηση</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/register/register.component.html</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="fname" datatype="html">
+        <source>Name is required</source>
+        <target>Γιατί είναι τόσο σημαντική η διεθνοποίηση</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/login/register.component.html</context>
+        </context-group>
+      </trans-unit>
+
+      <trans-unit id="lname_Placeholder" datatype="html">
+        <source>Enter last name</source>
+        <target>σημαντική διεθνοποίηση</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/register/register.component.html</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="lname" datatype="html">
+        <source>Last Name is required</source>
+        <target>Γιατί είναι τόσο σημαντική η διεθνοποίηση</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/register/register.component.html</context>
+        </context-group>
+      </trans-unit>
+
+      <trans-unit id="email_Placeholder" datatype="html">
+        <source>abc@example.com</source>
+        <target>σημαντική διεθνοποίηση</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/register/register.component.html</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="reg_email" datatype="html">
+        <source>Email is required</source>
+        <target>Γιατί είναι τόσο σημαντική η διεθνοποίηση</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/register/register.component.html</context>
+        </context-group>
+      </trans-unit>
+
+      <trans-unit id="reg-password_Placeholder" datatype="html">
+        <source>Enter password</source>
+        <target>σημαντική διεθνοποίηση</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/register/register.component.html</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="reg_password" datatype="html">
+        <source>Password is required</source>
+        <target>Γιατί είναι τόσο σημαντική η διεθνοποίηση</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/register/register.component.html</context>
+        </context-group>
+      </trans-unit>
+
+      <trans-unit id="reg-confirm-pwd_Placeholder" datatype="html">
+        <source>Confirm password</source>
+        <target>σημαντική διεθνοποίηση</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/register/register.component.html</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="reg_confirm-pwd" datatype="html">
+        <source>Enter Confirm Password</source>
+        <target>Γιατί είναι τόσο σημαντική η διεθνοποίηση</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/register/register.component.html</context>
+        </context-group>
+      </trans-unit>
+
+      <trans-unit id="phone_Placeholder" datatype="html">
+        <source>Enter Only Number</source>
+        <target>σημαντική διεθνοποίηση</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/register/register.component.html</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="reg_phone" datatype="html">
+        <source>Mobile Number</source>
+        <target>Γιατί είναι τόσο σημαντική η διεθνοποίηση</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/register/register.component.html</context>
+        </context-group>
+      </trans-unit>
+      <!--End register-->
+
+      <!--Add-user-page-->
+      <trans-unit id="user-fname_Pholder" datatype="html">
+        <source>Enter first name</source>
+        <target>σημαντική διεθνοποίηση</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/dashboard/users/add-user/add-user.component.html</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="user-fname" datatype="html">
+        <source>Name is required</source>
+        <target>Γιατί είναι τόσο σημαντική η διεθνοποίηση</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/dashboard/users/add-user/add-user.component.html</context>
+        </context-group>
+      </trans-unit>
+
+      <trans-unit id="user-lname_Pholder" datatype="html">
+        <source>Enter last name</source>
+        <target>σημαντική διεθνοποίηση</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/dashboard/users/add-user/add-user.component.html</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="user-lname" datatype="html">
+        <source>Last name is required</source>
+        <target>Γιατί είναι τόσο σημαντική η διεθνοποίηση</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/dashboard/users/add-user/add-user.component.html</context>
+        </context-group>
+      </trans-unit>
+
+      <trans-unit id="user-email_Pholder" datatype="html">
+        <source>abc@example.com</source>
+        <target>σημαντική διεθνοποίηση</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/dashboard/users/add-user/add-user.component.html</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="user_email" datatype="html">
+        <source>Email is required</source>
+        <target>Γιατί είναι τόσο σημαντική η διεθνοποίηση</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/dashboard/users/add-user/add-user.component.html</context>
+        </context-group>
+      </trans-unit>
+
+       <trans-unit id="user-password_Pholder" datatype="html">
+        <source>Enter password</source>
+        <target>σημαντική διεθνοποίηση</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/dashboard/users/add-user/add-user.component.html</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="user_password" datatype="html">
+        <source>Password is required</source>
+         <target>Γιατί είναι τόσο σημαντική η διεθνοποίηση</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/dashboard/users/add-user/add-user.component.html</context>
+        </context-group>
+      </trans-unit>
+
+      <trans-unit id="user-phoneCode" datatype="html">
+        <source>Select Country Code</source>
+        <target>σημαντική διεθνοποίηση</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/dashboard/users/add-user/add-user.component.html</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="user-phone" datatype="html">
+        <source>Enter phone no</source>
+        <target>Γιατί είναι τόσο σημαντική η διεθνοποίηση</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/dashboard/users/add-user/add-user.component.html</context>
+        </context-group>
+      </trans-unit>
+
+      <trans-unit id="user-timeZone" datatype="html">
+        <source>Select Time Zone</source>
+        <target>Γιατί είναι τόσο σημαντική</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/dashboard/users/add-user/add-user.component.html</context>
+        </context-group>
+      </trans-unit>
+
+      <trans-unit id="add-user_systemRole" datatype="html">
+        <source>Select Role</source>
+        <target>τόσο σημαντική </target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/dashboard/users/add-user/add-user.component.html</context>
+        </context-group>
+      </trans-unit>
+
+      <trans-unit id="user-empID_Pholder" datatype="html">
+        <source>Fill in employee ID</source>
+        <target>σημαντική διεθνοποίηση</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/dashboard/users/add-user/add-user.component.html</context>
+        </context-group>
+      </trans-unit>
+
+      <trans-unit id="user-position_Pholder" datatype="html">
+        <source>Add Position</source>
+        <target>Γιατί είναι τόσο σημαντική η </target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/dashboard/users/add-user/add-user.component.html</context>
+        </context-group>
+      </trans-unit>
+
+      <trans-unit id="user-team_Pholder" datatype="html">
+        <source>Add Team</source>
+        <target>Γιατί είναι τόσο σημαντική η </target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/dashboard/users/add-user/add-user.component.html</context>
+        </context-group>
+      </trans-unit>
+
+      <trans-unit id="user-group_Pholder" datatype="html">
+        <source>Add Group</source>
+        <target>Γιατί είναι τόσο σημαντική η </target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/dashboard/users/add-user/add-user.component.html</context>
+        </context-group>
+      </trans-unit>
+      <!--End add-user-->
+
+      <!--Edit-user-->
+        <trans-unit id="edit-user_fname_Pholder" datatype="html">
+        <source>Enter first name</source>
+        <target>Γιατί είναι τόσο σημαντική η </target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/dashboard/users/edit-user/edit-user.component.html</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="edit-user_fname" datatype="html">
+        <source>Name is required</source>
+        <target>Γιατί είναι τόσο σημαντική η </target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/dashboard/users/edit-user/edit-user.component.html</context>
+        </context-group>
+      </trans-unit>
+
+      <trans-unit id="edit-user_lname_Pholder" datatype="html">
+        <source>Enter last name</source>
+        <target>Γιατί είναι τόσο σημαντική η </target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/dashboard/users/edit-user/edit-user.component.html</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="edit-user_lname" datatype="html">
+        <source>Last name is required</source>
+        <target>Γιατί είναι τόσο σημαντική η </target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/dashboard/users/edit-user/edit-user.component.html</context>
+        </context-group>
+      </trans-unit>
+
+      <trans-unit id="edit-user_email_Pholder" datatype="html">
+        <source>abc@example.com</source>
+        <target>Γιατί είναι τόσο σημαντική η </target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/dashboard/users/edit-user/edit-user.component.html</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="edit-user_email" datatype="html">
+        <source>Email is required</source>
+        <target>Γιατί είναι τόσο σημαντική η </target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/dashboard/users/edit-user/edit-user.component.html</context>
+        </context-group>
+      </trans-unit>
+
+      <trans-unit id="edit-user_phoneCode" datatype="html">
+        <source>Select Country Code</source>
+        <target>Γιατί είναι τόσο σημαντική η </target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/dashboard/users/edit-user/edit-user.component.html</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="edit-user_phone" datatype="html">
+        <source>Enter phone no</source>
+        <target>Γιατί είναι τόσο σημαντική η </target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/dashboard/users/edit-user/edit-user.component.html</context>
+        </context-group>
+      </trans-unit>
+
+      <trans-unit id="edit-user_timeZone" datatype="html">
+        <source>Select Time Zone</source>
+        <target>Γιατί είναι τόσο σημαντική η </target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/dashboard/users/edit-user/edit-user.component.html</context>
+        </context-group>
+      </trans-unit>
+
+      <trans-unit id="edit-user_systemRole" datatype="html">
+        <source>Select Role</source>
+        <target>τόσο σημαντική </target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/dashboard/users/edit-user/edit-user.component.html</context>
+        </context-group>
+      </trans-unit>
+
+      <trans-unit id="edit-user_empID_Pholder" datatype="html">
+        <source>Fill in employee ID</source>
+        <target>Γιατί είναι τόσο σημαντική η </target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/dashboard/users/edit-user/edit-user.component.html</context>
+        </context-group>
+      </trans-unit>
+
+      <trans-unit id="edit-user_position_Pholder" datatype="html">
+        <source>Add Position</source>
+        <target>Γιατί είναι τόσο σημαντική η </target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/dashboard/users/edit-user/edit-user.component.html</context>
+        </context-group>
+      </trans-unit>
+
+      <trans-unit id="edit-user_team_Pholder" datatype="html">
+        <source>Add Team</source>
+        <target>Γιατί είναι τόσο σημαντική η </target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/dashboard/users/edit-user/edit-user.component.html</context>
+        </context-group>
+      </trans-unit>
+
+      <trans-unit id="edit-user_group_Pholder" datatype="html">
+        <source>Add Group</source>
+        <target>Γιατί είναι τόσο σημαντική η </target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/dashboard/users/edit-user/edit-user.component.html</context>
+        </context-group>
+      </trans-unit>
+
+      <trans-unit id="edit-user-labor_Pholder" datatype="html">
+        <source>none</source>
+        <target>Γιατί </target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/dashboard/users/edit-user/edit-user.component.html</context>
+        </context-group>
+      </trans-unit>
+      
+      <!--End edit-user-->
+
+      <!--Position page-->
+      <trans-unit id="position-name_Pholder" datatype="html">
+        <source>e.g. Assistant manager, Bartender, Server</source>
+        <target>Γιατί είναι τόσο σημαντική η ίναι τόσο </target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/dashboard/positions/add-position/add-position.component.html</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="position_name" datatype="html">
+        <source>Name is required</source>
+        <target>Γιατί είναι τόσο σημαντική η </target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/dashboard/positions/add-position/add-position.component.html</context>
+        </context-group>
+      </trans-unit>
+
+      <trans-unit id="position-add-emp_Pholder" datatype="html">
+        <source>Add Employee</source>
+        <target>Γιατί είναι τόσο σημαντική </target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/dashboard/positions/add-position/add-position.component.html</context>
+        </context-group>
+      </trans-unit>
+      <!--End position-->
+
+      <!--Edit-Position-->
+      <trans-unit id="edit-position-name_Pholder" datatype="html">
+        <source>e.g. Assistant manager, Bartender, Server</source>
+        <target>Γιατί είναι τόσο σημαντική η ίναι τόσο </target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/dashboard/positions/edit-position/edit-position.component.html</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="edit-position_name" datatype="html">
+        <source>Name is required</source>
+        <target>Γιατί είναι τόσο </target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/dashboard/positions/edit-position/edit-position.component.html</context>
+        </context-group>
+      </trans-unit>
+
+      <trans-unit id="edit-position-add-emp_Pholder" datatype="html">
+        <source>Add Employee</source>
+        <target>τόσο σημαντική η ίναι τόσο </target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/dashboard/positions/edit-position/edit-position.component.html</context>
+        </context-group>
+      </trans-unit>
+      <!--end edit-position-->
+
+      <!--Location page-->
+      <trans-unit id="location-name_Pholder" datatype="html">
+        <source>e.g. Boston, Flatiron, Bryant Park</source>
+         <target>Γιατί είναι τόσο σημαντική η ίναι τόσο </target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/dashboard/locations/add-location/add-location.component.html</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="location_name" datatype="html">
+        <source>Name is required</source>
+        <target>Γιατί είναι τόσο σημαντική </target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/dashboard/locations/add-location/add-location.component.html</context>
+        </context-group>
+      </trans-unit>
+
+      <trans-unit id="location-address_Pholder" datatype="html">
+        <source>e.g. 365 Broadway, etc</source>
+        <target>Γιατί είναι τόσο σημαντική η ίναι τόσο </target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/dashboard/locations/add-location/add-location.component.html</context>
+        </context-group>
+      </trans-unit>
+
+      <trans-unit id="location-phoneCode" datatype="html">
+        <source>Select Country Code</source>
+        <target>Γιατί είναι τόσο </target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/dashboard/locations/add-location/add-location.component.html</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="location-phone" datatype="html">
+        <source>Enter phone no</source>
+        <target>τόσο σημαντική η ίναι τόσο </target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/dashboard/locations/add-location/add-location.component.html</context>
+        </context-group>
+      </trans-unit>
+
+      <trans-unit id="location-timeZone" datatype="html">
+        <source>Select Time Zone</source>
+        <target>Γιατί είναι τόσο σημαντική τόσο </target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/dashboard/locations/add-location/add-location.component.html</context>
+        </context-group>
+      </trans-unit>
+
+      <trans-unit id="location-emp_Pholder" datatype="html">
+        <source>Add employee</source>
+        <target>Γιατί είναι τόσο σημαντική  </target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/dashboard/locations/add-location/add-location.component.html</context>
+        </context-group>
+      </trans-unit>
+
+      <trans-unit id="location-labor_Pholder" datatype="html">
+        <source>none</source>
+        <target>Γιατί</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/dashboard/locations/add-location/add-location.component.html</context>
+        </context-group>
+      </trans-unit>
+      <!--End location-->
+
+       <!--Edit-location-->
+      <trans-unit id="edit-location-name_Pholder" datatype="html">
+        <source>e.g. Boston, Flatiron, Bryant Park</source>
+        <target>Γιατί είναι τόσο σημαντική είναι τόσο</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/dashboard/locations/edit-location/edit-location.component.html</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="edit-location_name" datatype="html">
+        <source>Name is required</source>
+        <target>Γιατί είναι τόσο σημαντική είναι τόσο</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/dashboard/locations/edit-location/edit-location.component.html</context>
+        </context-group>
+      </trans-unit>
+
+      <trans-unit id="edit-location-address_Pholder" datatype="html">
+        <source>e.g. 365 Broadway, etc</source>
+        <target>Γιατί είναι τόσο σημαντική είναι τόσο</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/dashboard/locations/edit-location/edit-location.component.html</context>
+        </context-group>
+      </trans-unit>
+
+      <trans-unit id="edit-location-phoneCode" datatype="html">
+        <source>Select Country Code</source>
+        <target>Γιατί είναι τόσο σημαντική είναι τόσο</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/dashboard/locations/edit-location/edit-location.component.html</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="edit-location-phone" datatype="html">
+        <source>Enter phone no</source>
+        <target>Γιατί είναι τόσο σημαντική είναι τόσο</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/dashboard/locations/edit-location/edit-location.component.html</context>
+        </context-group>
+      </trans-unit>
+
+      <trans-unit id="edit-location-timeZone" datatype="html">
+        <source>Select Time Zone</source>
+        <target>Γιατί είναι τόσο σημαντική είναι τόσο</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/dashboard/locations/edit-location/edit-location.component.html</context>
+        </context-group>
+      </trans-unit>
+
+      <trans-unit id="edit-location-emp_Pholder" datatype="html">
+        <source>Add employee</source>
+        <target>Γιατί είναι τόσο σημαντική είναι τόσο</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/dashboard/locations/edit-location/edit-location.component.html</context>
+        </context-group>
+      </trans-unit>
+
+      <trans-unit id="edit-location-labor_Pholder" datatype="html">
+        <source>none</source>
+        <target>Γιατί</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/dashboard/locations/edit-location/edit-location.component.html</context>
+        </context-group>
+      </trans-unit>
+      <!--End edit-location-->
+
+      <!--Group page-->
+      <trans-unit id="group-name_Pholder" datatype="html">
+        <source>e.g. IT Department, Party Committee</source>
+        <target>Γιατί είναι τόσο σημαντική η ίναι τόσο </target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/dashboard/locations/add-location/add-location.component.html</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="group_name" datatype="html">
+        <source>Name is required</source>
+         <target>Γιατί είναι τόσο σημαντική  </target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/dashboard/locations/add-location/add-location.component.html</context>
+        </context-group>
+      </trans-unit>
+
+      <trans-unit id="group-emp_Pholder" datatype="html">
+        <source>Add employee</source>
+        <target>Γιατί είναι τόσο σημαντική  </target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/dashboard/groups/add-groups/add-groups.component.html</context>
+        </context-group>
+      </trans-unit>
+      <!--End group-->
+
+      <!--Edit-Group-->
+      <trans-unit id="edit-group-name_Pholder" datatype="html">
+        <source>e.g. IT Department, Party Committee</source>
+        <target>Γιατί είναι τόσο σημαντική είναι τόσο</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/dashboard/groups/add-groups/add-groups.component.html</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="edit-group_name" datatype="html">
+        <source>Name is required</source>
+        <target>Γιατί είναι τόσο </target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/dashboard/groups/add-groups/add-groups.component.html</context>
+        </context-group>
+      </trans-unit>
+
+      <trans-unit id="edit-group-emp_Pholder" datatype="html">
+        <source>Add employee</source>
+        <target>σημαντική είναι τόσο</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/dashboard/groups/add-groups/add-groups.component.html</context>
+        </context-group>
+      </trans-unit>
+      <!--End edit-group-->
+
+    </body>
+  </file>
+</xliff>
